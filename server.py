@@ -12,35 +12,58 @@ if sys.platform == "win32":
     except Exception:
         pass
 
-app = Flask(__name__, static_folder="static", template_folder="templates")
-
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+STATIC_DIR = os.path.join(BASE_DIR, "static")
+TEMPLATE_DIR = os.path.join(BASE_DIR, "templates")
 DATA_DIR = os.path.join(BASE_DIR, "data")
 CREATORS_FILE = os.path.join(DATA_DIR, "creators.json")
 BRIEFS_FILE = os.path.join(DATA_DIR, "briefs.json")
 ENGAGEMENTS_FILE = os.path.join(DATA_DIR, "engagements.json")
 
+app = Flask(
+    __name__,
+    static_folder=STATIC_DIR,
+    static_url_path="/static",
+    template_folder=TEMPLATE_DIR
+)
+
+# In-memory cache for serverless environments (e.g. Vercel) where filesystem is read-only
+_MEMORY_CACHE = {}
+
 def load_json(filepath):
+    if filepath in _MEMORY_CACHE:
+        return _MEMORY_CACHE[filepath]
     if not os.path.exists(filepath):
         return []
-    with open(filepath, "r", encoding="utf-8") as f:
-        try:
-            return json.load(f)
-        except Exception:
-            return []
+    try:
+        with open(filepath, "r", encoding="utf-8") as f:
+            data = json.load(f)
+            _MEMORY_CACHE[filepath] = data
+            return data
+    except Exception:
+        return []
 
 def save_json(filepath, data):
-    os.makedirs(os.path.dirname(filepath), exist_ok=True)
-    with open(filepath, "w", encoding="utf-8") as f:
-        json.dump(data, f, indent=2, ensure_ascii=False)
+    _MEMORY_CACHE[filepath] = data
+    try:
+        os.makedirs(os.path.dirname(filepath), exist_ok=True)
+        with open(filepath, "w", encoding="utf-8") as f:
+            json.dump(data, f, indent=2, ensure_ascii=False)
+    except (IOError, OSError):
+        # Gracefully handle read-only filesystems in serverless platforms
+        pass
 
-# Seed check
-if not os.path.exists(DATA_DIR):
-    os.makedirs(DATA_DIR, exist_ok=True)
+# Safe seed directory check
+try:
+    if not os.path.exists(DATA_DIR):
+        os.makedirs(DATA_DIR, exist_ok=True)
+except (IOError, OSError):
+    pass
 
 @app.route("/")
 def index():
     return render_template("index.html")
+
 
 # -------------------------------------------------------------
 # 1. DISCOVERY TO DELIVERY WORKFLOW ENGINE (Core Flagship Scope)
