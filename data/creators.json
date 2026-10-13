@@ -1,0 +1,412 @@
+[
+  {
+    "id": "creator-1",
+    "name": "Elena Rostova",
+    "handle": "@elena_ai_cinema",
+    "title": "Cinematic AI Filmmaker & Commercial Director",
+    "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80",
+    "cover_image": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1200&q=80",
+    "bio": "Directing commercial-grade generative cinema for Fortune 500 brands. Specialized in multi-camera consistency, cinematic motion control, and high-fidelity photorealism.",
+    "location": "Berlin / Remote",
+    "rating": 4.96,
+    "review_count": 38,
+    "completed_projects": 42,
+    "hourly_rate": 140,
+    "avg_turnaround_days": 4,
+    "verification": {
+      "verified_creator": true,
+      "verified_tool_stack": true,
+      "workflow_provenance_verified": true,
+      "commercial_license_cleared": true,
+      "kampus_vc_fellow": true,
+      "trust_score": 98
+    },
+    "skills": ["Cinematic Direction", "Camera Motion Control", "Character Consistency", "Color Grading", "Soundtrack Sync"],
+    "specialization": "Cinematic Commercials & Brand Teasers",
+    "content_types": ["Cinematic Video (16:9)", "Short-form Social (9:16)", "VFX Teasers"],
+    "tools": [
+      {"name": "Runway Gen-3 Alpha", "category": "Video Gen", "badge": "Verified Pro"},
+      {"name": "Kling 1.5 Pro", "category": "Video Gen", "badge": "Verified Pro"},
+      {"name": "Midjourney v6.1", "category": "Image Gen", "badge": "Verified Pro"},
+      {"name": "Flux.1 Dev", "category": "Image Gen", "badge": "Workflow Verified"},
+      {"name": "Topaz Video AI 5", "category": "Upscaling", "badge": "4K 60fps Pipeline"},
+      {"name": "ElevenLabs v2", "category": "Audio AI", "badge": "Voice Clone & SFX"},
+      {"name": "DaVinci Resolve Studio", "category": "Post-Production", "badge": "ACES Color Pipeline"}
+    ],
+    "hardware_specs": "Dual RTX 4090 24GB VRAM | Fast NVMe Scratch Cache | 10GbE Fiber Pipeline",
+    "commercial_terms": {
+      "license_type": "Full Buyout & Ad Rights",
+      "model_indemnity_included": true,
+      "max_revisions_included": 3,
+      "workflow_files_included": true
+    },
+    "portfolio": [
+      {
+        "id": "port-1-1",
+        "title": "Aether: Quantum Chrono Watches Commercial",
+        "content_type": "Cinematic Video (16:9)",
+        "media_url": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=1000&q=80",
+        "thumbnail": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=600&q=80",
+        "aspect_ratio": "16:9",
+        "client": "Aether Horology Switzerland",
+        "duration": "0:30",
+        "views": "240k",
+        "description": "30-second hyper-cinematic commercial showcasing high-complication watch mechanism dissolving through liquid titanium and stellar nebulae.",
+        "ai_breakdown": {
+          "primary_models": ["Runway Gen-3 Alpha", "Flux.1 Pro", "Midjourney v6.1"],
+          "prompt_used": "Macro extreme close-up of sapphire crystal timepiece ticking, liquid gold escapement wheel turning, volumetric cosmic particle rays, 35mm anamorphic lens, Arri Alexa 65 look, photorealistic metallic reflection, cinematic color grading, shutter angle 180 --ar 16:9 --style raw",
+          "negative_prompt": "cartoon, low resolution, jitter, distorted hands, noisy artifacts, oversaturated bloom",
+          "seed": 8941042781,
+          "sampler": "Euler Ancestral / DPM++ 2M Karras",
+          "cfg_scale": 6.5,
+          "steps": 45,
+          "upscale_pipeline": "Topaz Video AI 4K 60fps Iris HQ model + DaVinci Resolve ACEScc Film Emulation LUT",
+          "workflow_file": "aether_chrono_runway_gen3_v4.json"
+        }
+      },
+      {
+        "id": "port-1-2",
+        "title": "Kinetix Neon Runners - TikTok Campaign",
+        "content_type": "Short-form Social (9:16)",
+        "media_url": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=1000&q=80",
+        "thumbnail": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=600&q=80",
+        "aspect_ratio": "9:16",
+        "client": "Kinetix Footwear",
+        "duration": "0:15",
+        "views": "1.2M",
+        "description": "High-octane viral campaign for futuristic running sneakers with dynamic bioluminescent soles reacting to night city pavements.",
+        "ai_breakdown": {
+          "primary_models": ["Kling 1.5", "Flux.1 Dev LoRA", "ElevenLabs"],
+          "prompt_used": "Dynamic tracking shot of futuristic cybernetic sneakers sprinting through rain-slicked Tokyo street, neon reflections puddle splash, bioluminescent green and cyan light trails, cinematic motion blur, ultra-detailed textile weave --ar 9:16",
+          "seed": 443219082,
+          "sampler": "FlowMatch Euler",
+          "cfg_scale": 7.0,
+          "steps": 30,
+          "upscale_pipeline": "Real-ESRGAN x4 + Topaz Proteus",
+          "workflow_file": "kinetix_sneaker_kling_comfy.json"
+        }
+      }
+    ]
+  },
+  {
+    "id": "creator-2",
+    "name": "Marcus Vance",
+    "handle": "@marcus_comfy_vfx",
+    "title": "ComfyUI Node Architect & Generative VFX Lead",
+    "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80",
+    "cover_image": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=1200&q=80",
+    "bio": "Building custom deterministic ComfyUI workflows, custom LoRAs, and multi-ControlNet pipelines for AAA game studios and tech brand visual effects.",
+    "location": "San Francisco, CA / Remote",
+    "rating": 4.99,
+    "review_count": 54,
+    "completed_projects": 67,
+    "hourly_rate": 165,
+    "avg_turnaround_days": 3,
+    "verification": {
+      "verified_creator": true,
+      "verified_tool_stack": true,
+      "workflow_provenance_verified": true,
+      "commercial_license_cleared": true,
+      "kampus_vc_fellow": true,
+      "trust_score": 99
+    },
+    "skills": ["ComfyUI Custom Nodes", "LoRA Training", "ControlNet Posing", "IP-Adapter Consistency", "Blender + NeRF AI Integration"],
+    "specialization": "Custom ComfyUI Workflows & Tech Visual Effects",
+    "content_types": ["3D Render Animation (16:9)", "Product Render (1:1)", "VFX Composite"],
+    "tools": [
+      {"name": "ComfyUI Node Graph", "category": "Pipeline Engine", "badge": "Custom Node Dev"},
+      {"name": "Flux.1 Schnell & Dev", "category": "Image Gen", "badge": "LoRA Trained"},
+      {"name": "Stable Diffusion XL", "category": "Image Gen", "badge": "ControlNet Multi"},
+      {"name": "AnimateDiff Evolved", "category": "Motion Gen", "badge": "Motion LoRA Pro"},
+      {"name": "Blender 4.2", "category": "3D & Depth", "badge": "Depth Map Export"},
+      {"name": "Magnific AI", "category": "Detail Synthesis", "badge": "8K Re-texture"}
+    ],
+    "hardware_specs": "4x RTX 4090 Cluster (96GB total VRAM) | Local Model Inference Server",
+    "commercial_terms": {
+      "license_type": "Full IP Transfer & Node Graph Source Delivery",
+      "model_indemnity_included": true,
+      "max_revisions_included": 4,
+      "workflow_files_included": true
+    },
+    "portfolio": [
+      {
+        "id": "port-2-1",
+        "title": "Quantum Microchip: Silicon Heart",
+        "content_type": "3D Render Animation (16:9)",
+        "media_url": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1000&q=80",
+        "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=600&q=80",
+        "aspect_ratio": "16:9",
+        "client": "NeuroSilicon Corp",
+        "duration": "0:25",
+        "views": "180k",
+        "description": "Photorealistic microscopic zoom into quantum transistor gates featuring translucent glowing circuits and copper substrate heat dissipation.",
+        "ai_breakdown": {
+          "primary_models": ["Flux.1 Dev", "ComfyUI Custom LoRA", "AnimateDiff"],
+          "prompt_used": "Macro electron microscope visualization of nanometer silicon quantum architecture, etched photon channels glowing cyan, golden microscopic interconnects, depth of field f/1.4, cinematic industrial lighting, octane render quality",
+          "negative_prompt": "blurry, low poly, noisy pixelation, artifacts",
+          "seed": 901284562,
+          "sampler": "DPM++ 3M SDE Karras",
+          "cfg_scale": 7.5,
+          "steps": 50,
+          "upscale_pipeline": "Magnific AI Detail Injector + ComfyUI Latent Upscale 2x",
+          "workflow_file": "neuro_silicon_comfy_vfx.json"
+        }
+      }
+    ]
+  },
+  {
+    "id": "creator-3",
+    "name": "Aoi Takahashi",
+    "handle": "@aoi_generative_fashion",
+    "title": "AI Fashion Director & Virtual Model Stylist",
+    "avatar": "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=400&q=80",
+    "cover_image": "https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=1200&q=80",
+    "bio": "Pioneering generative luxury fashion campaigns, virtual runway looks, and high-fashion editorial lookbooks with zero physical fabric waste.",
+    "location": "Tokyo / Paris / Remote",
+    "rating": 4.98,
+    "review_count": 47,
+    "completed_projects": 51,
+    "hourly_rate": 150,
+    "avg_turnaround_days": 4,
+    "verification": {
+      "verified_creator": true,
+      "verified_tool_stack": true,
+      "workflow_provenance_verified": true,
+      "commercial_license_cleared": true,
+      "kampus_vc_fellow": false,
+      "trust_score": 96
+    },
+    "skills": ["Virtual Haute Couture", "Textile Simulation", "Editorial Lighting", "Virtual Model Consistency", "CLO3D to Generative Pipeline"],
+    "specialization": "Haute Couture, Virtual Fashion & E-Commerce Lookbooks",
+    "content_types": ["Editorial Still (4:5)", "Virtual Runway (9:16)", "Catalog (1:1)"],
+    "tools": [
+      {"name": "Midjourney v6.1", "category": "Image Gen", "badge": "Prompt Master"},
+      {"name": "Flux.1 Pro", "category": "Image Gen", "badge": "Photorealism Pro"},
+      {"name": "Kling 1.5", "category": "Video Gen", "badge": "Fabric Flow Verified"},
+      {"name": "CLO3D", "category": "Garment CAD", "badge": "Pattern Modeling"},
+      {"name": "Photoshop Generative Fill", "category": "Retouching", "badge": "Commercial Retouch"}
+    ],
+    "hardware_specs": "RTX 4090 24GB + Color Calibrated EIZO ColorEdge 4K Monitor",
+    "commercial_terms": {
+      "license_type": "Global Commercial & Social Media Advertising",
+      "model_indemnity_included": true,
+      "max_revisions_included": 3,
+      "workflow_files_included": true
+    },
+    "portfolio": [
+      {
+        "id": "port-3-1",
+        "title": "SOLARIS: Iridescent Silk Haute Couture 2026",
+        "content_type": "Editorial Still (4:5)",
+        "media_url": "https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=1000&q=80",
+        "thumbnail": "https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=600&q=80",
+        "aspect_ratio": "4:5",
+        "client": "Maison Aurelia Paris",
+        "duration": "Stills",
+        "views": "310k",
+        "description": "Editorial cover shoot featuring virtual fashion model wearing liquid chrome silk gown under golden desert dawn lighting.",
+        "ai_breakdown": {
+          "primary_models": ["Flux.1 Pro", "Midjourney v6.1", "Custom Silk LoRA"],
+          "prompt_used": "High fashion editorial portrait of striking East Asian fashion model, sculpted architectural silk gown with chromatic liquid reflection, desert sand dunes at golden hour, sharp editorial lighting, Hasselblad H6D-100c medium format, Vogue Paris aesthetic --ar 4:5 --raw",
+          "negative_prompt": "plastic skin, oversaturated, blurry textile, distorted fingers, flat lighting",
+          "seed": 732910481,
+          "sampler": "FlowMatch Euler",
+          "cfg_scale": 6.8,
+          "steps": 40,
+          "upscale_pipeline": "Magnific AI Fashion Skin & Textile preset + Photoshop neural retouching",
+          "workflow_file": "maison_aurelia_couture.json"
+        }
+      }
+    ]
+  },
+  {
+    "id": "creator-4",
+    "name": "Devon Carter",
+    "handle": "@devon_ai_avatar",
+    "title": "Hyper-realistic AI UGC & Virtual Human Producer",
+    "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=400&q=80",
+    "cover_image": "https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=1200&q=80",
+    "bio": "Producing native-looking UGC video ads with custom fine-tuned synthetic creators. 100% compliant with commercial advertising regulations.",
+    "location": "Austin, TX / Remote",
+    "rating": 4.93,
+    "review_count": 62,
+    "completed_projects": 89,
+    "hourly_rate": 115,
+    "avg_turnaround_days": 2,
+    "verification": {
+      "verified_creator": true,
+      "verified_tool_stack": true,
+      "workflow_provenance_verified": true,
+      "commercial_license_cleared": true,
+      "kampus_vc_fellow": false,
+      "trust_score": 95
+    },
+    "skills": ["Lip-Sync Synchronization", "Synthetic Voice Cloning", "UGC Scriptwriting", "Facial Micro-Expressions", "Direct Response Video"],
+    "specialization": "TikTok / Meta Direct Response UGC & Virtual Brand Ambassadors",
+    "content_types": ["UGC Video (9:16)", "Product Demo (9:16)", "Brand Ambassador Avatar"],
+    "tools": [
+      {"name": "Hedra Character-1", "category": "Facial AI", "badge": "Expression Pro"},
+      {"name": "LivePortrait AI", "category": "Motion Transfer", "badge": "Micro-Motion"},
+      {"name": "ElevenLabs v2", "category": "Voice AI", "badge": "Emotional Inflection"},
+      {"name": "Kling 1.5", "category": "Video Gen", "badge": "Verified Pro"},
+      {"name": "CapCut Pro Studio", "category": "Direct Response Edit", "badge": "Hook Specialist"}
+    ],
+    "hardware_specs": "RTX 4080 Super 16GB + Studio Microphones & Acoustic Vocal Booth",
+    "commercial_terms": {
+      "license_type": "Performance Ad Rights (Meta, TikTok, YouTube Shorts)",
+      "model_indemnity_included": true,
+      "max_revisions_included": 2,
+      "workflow_files_included": false
+    },
+    "portfolio": [
+      {
+        "id": "port-4-1",
+        "title": "GlowNova Collagen Serum - 9:16 TikTok Hook",
+        "content_type": "UGC Video (9:16)",
+        "media_url": "https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=1000&q=80",
+        "thumbnail": "https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=600&q=80",
+        "aspect_ratio": "9:16",
+        "client": "GlowNova Skincare",
+        "duration": "0:22",
+        "views": "890k",
+        "description": "High-converting UGC video ad featuring virtual creator unboxing skincare serum with micro-facial expressions and realistic vocal pauses.",
+        "ai_breakdown": {
+          "primary_models": ["LivePortrait", "Hedra Character-1", "ElevenLabs Voice"],
+          "prompt_used": "Selfie smartphone camera perspective of friendly young woman in brightly lit modern bathroom holding glass dropper serum, authentic conversational smile, talking directly to camera, natural skin texture with realistic pores, natural lighting --ar 9:16",
+          "seed": 51920831,
+          "sampler": "DPM++ 2M",
+          "cfg_scale": 6.0,
+          "steps": 35,
+          "upscale_pipeline": "Topaz Video AI Face Recovery v2",
+          "workflow_file": "glownova_ugc_hedra.json"
+        }
+      }
+    ]
+  },
+  {
+    "id": "creator-5",
+    "name": "Mateo Silva",
+    "handle": "@mateo_ai_arch",
+    "title": "Spatial AI Architect & Virtual Environment Designer",
+    "avatar": "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&w=400&q=80",
+    "cover_image": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80",
+    "bio": "Transforming luxury architectural developments and hospitality concepts into breathtaking photorealistic walkthroughs and immersive brand spaces.",
+    "location": "Barcelona / Remote",
+    "rating": 4.97,
+    "review_count": 31,
+    "completed_projects": 35,
+    "hourly_rate": 135,
+    "avg_turnaround_days": 5,
+    "verification": {
+      "verified_creator": true,
+      "verified_tool_stack": true,
+      "workflow_provenance_verified": true,
+      "commercial_license_cleared": true,
+      "kampus_vc_fellow": true,
+      "trust_score": 97
+    },
+    "skills": ["Architectural Visualization", "Lighting Simulation", "Spatial Composition", "CAD/BIM to AI Render", "Drone Path Simulation"],
+    "specialization": "Architectural Visualization & Luxury Real Estate Walkthroughs",
+    "content_types": ["Cinematic Video (16:9)", "Architectural Still (16:9)", "Virtual Reality 360"],
+    "tools": [
+      {"name": "Flux.1 Dev", "category": "Image Gen", "badge": "Arch LoRA Pro"},
+      {"name": "Luma Dream Machine", "category": "Video Gen", "badge": "Smooth Fly-Through"},
+      {"name": "Krea AI", "category": "Real-time AI", "badge": "Spatial Enhancer"},
+      {"name": "Rhino 3D + Grasshopper", "category": "Parametric CAD", "badge": "Geometry Base"}
+    ],
+    "hardware_specs": "RTX 4090 24GB | 64GB DDR5 RAM",
+    "commercial_terms": {
+      "license_type": "Perpetual Real Estate & Commercial Marketing License",
+      "model_indemnity_included": true,
+      "max_revisions_included": 3,
+      "workflow_files_included": true
+    },
+    "portfolio": [
+      {
+        "id": "port-5-1",
+        "title": "Villa Solstice: Mediterranean Biophilic Sanctuary",
+        "content_type": "Cinematic Video (16:9)",
+        "media_url": "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1000&q=80",
+        "thumbnail": "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=600&q=80",
+        "aspect_ratio": "16:9",
+        "client": "Balearic Luxury Estates",
+        "duration": "0:45",
+        "views": "140k",
+        "description": "Slow sweeping architectural cinematic tracking from cantilevered infinity pool through travertine glass pavilion at twilight.",
+        "ai_breakdown": {
+          "primary_models": ["Flux.1 Dev", "Luma Dream Machine", "Krea AI"],
+          "prompt_used": "Smooth cinematic drone sweep through minimalist brutalist cliffside villa in Mallorca, travertine stone walls, infinity pool reflecting dusk horizon, warm interior architectural accent lights, photorealistic foliage, Architectural Digest quality --ar 16:9",
+          "seed": 109283741,
+          "sampler": "Euler",
+          "cfg_scale": 7.0,
+          "steps": 40,
+          "upscale_pipeline": "Krea Realtime Upscaler 4K",
+          "workflow_file": "villa_solstice_luma_flux.json"
+        }
+      }
+    ]
+  },
+  {
+    "id": "creator-6",
+    "name": "Zara Chen",
+    "handle": "@zara_anime_motion",
+    "title": "Generative Anime & Stylized Motion Animator",
+    "avatar": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=400&q=80",
+    "cover_image": "https://images.unsplash.com/photo-1578632767115-351597cf2477?auto=format&fit=crop&w=1200&q=80",
+    "bio": "Crafting fluid stylized anime cinematics, character title sequences, and cyberpunk action choreography using hybrid 2D/AI diffusion pipelines.",
+    "location": "Seoul / Vancouver / Remote",
+    "rating": 4.95,
+    "review_count": 41,
+    "completed_projects": 48,
+    "hourly_rate": 125,
+    "avg_turnaround_days": 4,
+    "verification": {
+      "verified_creator": true,
+      "verified_tool_stack": true,
+      "workflow_provenance_verified": true,
+      "commercial_license_cleared": true,
+      "kampus_vc_fellow": false,
+      "trust_score": 94
+    },
+    "skills": ["Niji Stylization", "Keyframe Animation", "Action Choreography", "Stylized VFX Particles", "Character Sheet Consistency"],
+    "specialization": "Stylized Anime, Game Cinematic Trailers & Cyberpunk Motion",
+    "content_types": ["Cinematic Video (16:9)", "Short-form Social (9:16)", "Animated Loop (1:1)"],
+    "tools": [
+      {"name": "Midjourney Niji v6", "category": "Stylized Gen", "badge": "Niji Master"},
+      {"name": "Kling 1.5 Anime Mode", "category": "Video Gen", "badge": "Fluid 24fps"},
+      {"name": "ComfyUI AnimateDiff", "category": "Motion Pipeline", "badge": "Custom Workflow"},
+      {"name": "After Effects", "category": "Compositing", "badge": "Particle VFX"}
+    ],
+    "hardware_specs": "RTX 4090 24GB | Cintiq Pro 27",
+    "commercial_terms": {
+      "license_type": "Worldwide Digital & Streaming Rights",
+      "model_indemnity_included": true,
+      "max_revisions_included": 3,
+      "workflow_files_included": true
+    },
+    "portfolio": [
+      {
+        "id": "port-6-1",
+        "title": "Neon Ronin: Episode Zero Opening",
+        "content_type": "Cinematic Video (16:9)",
+        "media_url": "https://images.unsplash.com/photo-1578632767115-351597cf2477?auto=format&fit=crop&w=1000&q=80",
+        "thumbnail": "https://images.unsplash.com/photo-1578632767115-351597cf2477?auto=format&fit=crop&w=600&q=80",
+        "aspect_ratio": "16:9",
+        "client": "Kuro Games Studio",
+        "duration": "0:30",
+        "views": "520k",
+        "description": "High-octane anime opening sequence with fluid sword combat, electrical particle strikes, and dynamic sakuga frame pacing.",
+        "ai_breakdown": {
+          "primary_models": ["Niji v6", "Kling 1.5", "AnimateDiff Anime LoRA"],
+          "prompt_used": "Sakuga anime animation of futuristic cyber samurai deflecting laser barrage with plasma katana, neon cherry blossom petals flying in rain, intense camera angle, Studio Trigger aesthetic, fluid hand-drawn motion --ar 16:9 --niji 6",
+          "seed": 88301928,
+          "sampler": "Euler Ancestral",
+          "cfg_scale": 8.0,
+          "steps": 35,
+          "upscale_pipeline": "Waifu2x Anime 4K Upscaler",
+          "workflow_file": "neon_ronin_sakuga_kling.json"
+        }
+      }
+    ]
+  }
+]

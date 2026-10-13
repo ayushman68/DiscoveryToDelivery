@@ -1,0 +1,114 @@
+[
+  {
+    "id": "brief-1",
+    "title": "Apex Velocity: Hyper-Dynamic Cyberpunk Energy Drink Teaser",
+    "brand_name": "Apex Nitro Beverages",
+    "brand_logo": "https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=200&q=80",
+    "industry": "Beverages & Youth Culture",
+    "status": "Accepting Pitches",
+    "budget": 4500,
+    "deadline": "2026-11-05",
+    "content_type": "Short-form Social (9:16)",
+    "style": "Cyberpunk Neon & Hyper-kinetic Glitch",
+    "format_aspect_ratio": "9:16 Vertical (1080x1920) + 4K Master",
+    "duration_target": "15 to 20 seconds",
+    "campaign_overview": "Launching our limited edition 'Apex Velocity: Zero Chill' can design. We need an adrenaline-pumping 9:16 visual hook for TikTok and Instagram Reels. The can must crack open in zero-gravity, releasing glowing liquid lightning across a neon skyline.",
+    "deliverables": [
+      "1x 15s Hero Video (9:16 vertical 60fps)",
+      "3x High-res 4K Styleframe Render Stills for billboard cutouts",
+      "Full ComfyUI / Runway prompt seeds & parameter reproduction report"
+    ],
+    "commercial_use_requirements": {
+      "license_type": "Worldwide Digital Advertising (Perpetual)",
+      "usage_scope": "Paid Social Ads (Meta, TikTok, YouTube Shorts), Brand Website, Digital Out-of-Home",
+      "exclusivity": "Exclusive in Energy Beverage Category for 12 Months",
+      "model_indemnity_required": true,
+      "reproducible_workflow_required": true
+    },
+    "technical_constraints": {
+      "target_fps": 60,
+      "color_space": "Rec.709 / sRGB",
+      "negative_constraints": "No blurry motion, no low-res distortion on product logo, no copyrighted music"
+    },
+    "milestones": [
+      {"step": "Milestone 1", "title": "Concept Moodboard & 3x Styleframe Seeds", "payout_pct": 30},
+      {"step": "Milestone 2", "title": "Rough Cut Generation & Camera Motion Review", "payout_pct": 40},
+      {"step": "Milestone 3", "title": "Final 4K Upscale, SFX Mix & Workflow Transfer", "payout_pct": 30}
+    ],
+    "pitch_count": 6
+  },
+  {
+    "id": "brief-2",
+    "title": "Solaris EV: Nordic Minimalist Electric SUV Reveal",
+    "brand_name": "Solaris Automotive Group",
+    "brand_logo": "https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=200&q=80",
+    "industry": "Automotive & Clean Energy",
+    "status": "In Review",
+    "budget": 8500,
+    "deadline": "2026-11-18",
+    "content_type": "Cinematic Video (16:9)",
+    "style": "Photorealistic Nordic Sci-Fi & Minimalist Travertine",
+    "format_aspect_ratio": "16:9 Cinematic Widescreen (3840x2160)",
+    "duration_target": "30 to 45 seconds",
+    "campaign_overview": "Global teaser reveal for the Solaris Terra Electric SUV. Needs sweeping cinematic drone shots across Icelandic black sand beaches, volcanic steam, and geometric glass architecture. Consistent car body lines are paramount.",
+    "deliverables": [
+      "1x 30s Master Cinematic Commercial (16:9 4K)",
+      "1x 15s Cutdown for YouTube bumper ads",
+      "LoRA model weights or 3D ControlNet depth maps used for vehicle consistency"
+    ],
+    "commercial_use_requirements": {
+      "license_type": "Full Commercial Buyout & Global IP Ownership",
+      "usage_scope": "Broadcast TV, Streaming Pre-rolls, Global Digital, Auto Show Displays",
+      "exclusivity": "Perpetual Exclusive Rights across Automotive",
+      "model_indemnity_required": true,
+      "reproducible_workflow_required": true
+    },
+    "technical_constraints": {
+      "target_fps": 24,
+      "color_space": "ACES / Rec.2020",
+      "negative_constraints": "No warping on vehicle wheels, no inconsistent reflections on windshield, strict brand curvature"
+    },
+    "milestones": [
+      {"step": "Milestone 1", "title": "Vehicle Consistency LoRA / ControlNet Verification", "payout_pct": 25},
+      {"step": "Milestone 2", "title": "Animatic Storyboard & Motion Flow", "payout_pct": 35},
+      {"step": "Milestone 3", "title": "Final 4K Master Render & Color Grade Sign-off", "payout_pct": 40}
+    ],
+    "pitch_count": 4
+  },
+  {
+    "id": "brief-3",
+    "title": "Verdant Skin: Biophilic Botanical Skincare Social UGC",
+    "brand_name": "Verdant Botanicals",
+    "brand_logo": "https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=200&q=80",
+    "industry": "Clean Beauty & Wellness",
+    "status": "Accepting Pitches",
+    "budget": 2400,
+    "deadline": "2026-10-30",
+    "content_type": "UGC Video (9:16)",
+    "style": "Hyper-realistic Organic Macro & Sunlight Glow",
+    "format_aspect_ratio": "9:16 Vertical (1080x1920)",
+    "duration_target": "20 seconds",
+    "campaign_overview": "Authentic-looking virtual creator speaking directly into camera reviewing our seaweed peptide moisture barrier cream. Must feature extreme macro cuts to bubbling green botanical extracts and dewy skin hydration.",
+    "deliverables": [
+      "2x 20s UGC Variations with alternate opening hooks",
+      "Voiceover stems with natural breath pauses"
+    ],
+    "commercial_use_requirements": {
+      "license_type": "Paid Social Ad License (6 Months)",
+      "usage_scope": "Meta (Instagram/Facebook) & TikTok Ads",
+      "exclusivity": "Non-exclusive after 6 months",
+      "model_indemnity_required": true,
+      "reproducible_workflow_required": false
+    },
+    "technical_constraints": {
+      "target_fps": 30,
+      "color_space": "sRGB",
+      "negative_constraints": "No uncanny valley robotic speech, no rubbery skin smoothing"
+    },
+    "milestones": [
+      {"step": "Milestone 1", "title": "Voice Script & Synthetic Avatar Casting", "payout_pct": 40},
+      {"step": "Milestone 2", "title": "Final UGC Videos with Captions & Sound Stems", "payout_pct": 60}
+    ],
+    "pitch_count": 8
+  }
+]

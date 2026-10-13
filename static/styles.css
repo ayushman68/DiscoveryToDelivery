@@ -1,0 +1,145 @@
+/* Modern Neon Glassmorphism Design System for DiscoveryToDelivery */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+:root {
+  --bg-dark: #07090F;
+  --bg-card: rgba(14, 19, 32, 0.75);
+  --bg-card-hover: rgba(22, 30, 50, 0.85);
+  --border-subtle: rgba(36, 48, 77, 0.6);
+  --border-glow: rgba(0, 242, 254, 0.35);
+  --cyan-neon: #00F2FE;
+  --blue-neon: #4FACFE;
+  --purple-neon: #9D4EDD;
+  --pink-neon: #F72585;
+  --green-neon: #10B981;
+}
+
+body {
+  background-color: var(--bg-dark);
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  color: #F1F5F9;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, .font-heading {
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+code, pre, .font-mono {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* Glassmorphism Cards */
+.glass-panel {
+  background: var(--bg-card);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid var(--border-subtle);
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.6), 0 0 1px 1px rgba(255, 255, 255, 0.05) inset;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-panel:hover {
+  border-color: rgba(0, 242, 254, 0.3);
+  box-shadow: 0 14px 40px -10px rgba(0, 242, 254, 0.12), 0 0 1px 1px rgba(255, 255, 255, 0.1) inset;
+}
+
+.glass-card-interactive {
+  background: var(--bg-card);
+  backdrop-filter: blur(18px);
+  border: 1px solid var(--border-subtle);
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.glass-card-interactive:hover {
+  transform: translateY(-2px);
+  border-color: var(--border-glow);
+  box-shadow: 0 12px 30px -10px rgba(0, 242, 254, 0.18);
+}
+
+/* Neon Glow Accents */
+.glow-cyan {
+  box-shadow: 0 0 25px -4px rgba(0, 242, 254, 0.35);
+}
+
+.glow-purple {
+  box-shadow: 0 0 25px -4px rgba(157, 78, 221, 0.35);
+}
+
+.glow-text-cyan {
+  text-shadow: 0 0 12px rgba(0, 242, 254, 0.5);
+}
+
+/* Status Pills */
+.status-pill-completed {
+  background: rgba(16, 185, 129, 0.12);
+  color: #34D399;
+  border: 1px solid rgba(16, 185, 129, 0.35);
+}
+
+.status-pill-progress {
+  background: rgba(0, 242, 254, 0.12);
+  color: #00F2FE;
+  border: 1px solid rgba(0, 242, 254, 0.35);
+}
+
+.status-pill-review {
+  background: rgba(157, 78, 221, 0.12);
+  color: #C084FC;
+  border: 1px solid rgba(157, 78, 221, 0.35);
+}
+
+.status-pill-pending {
+  background: rgba(100, 116, 139, 0.15);
+  color: #94A3B8;
+  border: 1px solid rgba(100, 116, 139, 0.3);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: #080A12;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1E283D;
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #2E3E61;
+}
+
+/* Modal Animations */
+.animate-modal-in {
+  animation: modalIn 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes modalIn {
+  from {
+    opacity: 0;
+    transform: scale(0.96) translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* Custom Pulsing Badge */
+.pulse-glow {
+  animation: pulseGlow 2.5s infinite;
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 10px rgba(0, 242, 254, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 22px rgba(0, 242, 254, 0.8);
+  }
+}

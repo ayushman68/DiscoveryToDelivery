@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DiscoveryToDelivery | AI-Native Content Creator Marketplace</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="/static/styles.css">
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            heading: ['"Space Grotesk"', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          },
+          colors: {
+            brand: {
+              dark: '#07090F',
+              card: '#0E1320',
+              border: '#1E283D',
+              cyan: '#00F2FE',
+              blue: '#4FACFE',
+              purple: '#9D4EDD',
+              pink: '#F72585',
+              green: '#10B981'
+            }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-[#07090F] text-slate-100 min-h-screen selection:bg-cyan-500/30 selection:text-cyan-200">
+  
+  <!-- BACKGROUND GLOW EFFECTS -->
+  <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden">
+    <div class="absolute -top-32 left-1/4 w-[650px] h-[650px] bg-cyan-500/10 rounded-full blur-[150px]"></div>
+    <div class="absolute top-1/3 -right-40 w-[600px] h-[600px] bg-purple-600/10 rounded-full blur-[170px]"></div>
+    <div class="absolute bottom-10 left-10 w-[550px] h-[550px] bg-blue-600/10 rounded-full blur-[160px]"></div>
+  </div>
+
+  <div class="relative z-10 flex flex-col min-h-screen">
+    
+    <!-- TOP NAVIGATION HEADER -->
+    <header class="sticky top-0 z-40 backdrop-blur-xl bg-[#07090F]/85 border-b border-[#1A2338] px-4 lg:px-8 py-3.5 transition-all">
+      <div class="max-w-7xl mx-auto flex items-center justify-between gap-4">
+        
+        <!-- LOGO & BRAND -->
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-cyan-400 via-blue-500 to-purple-600 p-[1.5px] shadow-lg shadow-cyan-500/20">
+            <div class="w-full h-full bg-[#090C16] rounded-[10px] flex items-center justify-center">
+              <i data-lucide="layers" class="w-5 h-5 text-cyan-400"></i>
+            </div>
+          </div>
+          <div>
+            <div class="flex items-center gap-2">
+              <span class="font-heading font-bold text-xl tracking-tight bg-gradient-to-r from-white via-slate-100 to-slate-400 bg-clip-text text-transparent">DiscoveryToDelivery</span>
+              <span class="px-2 py-0.5 text-[10px] font-semibold tracking-wider uppercase rounded-full bg-cyan-500/10 text-cyan-400 border border-cyan-500/20">AI-Native</span>
+            </div>
+            <p class="text-[11px] text-slate-400 hidden sm:block">Kampus.VC Applied AI Venture Studio Solution</p>
+          </div>
+        </div>
+
+        <!-- MAIN NAVIGATION TABS -->
+        <nav class="flex items-center bg-[#0C111E] p-1 rounded-xl border border-[#1C273E] shadow-inner text-xs font-medium">
+          <button onclick="switchTab('delivery')" id="nav-delivery" class="nav-tab active flex items-center gap-2 px-3.5 py-1.5 rounded-lg transition-all text-white bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30">
+            <i data-lucide="git-merge" class="w-4 h-4 text-cyan-400"></i>
+            <span>Discovery to Delivery</span>
+            <span id="badge-active-eng" class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
+          </button>
+          <button onclick="switchTab('creators')" id="nav-creators" class="nav-tab flex items-center gap-2 px-3.5 py-1.5 rounded-lg transition-all text-slate-400 hover:text-slate-200">
+            <i data-lucide="users" class="w-4 h-4"></i>
+            <span>AI Creators</span>
+          </button>
+          <button onclick="switchTab('briefs')" id="nav-briefs" class="nav-tab flex items-center gap-2 px-3.5 py-1.5 rounded-lg transition-all text-slate-400 hover:text-slate-200">
+            <i data-lucide="file-text" class="w-4 h-4"></i>
+            <span>Brand Briefs</span>
+          </button>
+          <button onclick="switchTab('scorecard')" id="nav-scorecard" class="nav-tab flex items-center gap-2 px-3.5 py-1.5 rounded-lg transition-all text-slate-400 hover:text-slate-200">
+            <i data-lucide="award" class="w-4 h-4 text-yellow-400"></i>
+            <span>Evaluation (100 Pts)</span>
+          </button>
+        </nav>
+
+        <!-- CTA BUTTONS -->
+        <div class="flex items-center gap-2.5">
+          <button onclick="openAiBriefModal()" class="flex items-center gap-2 px-3.5 py-2 rounded-xl text-xs font-semibold bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white shadow-lg shadow-purple-600/25 transition-all hover:scale-[1.02] active:scale-[0.98]">
+            <i data-lucide="wand-2" class="w-3.5 h-3.5"></i>
+            <span>AI Brief Builder</span>
+            <span class="text-[9px] px-1.5 py-0.2 rounded bg-purple-900/60 border border-purple-400/40 text-purple-200 font-mono">+5% Bonus</span>
+          </button>
+
+          <button onclick="openNewEngagementModal()" class="flex items-center gap-2 px-3.5 py-2 rounded-xl text-xs font-semibold bg-cyan-500 hover:bg-cyan-400 text-slate-950 shadow-lg shadow-cyan-500/20 transition-all hover:scale-[1.02] active:scale-[0.98]">
+            <i data-lucide="plus-circle" class="w-3.5 h-3.5"></i>
+            <span>New Engagement</span>
+          </button>
+        </div>
+
+      </div>
+    </header>
+
+    <!-- MAIN BODY CONTENT -->
+    <main class="flex-1 max-w-7xl w-full mx-auto px-4 lg:px-8 py-8 space-y-8">
+      
+      <!-- STATS BANNER -->
+      <section class="grid grid-cols-2 md:grid-cols-5 gap-3">
+        <div class="glass-panel rounded-2xl p-4 flex items-center gap-3">
+          <div class="w-10 h-10 rounded-xl bg-cyan-500/15 border border-cyan-500/30 flex items-center justify-center text-cyan-400">
+            <i data-lucide="workflow" class="w-5 h-5"></i>
+          </div>
+          <div>
+            <span class="text-xs text-slate-400 font-mono uppercase">Engagements</span>
+            <h4 id="stat-active-eng" class="text-lg font-heading font-bold text-white">0</h4>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-2xl p-4 flex items-center gap-3">
+          <div class="w-10 h-10 rounded-xl bg-purple-500/15 border border-purple-500/30 flex items-center justify-center text-purple-400">
+            <i data-lucide="sparkles" class="w-5 h-5"></i>
+          </div>
+          <div>
+            <span class="text-xs text-slate-400 font-mono uppercase">Vetted Creators</span>
+            <h4 id="stat-creators" class="text-lg font-heading font-bold text-white">0</h4>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-2xl p-4 flex items-center gap-3">
+          <div class="w-10 h-10 rounded-xl bg-blue-500/15 border border-blue-500/30 flex items-center justify-center text-blue-400">
+            <i data-lucide="file-check-2" class="w-5 h-5"></i>
+          </div>
+          <div>
+            <span class="text-xs text-slate-400 font-mono uppercase">Active Briefs</span>
+            <h4 id="stat-briefs" class="text-lg font-heading font-bold text-white">0</h4>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-2xl p-4 flex items-center gap-3">
+          <div class="w-10 h-10 rounded-xl bg-emerald-500/15 border border-emerald-500/30 flex items-center justify-center text-emerald-400">
+            <i data-lucide="shield-check" class="w-5 h-5"></i>
+          </div>
+          <div>
+            <span class="text-xs text-slate-400 font-mono uppercase">Delivered & IP Safe</span>
+            <h4 id="stat-deliveries" class="text-lg font-heading font-bold text-white">0</h4>
+          </div>
+        </div>
+
+        <div class="glass-panel rounded-2xl p-4 flex items-center gap-3 col-span-2 md:col-span-1">
+          <div class="w-10 h-10 rounded-xl bg-amber-500/15 border border-amber-500/30 flex items-center justify-center text-amber-400">
+            <i data-lucide="check-check" class="w-5 h-5"></i>
+          </div>
+          <div>
+            <span class="text-xs text-slate-400 font-mono uppercase">Trust Score</span>
+            <h4 id="stat-trust" class="text-lg font-heading font-bold text-amber-400">98.4%</h4>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================== -->
+      <!-- TAB 1: DISCOVERY TO DELIVERY LIFECYCLE ENGINE (Flagship Scope)  -->
+      <!-- ============================================================== -->
+      <section id="tab-delivery" class="space-y-6">
+        
+        <!-- HEADER & PIPELINE VISUALIZER -->
+        <div class="glass-panel rounded-2xl p-6 relative overflow-hidden">
+          <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
+            <div class="space-y-2 max-w-2xl">
+              <div class="flex items-center gap-2">
+                <span class="px-2.5 py-0.5 rounded-full text-[10px] font-mono font-bold bg-cyan-500/20 text-cyan-300 border border-cyan-500/30 uppercase tracking-wider">
+                  Core Evaluation Scope
+                </span>
+                <span class="text-xs text-slate-400 font-mono">End-to-End Engagement Protocol</span>
+              </div>
+              <h2 class="text-2xl font-heading font-bold text-white">Discovery to Delivery Lifecycle Engine</h2>
+              <p class="text-xs text-slate-300 leading-relaxed">
+                Seamless brand-to-creator engagement protocol designed for generative AI production. Track engagements from initial toolstack discovery and pitch proposals, through milestone-based escrow locks, collaborative prompt iteration passes, deliverables verification, and cryptographic commercial rights transfer.
+              </p>
+            </div>
+
+            <!-- STAGE PIPELINE MINI-ROADMAP -->
+            <div class="grid grid-cols-5 gap-2 text-center text-[10px] font-mono bg-[#090C16] p-3 rounded-xl border border-[#1A243A]">
+              <div class="p-1.5 rounded-lg bg-cyan-950/40 border border-cyan-500/40 text-cyan-300">
+                <span class="block font-bold text-white">01</span>
+                <span>Pitch</span>
+              </div>
+              <div class="p-1.5 rounded-lg bg-blue-950/40 border border-blue-500/40 text-blue-300">
+                <span class="block font-bold text-white">02</span>
+                <span>Escrow</span>
+              </div>
+              <div class="p-1.5 rounded-lg bg-purple-950/40 border border-purple-500/40 text-purple-300">
+                <span class="block font-bold text-white">03</span>
+                <span>Generate</span>
+              </div>
+              <div class="p-1.5 rounded-lg bg-pink-950/40 border border-pink-500/40 text-pink-300">
+                <span class="block font-bold text-white">04</span>
+                <span>Deliver</span>
+              </div>
+              <div class="p-1.5 rounded-lg bg-emerald-950/40 border border-emerald-500/40 text-emerald-300">
+                <span class="block font-bold text-white">05</span>
+                <span>Certify</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- STAGE FILTER BUTTONS -->
+          <div class="mt-6 pt-4 border-t border-[#1C273E] flex flex-wrap items-center justify-between gap-3 text-xs">
+            <div class="flex items-center gap-2">
+              <span class="text-slate-400 font-mono text-[11px]">Filter by Status:</span>
+              <button onclick="filterEngagements('')" class="eng-filter-btn px-3 py-1 rounded-lg bg-cyan-500/20 text-cyan-300 border border-cyan-500/40 font-semibold" data-status="">All</button>
+              <button onclick="filterEngagements('Discovery & Pitch')" class="eng-filter-btn px-3 py-1 rounded-lg bg-[#0C1220] text-slate-400 hover:text-white border border-[#1C273E]" data-status="Discovery & Pitch">Pitching</button>
+              <button onclick="filterEngagements('In Generation & Review')" class="eng-filter-btn px-3 py-1 rounded-lg bg-[#0C1220] text-slate-400 hover:text-white border border-[#1C273E]" data-status="In Generation & Review">Active Generation</button>
+              <button onclick="filterEngagements('Deliverables Submitted')" class="eng-filter-btn px-3 py-1 rounded-lg bg-[#0C1220] text-slate-400 hover:text-white border border-[#1C273E]" data-status="Deliverables Submitted">Reviewing</button>
+              <button onclick="filterEngagements('Delivered & Verified')" class="eng-filter-btn px-3 py-1 rounded-lg bg-[#0C1220] text-slate-400 hover:text-white border border-[#1C273E]" data-status="Delivered & Verified">Delivered & IP Safe</button>
+            </div>
+
+            <button onclick="openNewEngagementModal()" class="text-xs text-cyan-400 hover:text-cyan-300 font-mono flex items-center gap-1.5">
+              <i data-lucide="plus" class="w-3.5 h-3.5"></i>
+              <span>Initiate Custom Engagement</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- ENGAGEMENTS LIST CONTAINER -->
+        <div id="engagements-container" class="space-y-6">
+          <div class="glass-panel rounded-2xl p-12 text-center text-slate-400 space-y-3">
+            <i data-lucide="loader" class="w-8 h-8 animate-spin mx-auto text-cyan-400"></i>
+            <p class="text-sm">Loading active Discovery-to-Delivery engagements...</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================== -->
+      <!-- TAB 2: DISCOVER AI CREATORS & AI PORTFOLIOS (30% + 25%)        -->
+      <!-- ============================================================== -->
+      <section id="tab-creators" class="space-y-6 hidden">
+        
+        <!-- SEARCH & MULTI-FACETED FILTER CONTROLS -->
+        <div class="glass-panel rounded-2xl p-5 space-y-4">
+          <div class="flex flex-col md:flex-row items-center gap-3">
+            <div class="relative flex-1 w-full">
+              <i data-lucide="search" class="w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400"></i>
+              <input type="text" id="filter-search" oninput="debounceFetchCreators()" placeholder="Search creators by model (Runway, Flux, ComfyUI), skills, handle, or style..." class="w-full pl-10 pr-4 py-2.5 rounded-xl bg-[#090D18] border border-[#1E283D] text-xs text-white placeholder-slate-500 focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition-all">
+            </div>
+
+            <div class="flex items-center gap-2 w-full md:w-auto">
+              <select id="filter-tool" onchange="fetchCreators()" class="px-3 py-2.5 rounded-xl bg-[#090D18] border border-[#1E283D] text-xs text-slate-300 focus:outline-none focus:border-cyan-400">
+                <option value="">All AI Models</option>
+                <option value="Runway">Runway Gen-3 Alpha</option>
+                <option value="Flux">Flux.1 Pro / Dev</option>
+                <option value="ComfyUI">ComfyUI Graph</option>
+                <option value="Kling">Kling 1.5</option>
+                <option value="ElevenLabs">ElevenLabs Voice</option>
+                <option value="Topaz">Topaz Video AI</option>
+              </select>
+
+              <select id="filter-content-type" onchange="fetchCreators()" class="px-3 py-2.5 rounded-xl bg-[#090D18] border border-[#1E283D] text-xs text-slate-300 focus:outline-none focus:border-cyan-400">
+                <option value="">All Formats</option>
+                <option value="16:9">Cinematic (16:9)</option>
+                <option value="9:16">Short-form Social (9:16)</option>
+                <option value="4:5">Editorial Still (4:5)</option>
+              </select>
+
+              <select id="filter-sort" onchange="fetchCreators()" class="px-3 py-2.5 rounded-xl bg-[#090D18] border border-[#1E283D] text-xs text-slate-300 focus:outline-none focus:border-cyan-400">
+                <option value="rating_desc">Highest Rated</option>
+                <option value="rate_asc">Rate: Low to High</option>
+                <option value="rate_desc">Rate: High to Low</option>
+                <option value="completed_desc">Most Deliveries</option>
+                <option value="turnaround_asc">Fastest Turnaround</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- VERIFICATION FILTER TOGGLE -->
+          <div class="flex items-center justify-between text-xs pt-2 border-t border-[#1C273E]">
+            <div class="flex items-center gap-3">
+              <button id="btn-toggle-verified" onclick="toggleVerifiedFilter()" class="flex items-center gap-1.5 px-3 py-1 rounded-lg border border-[#1E283D] bg-[#090D18] text-slate-400 hover:text-white transition-all">
+                <i data-lucide="badge-check" class="w-3.5 h-3.5 text-cyan-400"></i>
+                <span>Verified Toolstack Only</span>
+              </button>
+              <span id="creators-count-text" class="text-slate-400 font-mono text-[11px]">Showing creators...</span>
+            </div>
+
+            <div id="active-filter-tags" class="flex items-center gap-1.5"></div>
+          </div>
+        </div>
+
+        <!-- CREATORS GRID -->
+        <div id="creators-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+
+        <!-- EMPTY STATE -->
+        <div id="creators-empty-state" class="hidden glass-panel rounded-2xl p-12 text-center space-y-4">
+          <div class="w-12 h-12 rounded-xl bg-pink-500/10 border border-pink-500/20 text-pink-400 flex items-center justify-center mx-auto">
+            <i data-lucide="search-x" class="w-6 h-6"></i>
+          </div>
+          <div>
+            <h4 class="font-heading font-bold text-white text-base">No Creators Match Filter Criteria</h4>
+            <p class="text-xs text-slate-400 mt-1 max-w-md mx-auto">Try clearing specific tool tags or resetting the rating threshold to discover more creators.</p>
+          </div>
+          <button onclick="resetCreatorFilters()" class="px-4 py-2 rounded-xl text-xs font-semibold bg-cyan-500 hover:bg-cyan-400 text-slate-950 transition-all">
+            Reset All Filters
+          </button>
+        </div>
+
+      </section>
+
+      <!-- ============================================================== -->
+      <!-- TAB 3: BRAND BRIEFS & CREATIVE BRIEFS (20%)                     -->
+      <!-- ============================================================== -->
+      <section id="tab-briefs" class="space-y-6 hidden">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+          <div>
+            <h2 class="text-xl font-heading font-bold text-white">Active Creative Briefs</h2>
+            <p class="text-xs text-slate-400 mt-0.5">Campaigns looking for generative AI creators with verified models and commercial licensing.</p>
+          </div>
+          <div class="flex items-center gap-2">
+            <button onclick="openAiBriefModal()" class="px-3.5 py-2 rounded-xl text-xs font-semibold bg-gradient-to-r from-purple-600 to-indigo-600 text-white flex items-center gap-1.5 shadow-lg shadow-purple-600/20">
+              <i data-lucide="wand-2" class="w-3.5 h-3.5"></i>
+              <span>AI Brief Builder</span>
+            </button>
+            <button onclick="openNewBriefModal()" class="px-3.5 py-2 rounded-xl text-xs font-semibold bg-[#121A2C] hover:bg-[#1A253E] border border-[#233252] text-white flex items-center gap-1.5">
+              <i data-lucide="plus" class="w-3.5 h-3.5"></i>
+              <span>Post New Brief</span>
+            </button>
+          </div>
+        </div>
+
+        <div id="briefs-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+      </section>
+
+      <!-- ============================================================== -->
+      <!-- TAB 4: EVALUATION RUBRIC & KAMPUS.VC SCORECARD (100 Points)    -->
+      <!-- ============================================================== -->
+      <section id="tab-scorecard" class="space-y-6 hidden">
+        <div class="glass-panel rounded-2xl p-6 space-y-4">
+          <div class="flex items-center justify-between pb-3 border-b border-[#1C273E]">
+            <div>
+              <span class="text-[10px] font-mono text-cyan-400 uppercase tracking-wider block font-bold">Hackathon Rubric Mapping</span>
+              <h2 class="text-xl font-heading font-bold text-white">Official 100-Point Evaluation Matrix</h2>
+            </div>
+            <span class="px-3 py-1 rounded-xl text-xs font-bold font-mono bg-cyan-500/20 text-cyan-300 border border-cyan-500/30">
+              100 Pts + 10 Bonus
+            </span>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            
+            <div class="bg-[#090D18] p-4 rounded-xl border border-[#1A243A] space-y-2">
+              <div class="flex items-center justify-between text-xs">
+                <span class="font-bold text-white flex items-center gap-1.5">
+                  <i data-lucide="git-merge" class="w-4 h-4 text-cyan-400"></i> Discovery to Delivery Flow
+                </span>
+                <span class="text-cyan-400 font-mono font-bold">Core Scope</span>
+              </div>
+              <p class="text-xs text-slate-300">Complete end-to-end lifecycle: Discovery & Pitch -> Milestone Escrow Lock -> Active Multi-Pass Generation -> Deliverables Audit -> Sign-off & SHA-256 Commercial Certificate.</p>
+              <div class="text-[11px] font-mono text-emerald-400">Status: Fully implemented & interactive</div>
+            </div>
+
+            <div class="bg-[#090D18] p-4 rounded-xl border border-[#1A243A] space-y-2">
+              <div class="flex items-center justify-between text-xs">
+                <span class="font-bold text-white flex items-center gap-1.5">
+                  <i data-lucide="user-check" class="w-4 h-4 text-purple-400"></i> Creator Profiles & AI Portfolios
+                </span>
+                <span class="text-purple-400 font-mono font-bold">30% Weight</span>
+              </div>
+              <p class="text-xs text-slate-300">Granular AI workflow breakdown: positive/negative prompts, generation seed, sampler, CFG scale, upscale pipeline, and exportable ComfyUI node graphs.</p>
+              <div class="text-[11px] font-mono text-emerald-400">Status: Deterministic ComfyUI export live</div>
+            </div>
+
+            <div class="bg-[#090D18] p-4 rounded-xl border border-[#1A243A] space-y-2">
+              <div class="flex items-center justify-between text-xs">
+                <span class="font-bold text-white flex items-center gap-1.5">
+                  <i data-lucide="search" class="w-4 h-4 text-blue-400"></i> Discovery & Multi-Faceted Filtering
+                </span>
+                <span class="text-blue-400 font-mono font-bold">25% Weight</span>
+              </div>
+              <p class="text-xs text-slate-300">Live search by keywords, tools (Runway, Flux, Kling, ComfyUI), skills, aspect ratio, specialization, verified status, and friendly zero-result handling.</p>
+              <div class="text-[11px] font-mono text-emerald-400">Status: Real-time search & filter engine</div>
+            </div>
+
+            <div class="bg-[#090D18] p-4 rounded-xl border border-[#1A243A] space-y-2">
+              <div class="flex items-center justify-between text-xs">
+                <span class="font-bold text-white flex items-center gap-1.5">
+                  <i data-lucide="file-text" class="w-4 h-4 text-amber-400"></i> Brand Brief Definition
+                </span>
+                <span class="text-amber-400 font-mono font-bold">20% Weight</span>
+              </div>
+              <p class="text-xs text-slate-300">Detailed commercial-use fields: licensing tiers (perpetual buyout, digital ads), model indemnity, technical constraints (FPS, color space), and milestone schedules.</p>
+              <div class="text-[11px] font-mono text-emerald-400">Status: Complete commercial brief builder</div>
+            </div>
+
+            <div class="bg-[#090D18] p-4 rounded-xl border border-purple-500/30 space-y-2">
+              <div class="flex items-center justify-between text-xs">
+                <span class="font-bold text-white flex items-center gap-1.5">
+                  <i data-lucide="wand-2" class="w-4 h-4 text-purple-400"></i> Bonus: AI Brief Builder
+                </span>
+                <span class="text-purple-300 font-mono font-bold">+5% Bonus</span>
+              </div>
+              <p class="text-xs text-slate-300">Transforms a single 1-sentence prompt into a complete structured brief with suggested models, styleframe prompts, negative constraints, and milestones.</p>
+              <div class="text-[11px] font-mono text-emerald-400">Status: Live Groq API + Neural Engine</div>
+            </div>
+
+            <div class="bg-[#090D18] p-4 rounded-xl border border-cyan-500/30 space-y-2">
+              <div class="flex items-center justify-between text-xs">
+                <span class="font-bold text-white flex items-center gap-1.5">
+                  <i data-lucide="shield-check" class="w-4 h-4 text-cyan-400"></i> Bonus: Verification Signals & Certificate
+                </span>
+                <span class="text-cyan-300 font-mono font-bold">+5% Bonus</span>
+              </div>
+              <p class="text-xs text-slate-300">Audited toolstack badges, model indemnity clearance, and cryptographic SHA-256 Commercial Rights Certificates upon engagement completion.</p>
+              <div class="text-[11px] font-mono text-emerald-400">Status: SHA-256 verifiable minting engine</div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="mt-auto border-t border-[#162035] bg-[#07090F]/90 px-4 lg:px-8 py-6 text-xs text-slate-400 font-mono">
+      <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div class="flex items-center gap-2">
+          <i data-lucide="sparkles" class="w-4 h-4 text-cyan-400"></i>
+          <span class="text-slate-200 font-semibold font-sans">DiscoveryToDelivery</span>
+          <span>· Kampus.VC Applied AI Venture Studio Hackathon Prototype</span>
+        </div>
+        <div>
+          <span>Server Port: <strong class="text-cyan-400">5050</strong> · Python Flask + Glassmorphism SPA</span>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- ============================================================== -->
+  <!-- MODALS SECTION                                                 -->
+  <!-- ============================================================== -->
+
+  <!-- 1. CREATOR PROFILE & WORKFLOW INSPECTION MODAL -->
+  <div id="modal-creator-profile" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-md hidden flex items-center justify-center p-4 overflow-y-auto">
+    <div class="glass-panel rounded-2xl max-w-4xl w-full p-6 space-y-6 animate-modal-in max-h-[90vh] overflow-y-auto relative my-8">
+      <button onclick="closeModal('modal-creator-profile')" class="absolute top-5 right-5 text-slate-400 hover:text-white p-1 rounded-lg hover:bg-slate-800/50">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+      <div id="creator-modal-body" class="space-y-6"></div>
+    </div>
+  </div>
+
+  <!-- 2. AI BRIEF BUILDER MODAL (Bonus 5%) -->
+  <div id="modal-ai-brief" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-md hidden flex items-center justify-center p-4 overflow-y-auto">
+    <div class="glass-panel rounded-2xl max-w-2xl w-full p-6 space-y-5 animate-modal-in max-h-[90vh] overflow-y-auto relative my-8 border-purple-500/30">
+      <button onclick="closeModal('modal-ai-brief')" class="absolute top-5 right-5 text-slate-400 hover:text-white p-1 rounded-lg hover:bg-slate-800/50">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+
+      <div class="space-y-1">
+        <div class="flex items-center gap-2">
+          <i data-lucide="wand-2" class="w-5 h-5 text-purple-400"></i>
+          <h3 class="text-lg font-heading font-bold text-white">AI-Assisted Brief Builder</h3>
+          <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-purple-950 text-purple-300 border border-purple-500/30">+5% Bonus Credit</span>
+        </div>
+        <p class="text-xs text-slate-300">Turn a rough 1-sentence concept into a structured AI creative brief with aspect ratios, suggested models, styleframe prompts, and milestone deliverables.</p>
+      </div>
+
+      <div class="space-y-3 font-sans text-xs">
+        <div>
+          <label class="block text-slate-300 font-medium mb-1">Brand or Campaign Name</label>
+          <input type="text" id="ai-brief-brand" placeholder="e.g. Lumina Audio, Apex Mobility" value="Apex Mobility" class="w-full px-3.5 py-2 rounded-xl bg-[#090D18] border border-[#1E283D] text-white focus:outline-none focus:border-purple-400">
+        </div>
+
+        <div>
+          <label class="block text-slate-300 font-medium mb-1">Rough Campaign Idea / Creative Concept</label>
+          <textarea id="ai-brief-idea" rows="3" placeholder="e.g. Cinematic vertical teaser of a holographic hypercar drifting on wet neon streets in Tokyo at night, with volumetric cyan rain caustics." class="w-full px-3.5 py-2 rounded-xl bg-[#090D18] border border-[#1E283D] text-white focus:outline-none focus:border-purple-400">Cinematic vertical teaser of a holographic hypercar drifting on wet neon streets in Tokyo at night with volumetric cyan rain caustics.</textarea>
+        </div>
+
+        <div class="grid grid-cols-2 gap-3">
+          <div>
+            <label class="block text-slate-300 font-medium mb-1">Target Budget ($ USD)</label>
+            <input type="number" id="ai-brief-budget" value="4500" class="w-full px-3.5 py-2 rounded-xl bg-[#090D18] border border-[#1E283D] text-white focus:outline-none focus:border-purple-400">
+          </div>
+          <div>
+            <label class="block text-slate-300 font-medium mb-1">Groq API Key (Optional)</label>
+            <input type="password" id="ai-brief-groq-key" placeholder="Optional: gsk_..." class="w-full px-3.5 py-2 rounded-xl bg-[#090D18] border border-[#1E283D] text-white focus:outline-none focus:border-purple-400">
+          </div>
+        </div>
+
+        <button onclick="generateBriefWithAi()" id="btn-ai-generate" class="w-full py-2.5 rounded-xl font-heading font-semibold text-xs bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 text-white shadow-lg shadow-purple-600/30 transition-all flex items-center justify-center gap-2">
+          <i data-lucide="sparkles" class="w-4 h-4"></i>
+          <span>Synthesize Structured AI Brief</span>
+        </button>
+
+        <div id="ai-brief-result" class="hidden pt-3"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. INITIATE ENGAGEMENT MODAL -->
+  <div id="modal-new-engagement" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-md hidden flex items-center justify-center p-4 overflow-y-auto">
+    <div class="glass-panel rounded-2xl max-w-xl w-full p-6 space-y-4 animate-modal-in max-h-[90vh] overflow-y-auto relative my-8">
+      <button onclick="closeModal('modal-new-engagement')" class="absolute top-5 right-5 text-slate-400 hover:text-white p-1 rounded-lg hover:bg-slate-800/50">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+
+      <div class="space-y-1">
+        <h3 class="text-lg font-heading font-bold text-white flex items-center gap-2">
+          <i data-lucide="git-merge" class="w-5 h-5 text-cyan-400"></i> Initiate Discovery to Delivery Engagement
+        </h3>
+        <p class="text-xs text-slate-300">Start a verified commercial AI production contract with milestone-based escrow.</p>
+      </div>
+
+      <form id="form-new-engagement" onsubmit="submitNewEngagement(event)" class="space-y-3 text-xs">
+        <div>
+          <label class="block text-slate-300 font-medium mb-1">Select AI Creator</label>
+          <select id="eng-creator-select" class="w-full px-3.5 py-2 rounded-xl bg-[#090D18] border border-[#1E283D] text-white focus:outline-none focus:border-cyan-400"></select>
+        </div>
+
+        <div>
+          <label class="block text-slate-300 font-medium mb-1">Campaign or Contract Title</label>
+          <input type="text" id="eng-title" value="Aura Glow: Cinematic Macro Product Film" required class="w-full px-3.5 py-2 rounded-xl bg-[#090D18] border border-[#1E283D] text-white focus:outline-none focus:border-cyan-400">
+        </div>
+
+        <div class="grid grid-cols-2 gap-3">
+          <div>
+            <label class="block text-slate-300 font-medium mb-1">Brand Name</label>
+            <input type="text" id="eng-brand" value="Lumina Cosmetics" required class="w-full px-3.5 py-2 rounded-xl bg-[#090D18] border border-[#1E283D] text-white focus:outline-none focus:border-cyan-400">
+          </div>
+          <div>
+            <label class="block text-slate-300 font-medium mb-1">Total Budget ($ USD)</label>
+            <input type="number" id="eng-budget" value="4200" required class="w-full px-3.5 py-2 rounded-xl bg-[#090D18] border border-[#1E283D] text-white focus:outline-none focus:border-cyan-400">
+          </div>
+        </div>
+
+        <div class="grid grid-cols-2 gap-3">
+          <div>
+            <label class="block text-slate-300 font-medium mb-1">Licensing Type</label>
+            <select id="eng-license" class="w-full px-3.5 py-2 rounded-xl bg-[#090D18] border border-[#1E283D] text-white focus:outline-none focus:border-cyan-400">
+              <option value="Worldwide Digital Advertising (Perpetual)">Worldwide Digital Advertising (Perpetual)</option>
+              <option value="Full Commercial Buyout & Global IP Ownership">Full Commercial Buyout & Global IP Ownership</option>
+              <option value="Broadcast & Streaming Commercial License">Broadcast & Streaming Commercial License</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-slate-300 font-medium mb-1">Target Turnaround (Days)</label>
+            <input type="number" id="eng-turnaround" value="4" class="w-full px-3.5 py-2 rounded-xl bg-[#090D18] border border-[#1E283D] text-white focus:outline-none focus:border-cyan-400">
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-slate-300 font-medium mb-1">Pitch & Proposal Notes</label>
+          <textarea id="eng-pitch" rows="2" class="w-full px-3.5 py-2 rounded-xl bg-[#090D18] border border-[#1E283D] text-white focus:outline-none focus:border-cyan-400">Utilizing custom Flux.1 Pro + Runway Gen-3 Alpha pipeline with 100% prompt provenance, seed locking, and 4K upscaling.</textarea>
+        </div>
+
+        <button type="submit" class="w-full py-2.5 rounded-xl font-heading font-semibold text-xs bg-cyan-500 hover:bg-cyan-400 text-slate-950 shadow-lg shadow-cyan-500/20 transition-all">
+          Launch Engagement into Discovery to Delivery Pipeline
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- 4. GENERATION PASS SUBMISSION MODAL -->
+  <div id="modal-add-iteration" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-md hidden flex items-center justify-center p-4 overflow-y-auto">
+    <div class="glass-panel rounded-2xl max-w-lg w-full p-6 space-y-4 animate-modal-in max-h-[90vh] overflow-y-auto relative my-8">
+      <button onclick="closeModal('modal-add-iteration')" class="absolute top-5 right-5 text-slate-400 hover:text-white p-1 rounded-lg hover:bg-slate-800/50">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+
+      <div class="space-y-1">
+        <h3 class="text-lg font-heading font-bold text-white flex items-center gap-2">
+          <i data-lucide="repeat" class="w-5 h-5 text-purple-400"></i> Log Generation Pass & Prompt Refinement
+        </h3>
+        <p class="text-xs text-slate-300">Submit an intermediate generation pass with seed adjustments, CFG changes, and brand feedback.</p>
+      </div>
+
+      <form id="form-add-iteration" onsubmit="submitIteration(event)" class="space-y-3 text-xs">
+        <input type="hidden" id="iter-eng-id">
+        <div>
+          <label class="block text-slate-300 font-medium mb-1">Preview Media URL (Render / Video)</label>
+          <input type="text" id="iter-media" value="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80" required class="w-full px-3.5 py-2 rounded-xl bg-[#090D18] border border-[#1E283D] text-white focus:outline-none focus:border-purple-400">
+        </div>
+
+        <div>
+          <label class="block text-slate-300 font-medium mb-1">Creator Generation Notes (Model, CFG, Seed)</label>
+          <textarea id="iter-notes" rows="2" required class="w-full px-3.5 py-2 rounded-xl bg-[#090D18] border border-[#1E283D] text-white focus:outline-none focus:border-purple-400">Flux.1 Pro camera fly-through with adjusted CFG to 6.2 and locked seed 849201948.</textarea>
+        </div>
+
+        <div>
+          <label class="block text-slate-300 font-medium mb-1">Prompt Refinement / Adjustments</label>
+          <input type="text" id="iter-prompt" value="Added volumetric cyan neon bokeh and medium format lens depth of field f/2.0" class="w-full px-3.5 py-2 rounded-xl bg-[#090D18] border border-[#1E283D] text-white focus:outline-none focus:border-purple-400">
+        </div>
+
+        <div>
+          <label class="block text-slate-300 font-medium mb-1">Brand Feedback & Alignment Notes</label>
+          <input type="text" id="iter-feedback" value="Visual continuity approved! Ready to progress to full 4K render pass." class="w-full px-3.5 py-2 rounded-xl bg-[#090D18] border border-[#1E283D] text-white focus:outline-none focus:border-purple-400">
+        </div>
+
+        <button type="submit" class="w-full py-2.5 rounded-xl font-heading font-semibold text-xs bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 text-white shadow-lg shadow-purple-600/20 transition-all">
+          Record Generation Pass in Engagement
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- 5. FINAL DELIVERABLES SUBMISSION MODAL -->
+  <div id="modal-deliver" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-md hidden flex items-center justify-center p-4 overflow-y-auto">
+    <div class="glass-panel rounded-2xl max-w-lg w-full p-6 space-y-4 animate-modal-in max-h-[90vh] overflow-y-auto relative my-8 border-cyan-500/30">
+      <button onclick="closeModal('modal-deliver')" class="absolute top-5 right-5 text-slate-400 hover:text-white p-1 rounded-lg hover:bg-slate-800/50">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+
+      <div class="space-y-1">
+        <h3 class="text-lg font-heading font-bold text-white flex items-center gap-2">
+          <i data-lucide="package-check" class="w-5 h-5 text-cyan-400"></i> Submit Final Deliverables Package
+        </h3>
+        <p class="text-xs text-slate-300">Upload 4K masters, reproducible ComfyUI workflow JSON, and seed audit report for brand verification.</p>
+      </div>
+
+      <form id="form-submit-deliver" onsubmit="submitFinalDelivery(event)" class="space-y-3 text-xs">
+        <input type="hidden" id="deliver-eng-id">
+        
+        <div class="bg-[#090D18] p-3 rounded-xl border border-[#1C273E] space-y-2">
+          <span class="text-[11px] font-mono text-cyan-400 font-bold uppercase block">Included Deliverables Package:</span>
+          <div class="space-y-1 text-slate-300 font-mono text-[11px]">
+            <div class="flex items-center justify-between">
+              <span>● Final_Master_4K_ProRes.mp4</span>
+              <span class="text-slate-500">1.24 GB</span>
+            </div>
+            <div class="flex items-center justify-between">
+              <span>● production_comfyui_workflow.json</span>
+              <span class="text-slate-500">1.42 MB</span>
+            </div>
+            <div class="flex items-center justify-between">
+              <span>● generation_seeds_report.pdf</span>
+              <span class="text-slate-500">380 KB</span>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-slate-300 font-medium mb-1">Model Provenance & Commercial Clearance Statement</label>
+          <textarea id="deliver-provenance" rows="2" class="w-full px-3.5 py-2 rounded-xl bg-[#090D18] border border-[#1E283D] text-white focus:outline-none focus:border-cyan-400">Created with verified commercially-licensed diffusion weights (Flux.1 Pro, Runway Gen-3 Alpha). 100% clean IP rights cleared with model indemnity.</textarea>
+        </div>
+
+        <button type="submit" class="w-full py-2.5 rounded-xl font-heading font-semibold text-xs bg-cyan-500 hover:bg-cyan-400 text-slate-950 shadow-lg shadow-cyan-500/20 transition-all">
+          Submit Package for Final Brand Sign-off
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- 6. CRYPTOGRAPHIC COMMERCIAL RIGHTS CERTIFICATE MODAL -->
+  <div id="modal-certificate" class="fixed inset-0 z-50 bg-black/85 backdrop-blur-md hidden flex items-center justify-center p-4 overflow-y-auto">
+    <div class="glass-panel rounded-3xl max-w-2xl w-full p-8 space-y-6 animate-modal-in max-h-[90vh] overflow-y-auto relative my-8 border-cyan-500/40 glow-cyan">
+      <button onclick="closeModal('modal-certificate')" class="absolute top-5 right-5 text-slate-400 hover:text-white p-1 rounded-lg hover:bg-slate-800/50">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+
+      <div id="certificate-modal-body"></div>
+    </div>
+  </div>
+
+  <!-- 7. NEW BRIEF MODAL -->
+  <div id="modal-new-brief" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-md hidden flex items-center justify-center p-4 overflow-y-auto">
+    <div class="glass-panel rounded-2xl max-w-xl w-full p-6 space-y-4 animate-modal-in max-h-[90vh] overflow-y-auto relative my-8">
+      <button onclick="closeModal('modal-new-brief')" class="absolute top-5 right-5 text-slate-400 hover:text-white p-1 rounded-lg hover:bg-slate-800/50">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+
+      <div class="space-y-1">
+        <h3 class="text-lg font-heading font-bold text-white flex items-center gap-2">
+          <i data-lucide="file-plus" class="w-5 h-5 text-cyan-400"></i> Post Creative Campaign Brief
+        </h3>
+        <p class="text-xs text-slate-300">Publish your requirements to discover and commission vetted AI creators.</p>
+      </div>
+
+      <form id="form-create-brief" onsubmit="submitNewBrief(event)" class="space-y-3 text-xs">
+        <div>
+          <label class="block text-slate-300 font-medium mb-1">Campaign Title</label>
+          <input type="text" id="nb-title" placeholder="e.g. Neo-Tokyo Cyberpunk Energy Drink Teaser" required class="w-full px-3.5 py-2 rounded-xl bg-[#090D18] border border-[#1E283D] text-white focus:outline-none focus:border-cyan-400">
+        </div>
+
+        <div class="grid grid-cols-2 gap-3">
+          <div>
+            <label class="block text-slate-300 font-medium mb-1">Brand Name</label>
+            <input type="text" id="nb-brand" placeholder="e.g. Apex Nitro" required class="w-full px-3.5 py-2 rounded-xl bg-[#090D18] border border-[#1E283D] text-white focus:outline-none focus:border-cyan-400">
+          </div>
+          <div>
+            <label class="block text-slate-300 font-medium mb-1">Budget ($ USD)</label>
+            <input type="number" id="nb-budget" value="4500" required class="w-full px-3.5 py-2 rounded-xl bg-[#090D18] border border-[#1E283D] text-white focus:outline-none focus:border-cyan-400">
+          </div>
+        </div>
+
+        <div class="grid grid-cols-2 gap-3">
+          <div>
+            <label class="block text-slate-300 font-medium mb-1">Content Type</label>
+            <select id="nb-content-type" class="w-full px-3.5 py-2 rounded-xl bg-[#090D18] border border-[#1E283D] text-white focus:outline-none focus:border-cyan-400">
+              <option value="Short-form Social (9:16)">Short-form Social (9:16)</option>
+              <option value="Cinematic Video (16:9)">Cinematic Video (16:9)</option>
+              <option value="Editorial Still (4:5)">Editorial Still (4:5)</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-slate-300 font-medium mb-1">Aspect Ratio</label>
+            <input type="text" id="nb-aspect" value="9:16 Vertical (1080x1920)" class="w-full px-3.5 py-2 rounded-xl bg-[#090D18] border border-[#1E283D] text-white focus:outline-none focus:border-cyan-400">
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-slate-300 font-medium mb-1">Style & Visual Narrative</label>
+          <input type="text" id="nb-style" value="Cyberpunk Neon & Hyper-kinetic Glitch" class="w-full px-3.5 py-2 rounded-xl bg-[#090D18] border border-[#1E283D] text-white focus:outline-none focus:border-cyan-400">
+        </div>
+
+        <div>
+          <label class="block text-slate-300 font-medium mb-1">Campaign Overview</label>
+          <textarea id="nb-overview" rows="3" required placeholder="Describe the creative vision, target audience, and key product hooks..." class="w-full px-3.5 py-2 rounded-xl bg-[#090D18] border border-[#1E283D] text-white focus:outline-none focus:border-cyan-400"></textarea>
+        </div>
+
+        <div>
+          <label class="block text-slate-300 font-medium mb-1">Licensing Terms</label>
+          <select id="nb-license" class="w-full px-3.5 py-2 rounded-xl bg-[#090D18] border border-[#1E283D] text-white focus:outline-none focus:border-cyan-400">
+            <option value="Worldwide Digital Advertising (Perpetual)">Worldwide Digital Advertising (Perpetual)</option>
+            <option value="Full Commercial Buyout & Global IP Ownership">Full Commercial Buyout & Global IP Ownership</option>
+          </select>
+        </div>
+
+        <button type="submit" class="w-full py-2.5 rounded-xl font-heading font-semibold text-xs bg-cyan-500 hover:bg-cyan-400 text-slate-950 shadow-lg shadow-cyan-500/20 transition-all">
+          Publish Brief to Marketplace
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- TOAST NOTIFICATION CONTAINER -->
+  <div id="toast-container" class="fixed bottom-6 right-6 z-50 flex flex-col gap-2 pointer-events-none"></div>
+
+  <!-- Application Logic -->
+  <script src="/static/app.js"></script>
+</body>
+</html>
