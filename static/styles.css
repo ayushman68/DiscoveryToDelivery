@@ -1,34 +1,33 @@
 /* ==========================================================================
-   DiscoveryToDelivery — Powered by UniPost AI UI/UX Design System
-   Exact Design Tokens, Gradients, Aurora Backgrounds & Glassmorphism
-   from https://github.com/harshit961695-gif/Unipost-AI.git
+   DiscoveryToDelivery — Studio Creative Platform Design System
+   Refined, Human-Crafted, World-Class Creative Studio Aesthetic
+   Inspired by Linear, Runway, Contra, and Frame.io
    ========================================================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
 
 :root {
-  /* UniPost AI v2 Aurora Design Tokens (spec §02) */
-  --aurora-cyan: #2DE1D6;
-  --aurora-green: #7CEE7A;
-  --aurora-yellow: #FBD84A;
-  --aurora-violet: #9B6BFF;
-
   /* Surfaces */
-  --surface-base: #070B15;
-  --surface-raised: #0B1226;
-  --surface-glass: rgba(255, 255, 255, 0.05);
+  --bg-canvas: #090A0F;
+  --bg-surface: #10131C;
+  --bg-surface-raised: #151926;
+  --bg-surface-subtle: rgba(255, 255, 255, 0.035);
 
-  /* Typography Colors */
-  --ink-primary: #F1F5F9;
-  --ink-muted: #93A0B8;
+  /* Borders */
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-hover: rgba(255, 255, 255, 0.18);
+  --border-focus: #6366F1;
 
-  /* Neon Colors */
-  --neon-cyan: #00f0ff;
-  --neon-purple: #b026ff;
-  --neon-pink: #ff00ff;
-  --neon-blue: #0066ff;
-  --neon-green: #00ff88;
-  --neon-yellow: #ffd700;
+  /* Typography */
+  --text-main: #FFFFFF;
+  --text-muted: #94A3B8;
+  --text-faint: #64748B;
+
+  /* Accent Colors (Refined & Restrained) */
+  --accent-indigo: #6366F1;
+  --accent-indigo-hover: #4F46E5;
+  --accent-emerald: #10B981;
+  --accent-amber: #F59E0B;
 }
 
 *, *::before, *::after {
@@ -41,15 +40,15 @@ html {
 }
 
 body {
-  background-color: var(--surface-base);
-  color: var(--ink-primary);
+  background-color: var(--bg-canvas);
+  color: var(--text-main);
   font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-h1, h2, h3, h4, .font-heading, .font-display {
+h1, h2, h3, h4, .font-heading {
   font-family: 'Space Grotesk', -apple-system, sans-serif;
   letter-spacing: -0.02em;
 }
@@ -60,76 +59,149 @@ code, pre, .font-mono {
 }
 
 /* ==========================================================================
-   UniPost AI Signature Animations (spec §05)
+   Refined Studio Cards & Surfaces
    ========================================================================== */
 
-@keyframes aurora-drift {
-  0%, 100% {
-    transform: translate3d(0, 0, 0) scale(1);
-  }
-  33% {
-    transform: translate3d(4%, -3%, 0) scale(1.1);
-  }
-  66% {
-    transform: translate3d(-3%, 4%, 0) scale(0.95);
-  }
+.glass-card, .studio-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: 18px;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.animate-aurora-drift {
-  animation: aurora-drift 18s ease-in-out infinite;
+.glass-card:hover, .studio-card:hover {
+  border-color: var(--border-hover);
+  transform: translateY(-1px);
 }
 
-@keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
-}
-
-.animate-float {
-  animation: float 6s ease-in-out infinite;
-}
-
-@keyframes breathe {
-  0%, 100% { opacity: 0.55; transform: scale(1); }
-  50% { opacity: 0.9; transform: scale(1.04); }
-}
-
-.animate-breathe {
-  animation: breathe 5s ease-in-out infinite;
+.glass-strong, .studio-card-elevated {
+  background: var(--bg-surface-raised);
+  border: 1px solid var(--border-subtle);
+  border-radius: 14px;
 }
 
 /* ==========================================================================
-   UniPost AI Glassmorphism & Card System
+   Buttons & Pills (High-End Tactile UI)
    ========================================================================== */
 
-/* v2 signature card (spec §03) — glassmorphism panel */
-.glass-card {
-  background: rgba(255, 255, 255, 0.04);
+/* Primary CTA — Crisp solid high-contrast button */
+.btn-aurora-primary, .btn-primary {
+  background: #FFFFFF;
+  color: #090A0F;
+  font-weight: 600;
+  border-radius: 9999px;
+  padding: 0.55rem 1.25rem;
+  font-size: 13px;
+  transition: all 0.15s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+.btn-aurora-primary:hover, .btn-primary:hover {
+  background: #E2E8F0;
+  color: #04060A;
+  transform: translateY(-0.5px);
+}
+
+.btn-aurora-primary:active, .btn-primary:active {
+  transform: scale(0.98);
+}
+
+/* Secondary Button — Subtle frosted dark */
+.btn-secondary {
+  background: rgba(255, 255, 255, 0.05);
+  color: #F1F5F9;
+  font-weight: 500;
+  border-radius: 9999px;
+  padding: 0.5rem 1.1rem;
+  font-size: 13px;
+  border: 1px solid var(--border-subtle);
+  transition: all 0.15s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.09);
+  color: #FFFFFF;
+  border-color: var(--border-hover);
+}
+
+/* Accent Button */
+.btn-accent {
+  background: var(--accent-indigo);
+  color: #FFFFFF;
+  font-weight: 600;
+  border-radius: 9999px;
+  padding: 0.5rem 1.15rem;
+  font-size: 13px;
+  transition: all 0.15s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-accent:hover {
+  background: var(--accent-indigo-hover);
+}
+
+/* Clean Eyebrow Pill */
+.eyebrow-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  border-radius: 9999px;
   border: 1px solid rgba(255, 255, 255, 0.10);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border-radius: 20px;
-  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  background-color: rgba(255, 255, 255, 0.04);
+  padding: 0.3rem 0.75rem;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: #CBD5E1;
 }
 
-.glass-card:hover {
-  border-color: rgba(45, 225, 214, 0.35);
-  box-shadow: 0 12px 35px -8px rgba(45, 225, 214, 0.18);
-  transform: translateY(-2px);
+.eyebrow-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 9999px;
+  background-color: #6366F1;
 }
 
-.glass-strong {
-  background: rgba(255, 255, 255, 0.06);
-  backdrop-filter: blur(24px);
-  -webkit-backdrop-filter: blur(24px);
-  border: 1px solid rgba(255, 255, 255, 0.14);
+/* Status Badges */
+.badge-stage {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.25rem 0.65rem;
+  border-radius: 9999px;
+  font-size: 11px;
+  font-weight: 600;
+  font-family: 'JetBrains Mono', monospace;
+  background: rgba(99, 102, 241, 0.08);
+  border: 1px solid rgba(99, 102, 241, 0.25);
+  color: #A5B4FC;
 }
 
-/* ==========================================================================
-   UniPost AI Gradient Text & Borders
-   ========================================================================== */
+.badge-verified {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.25rem 0.65rem;
+  border-radius: 9999px;
+  font-size: 11px;
+  font-weight: 600;
+  background: rgba(16, 185, 129, 0.08);
+  border: 1px solid rgba(16, 185, 129, 0.25);
+  color: #34D399;
+}
 
+/* Monochromatic / Silver gradient text */
 .text-aurora {
-  background: linear-gradient(135deg, #2DE1D6 0%, #7CEE7A 50%, #FBD84A 100%);
+  background: linear-gradient(180deg, #FFFFFF 0%, #CBD5E1 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -137,131 +209,46 @@ code, pre, .font-mono {
 }
 
 .text-aurora-cv {
-  background: linear-gradient(135deg, #2DE1D6 0%, #9B6BFF 100%);
+  background: linear-gradient(135deg, #FFFFFF 0%, #A5B4FC 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
   color: transparent;
 }
 
-.border-aurora {
-  border: 1px solid transparent;
-  background:
-    linear-gradient(#0B1226, #0B1226) padding-box,
-    linear-gradient(135deg, #2DE1D6, #7CEE7A, #FBD84A) border-box;
-}
-
-.bg-aurora-gradient {
-  background: linear-gradient(135deg, #2DE1D6 0%, #7CEE7A 50%, #FBD84A 100%);
-}
-
-.bg-aurora-cv-gradient {
-  background: linear-gradient(135deg, #2DE1D6 0%, #9B6BFF 100%);
-}
-
-/* ==========================================================================
-   UniPost AI Glows & Shadows
-   ========================================================================== */
-
-.shadow-glow-cyan {
-  box-shadow: 0 0 40px rgba(45, 225, 214, 0.35);
-}
-
-.shadow-glow-aurora {
-  box-shadow: 0 0 60px rgba(124, 238, 122, 0.30);
-}
-
-.shadow-glow-violet {
-  box-shadow: 0 0 40px rgba(155, 107, 255, 0.35);
-}
-
-.neon-cyan-text {
-  text-shadow: 0 0 10px #00f0ff, 0 0 20px #00f0ff;
-}
-
-/* ==========================================================================
-   UniPost AI UI Kit Buttons & Pills
-   ========================================================================== */
-
-/* Primary CTA — gradient + glow (spec §03) */
-.btn-aurora-primary {
-  background: linear-gradient(to right, #2DE1D6, #7CEE7A, #FBD84A);
-  color: #070B15;
-  font-weight: 700;
-  border-radius: 9999px;
-  box-shadow: 0 8px 30px -6px rgba(45, 225, 214, 0.6);
-  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.btn-aurora-primary:hover {
-  box-shadow: 0 12px 40px -4px rgba(124, 238, 122, 0.8);
-  transform: translateY(-1px);
-}
-
-.btn-aurora-primary:active {
-  transform: scale(0.98);
-}
-
-/* Eyebrow Pill — spec §04 section anatomy */
-.eyebrow-pill {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  border-radius: 9999px;
-  border: 1px solid rgba(45, 225, 214, 0.3);
-  background-color: rgba(45, 225, 214, 0.06);
-  padding: 0.35rem 0.85rem;
-  font-size: 11px;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.2em;
-  color: #2DE1D6;
-}
-
-.eyebrow-dot {
-  width: 6px;
-  height: 6px;
-  border-radius: 9999px;
-  background-color: #2DE1D6;
-  box-shadow: 0 0 8px #2DE1D6;
-}
-
-/* Thin Aurora Scrollbar */
+/* Minimalist Scrollbar */
 ::-webkit-scrollbar {
   width: 6px;
   height: 6px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #070B15;
+  background: #090A0F;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #1B253D;
+  background: #1F2537;
   border-radius: 9999px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #2DE1D6;
+  background: #333D58;
 }
 
 ::selection {
-  background: rgba(45, 225, 214, 0.28);
-  color: #ffffff;
+  background: rgba(99, 102, 241, 0.35);
+  color: #FFFFFF;
 }
 
-/* Modal Entrance Animation */
+/* Modal Entrance */
 .animate-modal-luxury {
-  animation: modalLuxuryIn 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation: modalEnter 0.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
-@keyframes modalLuxuryIn {
+@keyframes modalEnter {
   from {
     opacity: 0;
-    transform: scale(0.96) translateY(8px);
+    transform: scale(0.97) translateY(6px);
   }
   to {
     opacity: 1;
