@@ -58,7 +58,7 @@ function showToast(title, message, type = "success") {
 // NAVIGATION TAB SWITCHING
 // -------------------------------------------------------------
 function switchTab(tabId) {
-  const tabs = ["delivery", "creators", "briefs", "scorecard"];
+  const tabs = ["delivery", "creators", "briefs"];
   tabs.forEach(t => {
     const tabEl = document.getElementById(`tab-${t}`);
     const navEl = document.getElementById(`nav-${t}`);

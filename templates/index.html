@@ -103,11 +103,6 @@
             <i data-lucide="file-text" class="w-4 h-4"></i>
             <span class="font-heading font-medium">Brand Briefs</span>
           </button>
-          
-          <button onclick="switchTab('scorecard')" id="nav-scorecard" class="nav-tab flex items-center gap-2 px-4 py-2 rounded-xl transition-all text-slate-400 hover:text-white hover:bg-white/[0.04]">
-            <i data-lucide="award" class="w-4 h-4 text-amber-400"></i>
-            <span class="font-heading font-medium">Rubric (100 Pts)</span>
-          </button>
         </nav>
 
         <!-- LUXURY CTA ACTIONS -->
@@ -383,105 +378,6 @@
         </div>
 
         <div id="briefs-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
-      </section>
-
-      <!-- ============================================================== -->
-      <!-- TAB 4: EVALUATION RUBRIC & KAMPUS.VC SCORECARD (100 Points)    -->
-      <!-- ============================================================== -->
-      <section id="tab-scorecard" class="space-y-6 hidden">
-        <div class="glass-surface rounded-3xl p-6 lg:p-8 space-y-6 border-white/[0.08]">
-          <div class="flex items-center justify-between pb-4 border-b border-white/[0.08]">
-            <div>
-              <span class="text-[10px] font-mono text-cyan-400 uppercase tracking-widest block font-bold">Kampus.VC Applied AI Venture Studio</span>
-              <h2 class="text-2xl font-heading font-bold text-white mt-1">Official 100-Point Evaluation Matrix</h2>
-            </div>
-            <span class="px-3.5 py-1.5 rounded-full text-xs font-mono font-bold badge-metallic-cyan">
-              100 Points + 10 Bonus Credit
-            </span>
-          </div>
-
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-            
-            <div class="bg-[#070A14] p-5 rounded-2xl border border-cyan-500/30 space-y-2.5">
-              <div class="flex items-center justify-between text-xs">
-                <span class="font-heading font-bold text-white flex items-center gap-2">
-                  <i data-lucide="git-merge" class="w-4 h-4 text-cyan-400"></i> Discovery to Delivery Flow
-                </span>
-                <span class="badge-metallic-cyan px-2 py-0.5 rounded text-[10px] font-mono font-bold">CORE SCOPE</span>
-              </div>
-              <p class="text-xs text-slate-300 leading-relaxed">Complete end-to-end lifecycle: Discovery & Pitch -> Milestone Escrow Lock -> Active Multi-Pass Generation -> Deliverables Audit -> Sign-off & SHA-256 Commercial Certificate.</p>
-              <div class="text-[11px] font-mono text-emerald-400 font-bold flex items-center gap-1.5">
-                <i data-lucide="check-circle-2" class="w-3.5 h-3.5"></i> 100% Implemented & Interactive
-              </div>
-            </div>
-
-            <div class="bg-[#070A14] p-5 rounded-2xl border border-purple-500/30 space-y-2.5">
-              <div class="flex items-center justify-between text-xs">
-                <span class="font-heading font-bold text-white flex items-center gap-2">
-                  <i data-lucide="users" class="w-4 h-4 text-purple-400"></i> Creator Profiles & AI Portfolios
-                </span>
-                <span class="badge-metallic-purple px-2 py-0.5 rounded text-[10px] font-mono font-bold">30% WEIGHT</span>
-              </div>
-              <p class="text-xs text-slate-300 leading-relaxed">Granular AI workflow breakdown: positive/negative prompts, generation seed, sampler, CFG scale, upscale pipeline, and exportable ComfyUI node graphs.</p>
-              <div class="text-[11px] font-mono text-emerald-400 font-bold flex items-center gap-1.5">
-                <i data-lucide="check-circle-2" class="w-3.5 h-3.5"></i> Deterministic ComfyUI Export Live
-              </div>
-            </div>
-
-            <div class="bg-[#070A14] p-5 rounded-2xl border border-blue-500/30 space-y-2.5">
-              <div class="flex items-center justify-between text-xs">
-                <span class="font-heading font-bold text-white flex items-center gap-2">
-                  <i data-lucide="search" class="w-4 h-4 text-blue-400"></i> Discovery & Multi-Faceted Filtering
-                </span>
-                <span class="badge-metallic-cyan px-2 py-0.5 rounded text-[10px] font-mono font-bold">25% WEIGHT</span>
-              </div>
-              <p class="text-xs text-slate-300 leading-relaxed">Live search by keywords, tools (Runway, Flux, Kling, ComfyUI), skills, aspect ratio, specialization, verified status, and friendly zero-result handling.</p>
-              <div class="text-[11px] font-mono text-emerald-400 font-bold flex items-center gap-1.5">
-                <i data-lucide="check-circle-2" class="w-3.5 h-3.5"></i> Real-time Filter & Search Engine
-              </div>
-            </div>
-
-            <div class="bg-[#070A14] p-5 rounded-2xl border border-amber-500/30 space-y-2.5">
-              <div class="flex items-center justify-between text-xs">
-                <span class="font-heading font-bold text-white flex items-center gap-2">
-                  <i data-lucide="file-text" class="w-4 h-4 text-amber-400"></i> Brand Brief Definition
-                </span>
-                <span class="badge-metallic-gold px-2 py-0.5 rounded text-[10px] font-mono font-bold">20% WEIGHT</span>
-              </div>
-              <p class="text-xs text-slate-300 leading-relaxed">Detailed commercial-use fields: licensing tiers (perpetual buyout, digital ads), model indemnity, technical constraints (FPS, color space), and milestone schedules.</p>
-              <div class="text-[11px] font-mono text-emerald-400 font-bold flex items-center gap-1.5">
-                <i data-lucide="check-circle-2" class="w-3.5 h-3.5"></i> Complete Commercial Brief Builder
-              </div>
-            </div>
-
-            <div class="bg-[#070A14] p-5 rounded-2xl border border-purple-500/40 space-y-2.5">
-              <div class="flex items-center justify-between text-xs">
-                <span class="font-heading font-bold text-white flex items-center gap-2">
-                  <i data-lucide="wand-2" class="w-4 h-4 text-purple-400"></i> Bonus: AI Brief Builder
-                </span>
-                <span class="badge-metallic-purple px-2 py-0.5 rounded text-[10px] font-mono font-bold">+5% BONUS</span>
-              </div>
-              <p class="text-xs text-slate-300 leading-relaxed">Transforms a single 1-sentence prompt into a complete structured brief with suggested models, styleframe prompts, negative constraints, and milestones.</p>
-              <div class="text-[11px] font-mono text-emerald-400 font-bold flex items-center gap-1.5">
-                <i data-lucide="check-circle-2" class="w-3.5 h-3.5"></i> Live Groq API + Local Neural Engine
-              </div>
-            </div>
-
-            <div class="bg-[#070A14] p-5 rounded-2xl border border-cyan-500/40 space-y-2.5">
-              <div class="flex items-center justify-between text-xs">
-                <span class="font-heading font-bold text-white flex items-center gap-2">
-                  <i data-lucide="shield-check" class="w-4 h-4 text-cyan-400"></i> Bonus: Verification Signals & Certificate
-                </span>
-                <span class="badge-metallic-cyan px-2 py-0.5 rounded text-[10px] font-mono font-bold">+5% BONUS</span>
-              </div>
-              <p class="text-xs text-slate-300 leading-relaxed">Audited toolstack badges, model indemnity clearance, and cryptographic SHA-256 Commercial Rights Certificates upon engagement completion.</p>
-              <div class="text-[11px] font-mono text-emerald-400 font-bold flex items-center gap-1.5">
-                <i data-lucide="check-circle-2" class="w-3.5 h-3.5"></i> SHA-256 Verifiable Minting Engine
-              </div>
-            </div>
-
-          </div>
-        </div>
       </section>
 
     </main>
