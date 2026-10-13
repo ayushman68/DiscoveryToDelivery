@@ -5,33 +5,61 @@
     "handle": "@elena_ai_cinema",
     "title": "Cinematic AI Filmmaker & Commercial Director",
     "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80",
-    "cover_image": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1200&q=80",
-    "bio": "Directing commercial-grade generative cinema for Fortune 500 brands. Specialized in multi-camera consistency, cinematic motion control, and high-fidelity photorealism.",
+    "cover_image": "https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1000&q=80",
+    "bio": "Specializing in cinematic commercials & brand teasers. Delivering verified prompt reproducibility, model indemnity clearance, and commercial-grade generative assets for global brands.",
     "location": "Berlin / Remote",
-    "rating": 4.96,
-    "review_count": 38,
-    "completed_projects": 42,
+    "rating": 4.98,
+    "review_count": 48,
+    "completed_projects": 52,
     "hourly_rate": 140,
-    "avg_turnaround_days": 4,
+    "avg_turnaround_days": 3,
     "verification": {
       "verified_creator": true,
       "verified_tool_stack": true,
       "workflow_provenance_verified": true,
       "commercial_license_cleared": true,
       "kampus_vc_fellow": true,
-      "trust_score": 98
+      "trust_score": 96
     },
-    "skills": ["Cinematic Direction", "Camera Motion Control", "Character Consistency", "Color Grading", "Soundtrack Sync"],
+    "skills": [
+      "Cinematic",
+      "Prompt Engineering",
+      "ComfyUI Custom Nodes",
+      "Character Consistency",
+      "Color Grading"
+    ],
     "specialization": "Cinematic Commercials & Brand Teasers",
-    "content_types": ["Cinematic Video (16:9)", "Short-form Social (9:16)", "VFX Teasers"],
+    "content_types": [
+      "Cinematic Video (16:9)",
+      "Short-form Social (9:16)",
+      "Editorial Still (4:5)"
+    ],
     "tools": [
-      {"name": "Runway Gen-3 Alpha", "category": "Video Gen", "badge": "Verified Pro"},
-      {"name": "Kling 1.5 Pro", "category": "Video Gen", "badge": "Verified Pro"},
-      {"name": "Midjourney v6.1", "category": "Image Gen", "badge": "Verified Pro"},
-      {"name": "Flux.1 Dev", "category": "Image Gen", "badge": "Workflow Verified"},
-      {"name": "Topaz Video AI 5", "category": "Upscaling", "badge": "4K 60fps Pipeline"},
-      {"name": "ElevenLabs v2", "category": "Audio AI", "badge": "Voice Clone & SFX"},
-      {"name": "DaVinci Resolve Studio", "category": "Post-Production", "badge": "ACES Color Pipeline"}
+      {
+        "name": "ElevenLabs v2",
+        "category": "Audio AI",
+        "badge": "Voice & SFX"
+      },
+      {
+        "name": "Midjourney v6.1",
+        "category": "Image Gen",
+        "badge": "Verified Pro"
+      },
+      {
+        "name": "ComfyUI Custom Nodes",
+        "category": "Workflow Engine",
+        "badge": "Workflow Verified"
+      },
+      {
+        "name": "ControlNet Multi-Depth",
+        "category": "3D Guidance",
+        "badge": "Spatial Geometry"
+      },
+      {
+        "name": "Topaz Video AI 5",
+        "category": "Upscaling",
+        "badge": "4K 60fps Pipeline"
+      }
     ],
     "hardware_specs": "Dual RTX 4090 24GB VRAM | Fast NVMe Scratch Cache | 10GbE Fiber Pipeline",
     "commercial_terms": {
@@ -43,47 +71,29 @@
     "portfolio": [
       {
         "id": "port-1-1",
-        "title": "Aether: Quantum Chrono Watches Commercial",
+        "title": "Elena Showcase: Commercial Master Render",
         "content_type": "Cinematic Video (16:9)",
         "media_url": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=1000&q=80",
-        "thumbnail": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=600&q=80",
+        "thumbnail": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=1000&q=80",
         "aspect_ratio": "16:9",
-        "client": "Aether Horology Switzerland",
+        "client": "Enterprise Client #101",
         "duration": "0:30",
-        "views": "240k",
-        "description": "30-second hyper-cinematic commercial showcasing high-complication watch mechanism dissolving through liquid titanium and stellar nebulae.",
+        "views": "173k",
+        "description": "High-impact generative visual campaign produced with ElevenLabs v2 and Midjourney v6.1. Features frame-accurate consistency and 4K upscaling.",
         "ai_breakdown": {
-          "primary_models": ["Runway Gen-3 Alpha", "Flux.1 Pro", "Midjourney v6.1"],
-          "prompt_used": "Macro extreme close-up of sapphire crystal timepiece ticking, liquid gold escapement wheel turning, volumetric cosmic particle rays, 35mm anamorphic lens, Arri Alexa 65 look, photorealistic metallic reflection, cinematic color grading, shutter angle 180 --ar 16:9 --style raw",
-          "negative_prompt": "cartoon, low resolution, jitter, distorted hands, noisy artifacts, oversaturated bloom",
-          "seed": 8941042781,
+          "primary_models": [
+            "ElevenLabs v2",
+            "Midjourney v6.1",
+            "DaVinci Resolve ACES"
+          ],
+          "prompt_used": "Hero commercial master shot of futuristic luxury concept, volumetric cinematic lighting, photorealistic textures, 8k resolution, shot on Arri Alexa 65 anamorphic lenses, natural reflections --ar 16:9 --style raw",
+          "negative_prompt": "cartoon, low quality, artifacts, blur, oversaturated bloom, deformed geometry",
+          "seed": 1307471384,
           "sampler": "Euler Ancestral / DPM++ 2M Karras",
-          "cfg_scale": 6.5,
-          "steps": 45,
-          "upscale_pipeline": "Topaz Video AI 4K 60fps Iris HQ model + DaVinci Resolve ACEScc Film Emulation LUT",
-          "workflow_file": "aether_chrono_runway_gen3_v4.json"
-        }
-      },
-      {
-        "id": "port-1-2",
-        "title": "Kinetix Neon Runners - TikTok Campaign",
-        "content_type": "Short-form Social (9:16)",
-        "media_url": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=1000&q=80",
-        "thumbnail": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=600&q=80",
-        "aspect_ratio": "9:16",
-        "client": "Kinetix Footwear",
-        "duration": "0:15",
-        "views": "1.2M",
-        "description": "High-octane viral campaign for futuristic running sneakers with dynamic bioluminescent soles reacting to night city pavements.",
-        "ai_breakdown": {
-          "primary_models": ["Kling 1.5", "Flux.1 Dev LoRA", "ElevenLabs"],
-          "prompt_used": "Dynamic tracking shot of futuristic cybernetic sneakers sprinting through rain-slicked Tokyo street, neon reflections puddle splash, bioluminescent green and cyan light trails, cinematic motion blur, ultra-detailed textile weave --ar 9:16",
-          "seed": 443219082,
-          "sampler": "FlowMatch Euler",
           "cfg_scale": 7.0,
-          "steps": 30,
-          "upscale_pipeline": "Real-ESRGAN x4 + Topaz Proteus",
-          "workflow_file": "kinetix_sneaker_kling_comfy.json"
+          "steps": 45,
+          "upscale_pipeline": "Topaz Video AI 5 Iris-HQ 4K 60fps",
+          "workflow_file": "workflow_node_graph_creator_1.json"
         }
       }
     ]
@@ -92,15 +102,2589 @@
     "id": "creator-2",
     "name": "Marcus Vance",
     "handle": "@marcus_comfy_vfx",
-    "title": "ComfyUI Node Architect & Generative VFX Lead",
+    "title": "ComfyUI VFX Architect & Node Pipeline Engineer",
     "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80",
-    "cover_image": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=1200&q=80",
-    "bio": "Building custom deterministic ComfyUI workflows, custom LoRAs, and multi-ControlNet pipelines for AAA game studios and tech brand visual effects.",
-    "location": "San Francisco, CA / Remote",
-    "rating": 4.99,
+    "cover_image": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1000&q=80",
+    "bio": "Specializing in short-form viral video & tiktok 9:16. Delivering verified prompt reproducibility, model indemnity clearance, and commercial-grade generative assets for global brands.",
+    "location": "London / Remote",
+    "rating": 4.95,
+    "review_count": 36,
+    "completed_projects": 44,
+    "hourly_rate": 150,
+    "avg_turnaround_days": 4,
+    "verification": {
+      "verified_creator": true,
+      "verified_tool_stack": true,
+      "workflow_provenance_verified": true,
+      "commercial_license_cleared": true,
+      "kampus_vc_fellow": false,
+      "trust_score": 99
+    },
+    "skills": [
+      "Short-form",
+      "Prompt Engineering",
+      "ComfyUI Custom Nodes",
+      "Character Consistency",
+      "Color Grading"
+    ],
+    "specialization": "Short-form Viral Video & TikTok 9:16",
+    "content_types": [
+      "Cinematic Video (16:9)",
+      "Short-form Social (9:16)",
+      "Editorial Still (4:5)"
+    ],
+    "tools": [
+      {
+        "name": "DaVinci Resolve Studio",
+        "category": "Post-Production",
+        "badge": "ACES Color Pipeline"
+      },
+      {
+        "name": "Topaz Video AI 5",
+        "category": "Upscaling",
+        "badge": "4K 60fps Pipeline"
+      },
+      {
+        "name": "ComfyUI Custom Nodes",
+        "category": "Workflow Engine",
+        "badge": "Workflow Verified"
+      },
+      {
+        "name": "Midjourney v6.1",
+        "category": "Image Gen",
+        "badge": "Verified Pro"
+      },
+      {
+        "name": "AnimateDiff v3",
+        "category": "Motion Synthesis",
+        "badge": "Latent Motion"
+      }
+    ],
+    "hardware_specs": "Dual NVIDIA RTX 6000 Ada 48GB VRAM | Threadripper PRO 64-Core",
+    "commercial_terms": {
+      "license_type": "Full Buyout & Ad Rights",
+      "model_indemnity_included": true,
+      "max_revisions_included": 3,
+      "workflow_files_included": true
+    },
+    "portfolio": [
+      {
+        "id": "port-2-1",
+        "title": "Marcus Showcase: Commercial Master Render",
+        "content_type": "Short-form Social (9:16)",
+        "media_url": "https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1000&q=80",
+        "thumbnail": "https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1000&q=80",
+        "aspect_ratio": "9:16",
+        "client": "Enterprise Client #102",
+        "duration": "0:30",
+        "views": "337k",
+        "description": "High-impact generative visual campaign produced with DaVinci Resolve Studio and Topaz Video AI 5. Features frame-accurate consistency and 4K upscaling.",
+        "ai_breakdown": {
+          "primary_models": [
+            "DaVinci Resolve Studio",
+            "Topaz Video AI 5",
+            "DaVinci Resolve ACES"
+          ],
+          "prompt_used": "Hero commercial master shot of futuristic luxury concept, volumetric cinematic lighting, photorealistic textures, 8k resolution, shot on Arri Alexa 65 anamorphic lenses, natural reflections --ar 9:16 --style raw",
+          "negative_prompt": "cartoon, low quality, artifacts, blur, oversaturated bloom, deformed geometry",
+          "seed": 3890811956,
+          "sampler": "Euler Ancestral / DPM++ 2M Karras",
+          "cfg_scale": 6.1,
+          "steps": 35,
+          "upscale_pipeline": "Topaz Video AI 5 Iris-HQ 4K 60fps",
+          "workflow_file": "workflow_node_graph_creator_2.json"
+        }
+      }
+    ]
+  },
+  {
+    "id": "creator-3",
+    "name": "Sofia Chen",
+    "handle": "@sofia_generative",
+    "title": "Virtual 3D & Architectural Diffusion Artist",
+    "avatar": "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=400&q=80",
+    "cover_image": "https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=1000&q=80",
+    "bio": "Specializing in 3d hard surface & automotive vfx. Delivering verified prompt reproducibility, model indemnity clearance, and commercial-grade generative assets for global brands.",
+    "location": "Tokyo / Remote",
+    "rating": 4.97,
+    "review_count": 42,
+    "completed_projects": 49,
+    "hourly_rate": 135,
+    "avg_turnaround_days": 3,
+    "verification": {
+      "verified_creator": true,
+      "verified_tool_stack": true,
+      "workflow_provenance_verified": true,
+      "commercial_license_cleared": true,
+      "kampus_vc_fellow": false,
+      "trust_score": 97
+    },
+    "skills": [
+      "3D",
+      "Prompt Engineering",
+      "ComfyUI Custom Nodes",
+      "Character Consistency",
+      "Color Grading"
+    ],
+    "specialization": "3D Hard Surface & Automotive VFX",
+    "content_types": [
+      "Cinematic Video (16:9)",
+      "Short-form Social (9:16)",
+      "Editorial Still (4:5)"
+    ],
+    "tools": [
+      {
+        "name": "DaVinci Resolve Studio",
+        "category": "Post-Production",
+        "badge": "ACES Color Pipeline"
+      },
+      {
+        "name": "Topaz Video AI 5",
+        "category": "Upscaling",
+        "badge": "4K 60fps Pipeline"
+      },
+      {
+        "name": "Runway Gen-3 Alpha",
+        "category": "Video Gen",
+        "badge": "Verified Pro"
+      },
+      {
+        "name": "ComfyUI Custom Nodes",
+        "category": "Workflow Engine",
+        "badge": "Workflow Verified"
+      },
+      {
+        "name": "AnimateDiff v3",
+        "category": "Motion Synthesis",
+        "badge": "Latent Motion"
+      }
+    ],
+    "hardware_specs": "RTX 4090 24GB | 64GB DDR5 | ColorEdge CG319X calibrated monitor",
+    "commercial_terms": {
+      "license_type": "Full Buyout & Ad Rights",
+      "model_indemnity_included": true,
+      "max_revisions_included": 3,
+      "workflow_files_included": true
+    },
+    "portfolio": [
+      {
+        "id": "port-3-1",
+        "title": "Sofia Showcase: Commercial Master Render",
+        "content_type": "Cinematic Video (16:9)",
+        "media_url": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1000&q=80",
+        "thumbnail": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1000&q=80",
+        "aspect_ratio": "16:9",
+        "client": "Enterprise Client #103",
+        "duration": "0:30",
+        "views": "178k",
+        "description": "High-impact generative visual campaign produced with DaVinci Resolve Studio and Topaz Video AI 5. Features frame-accurate consistency and 4K upscaling.",
+        "ai_breakdown": {
+          "primary_models": [
+            "DaVinci Resolve Studio",
+            "Topaz Video AI 5",
+            "DaVinci Resolve ACES"
+          ],
+          "prompt_used": "Hero commercial master shot of futuristic luxury concept, volumetric cinematic lighting, photorealistic textures, 8k resolution, shot on Arri Alexa 65 anamorphic lenses, natural reflections --ar 16:9 --style raw",
+          "negative_prompt": "cartoon, low quality, artifacts, blur, oversaturated bloom, deformed geometry",
+          "seed": 9008523166,
+          "sampler": "Euler Ancestral / DPM++ 2M Karras",
+          "cfg_scale": 5.6,
+          "steps": 45,
+          "upscale_pipeline": "Topaz Video AI 5 Iris-HQ 4K 60fps",
+          "workflow_file": "workflow_node_graph_creator_3.json"
+        }
+      }
+    ]
+  },
+  {
+    "id": "creator-4",
+    "name": "Kai Sterling",
+    "handle": "@kai_motion_ai",
+    "title": "Short-Form Viral AI Animator & Kinetic Specialist",
+    "avatar": "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&w=400&q=80",
+    "cover_image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=1000&q=80",
+    "bio": "Specializing in virtual fashion & virtual garment cad. Delivering verified prompt reproducibility, model indemnity clearance, and commercial-grade generative assets for global brands.",
+    "location": "Los Angeles / Remote",
+    "rating": 4.92,
     "review_count": 54,
-    "completed_projects": 67,
+    "completed_projects": 68,
+    "hourly_rate": 125,
+    "avg_turnaround_days": 2,
+    "verification": {
+      "verified_creator": true,
+      "verified_tool_stack": true,
+      "workflow_provenance_verified": true,
+      "commercial_license_cleared": true,
+      "kampus_vc_fellow": true,
+      "trust_score": 99
+    },
+    "skills": [
+      "Virtual",
+      "Prompt Engineering",
+      "ComfyUI Custom Nodes",
+      "Character Consistency",
+      "Color Grading"
+    ],
+    "specialization": "Virtual Fashion & Virtual Garment CAD",
+    "content_types": [
+      "Cinematic Video (16:9)",
+      "Short-form Social (9:16)",
+      "Editorial Still (4:5)"
+    ],
+    "tools": [
+      {
+        "name": "AnimateDiff v3",
+        "category": "Motion Synthesis",
+        "badge": "Latent Motion"
+      },
+      {
+        "name": "ComfyUI Custom Nodes",
+        "category": "Workflow Engine",
+        "badge": "Workflow Verified"
+      },
+      {
+        "name": "DaVinci Resolve Studio",
+        "category": "Post-Production",
+        "badge": "ACES Color Pipeline"
+      },
+      {
+        "name": "Runway Gen-3 Alpha",
+        "category": "Video Gen",
+        "badge": "Verified Pro"
+      },
+      {
+        "name": "ElevenLabs v2",
+        "category": "Audio AI",
+        "badge": "Voice & SFX"
+      }
+    ],
+    "hardware_specs": "RTX 4090 Mobile Workstation + Cloud Tensor Cluster A100",
+    "commercial_terms": {
+      "license_type": "Full Buyout & Ad Rights",
+      "model_indemnity_included": true,
+      "max_revisions_included": 3,
+      "workflow_files_included": true
+    },
+    "portfolio": [
+      {
+        "id": "port-4-1",
+        "title": "Kai Showcase: Commercial Master Render",
+        "content_type": "Short-form Social (9:16)",
+        "media_url": "https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=1000&q=80",
+        "thumbnail": "https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=1000&q=80",
+        "aspect_ratio": "9:16",
+        "client": "Enterprise Client #104",
+        "duration": "0:30",
+        "views": "381k",
+        "description": "High-impact generative visual campaign produced with AnimateDiff v3 and ComfyUI Custom Nodes. Features frame-accurate consistency and 4K upscaling.",
+        "ai_breakdown": {
+          "primary_models": [
+            "AnimateDiff v3",
+            "ComfyUI Custom Nodes",
+            "DaVinci Resolve ACES"
+          ],
+          "prompt_used": "Hero commercial master shot of futuristic luxury concept, volumetric cinematic lighting, photorealistic textures, 8k resolution, shot on Arri Alexa 65 anamorphic lenses, natural reflections --ar 9:16 --style raw",
+          "negative_prompt": "cartoon, low quality, artifacts, blur, oversaturated bloom, deformed geometry",
+          "seed": 6333203101,
+          "sampler": "Euler Ancestral / DPM++ 2M Karras",
+          "cfg_scale": 6.6,
+          "steps": 45,
+          "upscale_pipeline": "Topaz Video AI 5 Iris-HQ 4K 60fps",
+          "workflow_file": "workflow_node_graph_creator_4.json"
+        }
+      }
+    ]
+  },
+  {
+    "id": "creator-5",
+    "name": "Aisha Patel",
+    "handle": "@aisha_virtual_couture",
+    "title": "AI Fashion Couturier & CLO3D Virtual Stylist",
+    "avatar": "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=400&q=80",
+    "cover_image": "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=1000&q=80",
+    "bio": "Specializing in cosmetics & macro diffusion glow. Delivering verified prompt reproducibility, model indemnity clearance, and commercial-grade generative assets for global brands.",
+    "location": "Paris / Remote",
+    "rating": 4.99,
+    "review_count": 31,
+    "completed_projects": 38,
+    "hourly_rate": 160,
+    "avg_turnaround_days": 4,
+    "verification": {
+      "verified_creator": true,
+      "verified_tool_stack": true,
+      "workflow_provenance_verified": true,
+      "commercial_license_cleared": true,
+      "kampus_vc_fellow": false,
+      "trust_score": 98
+    },
+    "skills": [
+      "Cosmetics",
+      "Prompt Engineering",
+      "ComfyUI Custom Nodes",
+      "Character Consistency",
+      "Color Grading"
+    ],
+    "specialization": "Cosmetics & Macro Diffusion Glow",
+    "content_types": [
+      "Cinematic Video (16:9)",
+      "Short-form Social (9:16)",
+      "Editorial Still (4:5)"
+    ],
+    "tools": [
+      {
+        "name": "ComfyUI Custom Nodes",
+        "category": "Workflow Engine",
+        "badge": "Workflow Verified"
+      },
+      {
+        "name": "Midjourney v6.1",
+        "category": "Image Gen",
+        "badge": "Verified Pro"
+      },
+      {
+        "name": "Flux.1 Pro",
+        "category": "Image Gen",
+        "badge": "Verified Pro"
+      },
+      {
+        "name": "Runway Gen-3 Alpha",
+        "category": "Video Gen",
+        "badge": "Verified Pro"
+      },
+      {
+        "name": "DaVinci Resolve Studio",
+        "category": "Post-Production",
+        "badge": "ACES Color Pipeline"
+      }
+    ],
+    "hardware_specs": "Dual RTX 4090 24GB VRAM | CLO3D Enterprise | OptiTrack Studio",
+    "commercial_terms": {
+      "license_type": "Full Buyout & Ad Rights",
+      "model_indemnity_included": true,
+      "max_revisions_included": 3,
+      "workflow_files_included": true
+    },
+    "portfolio": [
+      {
+        "id": "port-5-1",
+        "title": "Aisha Showcase: Commercial Master Render",
+        "content_type": "Cinematic Video (16:9)",
+        "media_url": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=1000&q=80",
+        "thumbnail": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=1000&q=80",
+        "aspect_ratio": "16:9",
+        "client": "Enterprise Client #105",
+        "duration": "0:30",
+        "views": "230k",
+        "description": "High-impact generative visual campaign produced with ComfyUI Custom Nodes and Midjourney v6.1. Features frame-accurate consistency and 4K upscaling.",
+        "ai_breakdown": {
+          "primary_models": [
+            "ComfyUI Custom Nodes",
+            "Midjourney v6.1",
+            "DaVinci Resolve ACES"
+          ],
+          "prompt_used": "Hero commercial master shot of futuristic luxury concept, volumetric cinematic lighting, photorealistic textures, 8k resolution, shot on Arri Alexa 65 anamorphic lenses, natural reflections --ar 16:9 --style raw",
+          "negative_prompt": "cartoon, low quality, artifacts, blur, oversaturated bloom, deformed geometry",
+          "seed": 4057985968,
+          "sampler": "Euler Ancestral / DPM++ 2M Karras",
+          "cfg_scale": 5.7,
+          "steps": 50,
+          "upscale_pipeline": "Topaz Video AI 5 Iris-HQ 4K 60fps",
+          "workflow_file": "workflow_node_graph_creator_5.json"
+        }
+      }
+    ]
+  },
+  {
+    "id": "creator-6",
+    "name": "Liam O Connor",
+    "handle": "@liam_sound_latent",
+    "title": "Audiovisual Sync & Generative Sound Architect",
+    "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=400&q=80",
+    "cover_image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1000&q=80",
+    "bio": "Specializing in sci-fi & cyberpunk worldbuilding. Delivering verified prompt reproducibility, model indemnity clearance, and commercial-grade generative assets for global brands.",
+    "location": "Dublin / Remote",
+    "rating": 4.94,
+    "review_count": 28,
+    "completed_projects": 35,
+    "hourly_rate": 130,
+    "avg_turnaround_days": 3,
+    "verification": {
+      "verified_creator": true,
+      "verified_tool_stack": true,
+      "workflow_provenance_verified": true,
+      "commercial_license_cleared": true,
+      "kampus_vc_fellow": false,
+      "trust_score": 96
+    },
+    "skills": [
+      "Sci-Fi",
+      "Prompt Engineering",
+      "ComfyUI Custom Nodes",
+      "Character Consistency",
+      "Color Grading"
+    ],
+    "specialization": "Sci-Fi & Cyberpunk Worldbuilding",
+    "content_types": [
+      "Cinematic Video (16:9)",
+      "Short-form Social (9:16)",
+      "Editorial Still (4:5)"
+    ],
+    "tools": [
+      {
+        "name": "Topaz Video AI 5",
+        "category": "Upscaling",
+        "badge": "4K 60fps Pipeline"
+      },
+      {
+        "name": "Midjourney v6.1",
+        "category": "Image Gen",
+        "badge": "Verified Pro"
+      },
+      {
+        "name": "ComfyUI Custom Nodes",
+        "category": "Workflow Engine",
+        "badge": "Workflow Verified"
+      },
+      {
+        "name": "Kling 1.5 Pro",
+        "category": "Video Gen",
+        "badge": "Verified Pro"
+      },
+      {
+        "name": "ControlNet Multi-Depth",
+        "category": "3D Guidance",
+        "badge": "Spatial Geometry"
+      }
+    ],
+    "hardware_specs": "Universal Audio Apollo x8 | Genelec 8351B Studio Monitors | RTX 4090",
+    "commercial_terms": {
+      "license_type": "Full Buyout & Ad Rights",
+      "model_indemnity_included": true,
+      "max_revisions_included": 3,
+      "workflow_files_included": true
+    },
+    "portfolio": [
+      {
+        "id": "port-6-1",
+        "title": "Liam Showcase: Commercial Master Render",
+        "content_type": "Short-form Social (9:16)",
+        "media_url": "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=1000&q=80",
+        "thumbnail": "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=1000&q=80",
+        "aspect_ratio": "9:16",
+        "client": "Enterprise Client #106",
+        "duration": "0:30",
+        "views": "341k",
+        "description": "High-impact generative visual campaign produced with Topaz Video AI 5 and Midjourney v6.1. Features frame-accurate consistency and 4K upscaling.",
+        "ai_breakdown": {
+          "primary_models": [
+            "Topaz Video AI 5",
+            "Midjourney v6.1",
+            "DaVinci Resolve ACES"
+          ],
+          "prompt_used": "Hero commercial master shot of futuristic luxury concept, volumetric cinematic lighting, photorealistic textures, 8k resolution, shot on Arri Alexa 65 anamorphic lenses, natural reflections --ar 9:16 --style raw",
+          "negative_prompt": "cartoon, low quality, artifacts, blur, oversaturated bloom, deformed geometry",
+          "seed": 1014582623,
+          "sampler": "Euler Ancestral / DPM++ 2M Karras",
+          "cfg_scale": 7.0,
+          "steps": 35,
+          "upscale_pipeline": "Topaz Video AI 5 Iris-HQ 4K 60fps",
+          "workflow_file": "workflow_node_graph_creator_6.json"
+        }
+      }
+    ]
+  },
+  {
+    "id": "creator-7",
+    "name": "Zara Thorne",
+    "handle": "@zara_cyberpunk",
+    "title": "Cyberpunk & Sci-Fi Worldbuilding Concept Lead",
+    "avatar": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=400&q=80",
+    "cover_image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=1000&q=80",
+    "bio": "Specializing in anime & stylized motion animation. Delivering verified prompt reproducibility, model indemnity clearance, and commercial-grade generative assets for global brands.",
+    "location": "Singapore / Remote",
+    "rating": 4.96,
+    "review_count": 39,
+    "completed_projects": 46,
+    "hourly_rate": 145,
+    "avg_turnaround_days": 4,
+    "verification": {
+      "verified_creator": true,
+      "verified_tool_stack": true,
+      "workflow_provenance_verified": true,
+      "commercial_license_cleared": true,
+      "kampus_vc_fellow": true,
+      "trust_score": 96
+    },
+    "skills": [
+      "Anime",
+      "Prompt Engineering",
+      "ComfyUI Custom Nodes",
+      "Character Consistency",
+      "Color Grading"
+    ],
+    "specialization": "Anime & Stylized Motion Animation",
+    "content_types": [
+      "Cinematic Video (16:9)",
+      "Short-form Social (9:16)",
+      "Editorial Still (4:5)"
+    ],
+    "tools": [
+      {
+        "name": "ComfyUI Custom Nodes",
+        "category": "Workflow Engine",
+        "badge": "Workflow Verified"
+      },
+      {
+        "name": "AnimateDiff v3",
+        "category": "Motion Synthesis",
+        "badge": "Latent Motion"
+      },
+      {
+        "name": "ControlNet Multi-Depth",
+        "category": "3D Guidance",
+        "badge": "Spatial Geometry"
+      },
+      {
+        "name": "Topaz Video AI 5",
+        "category": "Upscaling",
+        "badge": "4K 60fps Pipeline"
+      },
+      {
+        "name": "Midjourney v6.1",
+        "category": "Image Gen",
+        "badge": "Verified Pro"
+      }
+    ],
+    "hardware_specs": "RTX 4090 24GB | Wacom Cintiq Pro 27 | 128GB RAM",
+    "commercial_terms": {
+      "license_type": "Full Buyout & Ad Rights",
+      "model_indemnity_included": true,
+      "max_revisions_included": 3,
+      "workflow_files_included": true
+    },
+    "portfolio": [
+      {
+        "id": "port-7-1",
+        "title": "Zara Showcase: Commercial Master Render",
+        "content_type": "Cinematic Video (16:9)",
+        "media_url": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1000&q=80",
+        "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1000&q=80",
+        "aspect_ratio": "16:9",
+        "client": "Enterprise Client #107",
+        "duration": "0:30",
+        "views": "305k",
+        "description": "High-impact generative visual campaign produced with ComfyUI Custom Nodes and AnimateDiff v3. Features frame-accurate consistency and 4K upscaling.",
+        "ai_breakdown": {
+          "primary_models": [
+            "ComfyUI Custom Nodes",
+            "AnimateDiff v3",
+            "DaVinci Resolve ACES"
+          ],
+          "prompt_used": "Hero commercial master shot of futuristic luxury concept, volumetric cinematic lighting, photorealistic textures, 8k resolution, shot on Arri Alexa 65 anamorphic lenses, natural reflections --ar 16:9 --style raw",
+          "negative_prompt": "cartoon, low quality, artifacts, blur, oversaturated bloom, deformed geometry",
+          "seed": 1394687809,
+          "sampler": "Euler Ancestral / DPM++ 2M Karras",
+          "cfg_scale": 7.4,
+          "steps": 45,
+          "upscale_pipeline": "Topaz Video AI 5 Iris-HQ 4K 60fps",
+          "workflow_file": "workflow_node_graph_creator_7.json"
+        }
+      }
+    ]
+  },
+  {
+    "id": "creator-8",
+    "name": "Mateo Rossi",
+    "handle": "@mateo_auto_vfx",
+    "title": "Automotive AI Commercials & Hard Surface Director",
+    "avatar": "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?auto=format&fit=crop&w=400&q=80",
+    "cover_image": "https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1000&q=80",
+    "bio": "Specializing in food & beverage hyper-kinetic teasers. Delivering verified prompt reproducibility, model indemnity clearance, and commercial-grade generative assets for global brands.",
+    "location": "Milan / Remote",
+    "rating": 4.97,
+    "review_count": 44,
+    "completed_projects": 51,
+    "hourly_rate": 155,
+    "avg_turnaround_days": 4,
+    "verification": {
+      "verified_creator": true,
+      "verified_tool_stack": true,
+      "workflow_provenance_verified": true,
+      "commercial_license_cleared": true,
+      "kampus_vc_fellow": false,
+      "trust_score": 100
+    },
+    "skills": [
+      "Food",
+      "Prompt Engineering",
+      "ComfyUI Custom Nodes",
+      "Character Consistency",
+      "Color Grading"
+    ],
+    "specialization": "Food & Beverage Hyper-Kinetic Teasers",
+    "content_types": [
+      "Cinematic Video (16:9)",
+      "Short-form Social (9:16)",
+      "Editorial Still (4:5)"
+    ],
+    "tools": [
+      {
+        "name": "ControlNet Multi-Depth",
+        "category": "3D Guidance",
+        "badge": "Spatial Geometry"
+      },
+      {
+        "name": "DaVinci Resolve Studio",
+        "category": "Post-Production",
+        "badge": "ACES Color Pipeline"
+      },
+      {
+        "name": "Kling 1.5 Pro",
+        "category": "Video Gen",
+        "badge": "Verified Pro"
+      },
+      {
+        "name": "AnimateDiff v3",
+        "category": "Motion Synthesis",
+        "badge": "Latent Motion"
+      },
+      {
+        "name": "Runway Gen-3 Alpha",
+        "category": "Video Gen",
+        "badge": "Verified Pro"
+      }
+    ],
+    "hardware_specs": "Dual RTX 4090 48GB VRAM | Unreal Engine 5.4 ControlNet rig",
+    "commercial_terms": {
+      "license_type": "Full Buyout & Ad Rights",
+      "model_indemnity_included": true,
+      "max_revisions_included": 3,
+      "workflow_files_included": true
+    },
+    "portfolio": [
+      {
+        "id": "port-8-1",
+        "title": "Mateo Showcase: Commercial Master Render",
+        "content_type": "Short-form Social (9:16)",
+        "media_url": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=1000&q=80",
+        "thumbnail": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=1000&q=80",
+        "aspect_ratio": "9:16",
+        "client": "Enterprise Client #108",
+        "duration": "0:30",
+        "views": "174k",
+        "description": "High-impact generative visual campaign produced with ControlNet Multi-Depth and DaVinci Resolve Studio. Features frame-accurate consistency and 4K upscaling.",
+        "ai_breakdown": {
+          "primary_models": [
+            "ControlNet Multi-Depth",
+            "DaVinci Resolve Studio",
+            "DaVinci Resolve ACES"
+          ],
+          "prompt_used": "Hero commercial master shot of futuristic luxury concept, volumetric cinematic lighting, photorealistic textures, 8k resolution, shot on Arri Alexa 65 anamorphic lenses, natural reflections --ar 9:16 --style raw",
+          "negative_prompt": "cartoon, low quality, artifacts, blur, oversaturated bloom, deformed geometry",
+          "seed": 8234478575,
+          "sampler": "Euler Ancestral / DPM++ 2M Karras",
+          "cfg_scale": 7.4,
+          "steps": 45,
+          "upscale_pipeline": "Topaz Video AI 5 Iris-HQ 4K 60fps",
+          "workflow_file": "workflow_node_graph_creator_8.json"
+        }
+      }
+    ]
+  },
+  {
+    "id": "creator-9",
+    "name": "Chloe Dubois",
+    "handle": "@chloe_macro_glow",
+    "title": "Luxury Cosmetics & Macro Diffusion Stylist",
+    "avatar": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&q=80",
+    "cover_image": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1000&q=80",
+    "bio": "Specializing in architectural visualization & biophilic spaces. Delivering verified prompt reproducibility, model indemnity clearance, and commercial-grade generative assets for global brands.",
+    "location": "Zurich / Remote",
+    "rating": 4.98,
+    "review_count": 35,
+    "completed_projects": 40,
+    "hourly_rate": 140,
+    "avg_turnaround_days": 3,
+    "verification": {
+      "verified_creator": true,
+      "verified_tool_stack": true,
+      "workflow_provenance_verified": true,
+      "commercial_license_cleared": true,
+      "kampus_vc_fellow": false,
+      "trust_score": 97
+    },
+    "skills": [
+      "Architectural",
+      "Prompt Engineering",
+      "ComfyUI Custom Nodes",
+      "Character Consistency",
+      "Color Grading"
+    ],
+    "specialization": "Architectural Visualization & Biophilic Spaces",
+    "content_types": [
+      "Cinematic Video (16:9)",
+      "Short-form Social (9:16)",
+      "Editorial Still (4:5)"
+    ],
+    "tools": [
+      {
+        "name": "Topaz Video AI 5",
+        "category": "Upscaling",
+        "badge": "4K 60fps Pipeline"
+      },
+      {
+        "name": "Kling 1.5 Pro",
+        "category": "Video Gen",
+        "badge": "Verified Pro"
+      },
+      {
+        "name": "Flux.1 Pro",
+        "category": "Image Gen",
+        "badge": "Verified Pro"
+      },
+      {
+        "name": "DaVinci Resolve Studio",
+        "category": "Post-Production",
+        "badge": "ACES Color Pipeline"
+      },
+      {
+        "name": "Runway Gen-3 Alpha",
+        "category": "Video Gen",
+        "badge": "Verified Pro"
+      }
+    ],
+    "hardware_specs": "Dual RTX 4090 | Phase One XF IQ4 calibrated workflow",
+    "commercial_terms": {
+      "license_type": "Full Buyout & Ad Rights",
+      "model_indemnity_included": true,
+      "max_revisions_included": 3,
+      "workflow_files_included": true
+    },
+    "portfolio": [
+      {
+        "id": "port-9-1",
+        "title": "Chloe Showcase: Commercial Master Render",
+        "content_type": "Cinematic Video (16:9)",
+        "media_url": "https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1000&q=80",
+        "thumbnail": "https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1000&q=80",
+        "aspect_ratio": "16:9",
+        "client": "Enterprise Client #109",
+        "duration": "0:30",
+        "views": "476k",
+        "description": "High-impact generative visual campaign produced with Topaz Video AI 5 and Kling 1.5 Pro. Features frame-accurate consistency and 4K upscaling.",
+        "ai_breakdown": {
+          "primary_models": [
+            "Topaz Video AI 5",
+            "Kling 1.5 Pro",
+            "DaVinci Resolve ACES"
+          ],
+          "prompt_used": "Hero commercial master shot of futuristic luxury concept, volumetric cinematic lighting, photorealistic textures, 8k resolution, shot on Arri Alexa 65 anamorphic lenses, natural reflections --ar 16:9 --style raw",
+          "negative_prompt": "cartoon, low quality, artifacts, blur, oversaturated bloom, deformed geometry",
+          "seed": 3685489078,
+          "sampler": "Euler Ancestral / DPM++ 2M Karras",
+          "cfg_scale": 7.5,
+          "steps": 35,
+          "upscale_pipeline": "Topaz Video AI 5 Iris-HQ 4K 60fps",
+          "workflow_file": "workflow_node_graph_creator_9.json"
+        }
+      }
+    ]
+  },
+  {
+    "id": "creator-10",
+    "name": "Kenji Takahashi",
+    "handle": "@kenji_anime_latent",
+    "title": "Anime & Stylized Generative Animator",
+    "avatar": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=400&q=80",
+    "cover_image": "https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=1000&q=80",
+    "bio": "Specializing in audiovisual music video & latent sync. Delivering verified prompt reproducibility, model indemnity clearance, and commercial-grade generative assets for global brands.",
+    "location": "Kyoto / Remote",
+    "rating": 4.93,
+    "review_count": 62,
+    "completed_projects": 74,
+    "hourly_rate": 120,
+    "avg_turnaround_days": 2,
+    "verification": {
+      "verified_creator": true,
+      "verified_tool_stack": true,
+      "workflow_provenance_verified": true,
+      "commercial_license_cleared": true,
+      "kampus_vc_fellow": true,
+      "trust_score": 100
+    },
+    "skills": [
+      "Audiovisual",
+      "Prompt Engineering",
+      "ComfyUI Custom Nodes",
+      "Character Consistency",
+      "Color Grading"
+    ],
+    "specialization": "Audiovisual Music Video & Latent Sync",
+    "content_types": [
+      "Cinematic Video (16:9)",
+      "Short-form Social (9:16)",
+      "Editorial Still (4:5)"
+    ],
+    "tools": [
+      {
+        "name": "Runway Gen-3 Alpha",
+        "category": "Video Gen",
+        "badge": "Verified Pro"
+      },
+      {
+        "name": "ComfyUI Custom Nodes",
+        "category": "Workflow Engine",
+        "badge": "Workflow Verified"
+      },
+      {
+        "name": "ElevenLabs v2",
+        "category": "Audio AI",
+        "badge": "Voice & SFX"
+      },
+      {
+        "name": "DaVinci Resolve Studio",
+        "category": "Post-Production",
+        "badge": "ACES Color Pipeline"
+      },
+      {
+        "name": "Kling 1.5 Pro",
+        "category": "Video Gen",
+        "badge": "Verified Pro"
+      }
+    ],
+    "hardware_specs": "RTX 4090 24GB | AnimateDiff custom LoRA cluster",
+    "commercial_terms": {
+      "license_type": "Full Buyout & Ad Rights",
+      "model_indemnity_included": true,
+      "max_revisions_included": 3,
+      "workflow_files_included": true
+    },
+    "portfolio": [
+      {
+        "id": "port-10-1",
+        "title": "Kenji Showcase: Commercial Master Render",
+        "content_type": "Short-form Social (9:16)",
+        "media_url": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1000&q=80",
+        "thumbnail": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1000&q=80",
+        "aspect_ratio": "9:16",
+        "client": "Enterprise Client #110",
+        "duration": "0:30",
+        "views": "302k",
+        "description": "High-impact generative visual campaign produced with Runway Gen-3 Alpha and ComfyUI Custom Nodes. Features frame-accurate consistency and 4K upscaling.",
+        "ai_breakdown": {
+          "primary_models": [
+            "Runway Gen-3 Alpha",
+            "ComfyUI Custom Nodes",
+            "DaVinci Resolve ACES"
+          ],
+          "prompt_used": "Hero commercial master shot of futuristic luxury concept, volumetric cinematic lighting, photorealistic textures, 8k resolution, shot on Arri Alexa 65 anamorphic lenses, natural reflections --ar 9:16 --style raw",
+          "negative_prompt": "cartoon, low quality, artifacts, blur, oversaturated bloom, deformed geometry",
+          "seed": 6368303677,
+          "sampler": "Euler Ancestral / DPM++ 2M Karras",
+          "cfg_scale": 6.4,
+          "steps": 50,
+          "upscale_pipeline": "Topaz Video AI 5 Iris-HQ 4K 60fps",
+          "workflow_file": "workflow_node_graph_creator_10.json"
+        }
+      }
+    ]
+  },
+  {
+    "id": "creator-11",
+    "name": "Sarah Jenkins",
+    "handle": "@sarah_food_ai",
+    "title": "Food & Beverage Kinetic Pour AI Specialist",
+    "avatar": "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=400&q=80",
+    "cover_image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=1000&q=80",
+    "bio": "Specializing in cinematic commercials & brand teasers. Delivering verified prompt reproducibility, model indemnity clearance, and commercial-grade generative assets for global brands.",
+    "location": "New York / Remote",
+    "rating": 4.95,
+    "review_count": 33,
+    "completed_projects": 41,
+    "hourly_rate": 135,
+    "avg_turnaround_days": 3,
+    "verification": {
+      "verified_creator": true,
+      "verified_tool_stack": true,
+      "workflow_provenance_verified": true,
+      "commercial_license_cleared": true,
+      "kampus_vc_fellow": false,
+      "trust_score": 96
+    },
+    "skills": [
+      "Cinematic",
+      "Prompt Engineering",
+      "ComfyUI Custom Nodes",
+      "Character Consistency",
+      "Color Grading"
+    ],
+    "specialization": "Cinematic Commercials & Brand Teasers",
+    "content_types": [
+      "Cinematic Video (16:9)",
+      "Short-form Social (9:16)",
+      "Editorial Still (4:5)"
+    ],
+    "tools": [
+      {
+        "name": "ComfyUI Custom Nodes",
+        "category": "Workflow Engine",
+        "badge": "Workflow Verified"
+      },
+      {
+        "name": "AnimateDiff v3",
+        "category": "Motion Synthesis",
+        "badge": "Latent Motion"
+      },
+      {
+        "name": "DaVinci Resolve Studio",
+        "category": "Post-Production",
+        "badge": "ACES Color Pipeline"
+      },
+      {
+        "name": "Runway Gen-3 Alpha",
+        "category": "Video Gen",
+        "badge": "Verified Pro"
+      },
+      {
+        "name": "Flux.1 Pro",
+        "category": "Image Gen",
+        "badge": "Verified Pro"
+      }
+    ],
+    "hardware_specs": "RTX 4090 24GB | Phantom Flex 4K emulation prompt engine",
+    "commercial_terms": {
+      "license_type": "Full Buyout & Ad Rights",
+      "model_indemnity_included": true,
+      "max_revisions_included": 3,
+      "workflow_files_included": true
+    },
+    "portfolio": [
+      {
+        "id": "port-11-1",
+        "title": "Sarah Showcase: Commercial Master Render",
+        "content_type": "Cinematic Video (16:9)",
+        "media_url": "https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=1000&q=80",
+        "thumbnail": "https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=1000&q=80",
+        "aspect_ratio": "16:9",
+        "client": "Enterprise Client #111",
+        "duration": "0:30",
+        "views": "438k",
+        "description": "High-impact generative visual campaign produced with ComfyUI Custom Nodes and AnimateDiff v3. Features frame-accurate consistency and 4K upscaling.",
+        "ai_breakdown": {
+          "primary_models": [
+            "ComfyUI Custom Nodes",
+            "AnimateDiff v3",
+            "DaVinci Resolve ACES"
+          ],
+          "prompt_used": "Hero commercial master shot of futuristic luxury concept, volumetric cinematic lighting, photorealistic textures, 8k resolution, shot on Arri Alexa 65 anamorphic lenses, natural reflections --ar 16:9 --style raw",
+          "negative_prompt": "cartoon, low quality, artifacts, blur, oversaturated bloom, deformed geometry",
+          "seed": 2020026731,
+          "sampler": "Euler Ancestral / DPM++ 2M Karras",
+          "cfg_scale": 7.1,
+          "steps": 45,
+          "upscale_pipeline": "Topaz Video AI 5 Iris-HQ 4K 60fps",
+          "workflow_file": "workflow_node_graph_creator_11.json"
+        }
+      }
+    ]
+  },
+  {
+    "id": "creator-12",
+    "name": "Viktor Novak",
+    "handle": "@viktor_lora_lab",
+    "title": "Product Consistency & Custom LoRA Engineer",
+    "avatar": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=400&q=80",
+    "cover_image": "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=1000&q=80",
+    "bio": "Specializing in short-form viral video & tiktok 9:16. Delivering verified prompt reproducibility, model indemnity clearance, and commercial-grade generative assets for global brands.",
+    "location": "Prague / Remote",
+    "rating": 4.99,
+    "review_count": 58,
+    "completed_projects": 65,
     "hourly_rate": 165,
+    "avg_turnaround_days": 3,
+    "verification": {
+      "verified_creator": true,
+      "verified_tool_stack": true,
+      "workflow_provenance_verified": true,
+      "commercial_license_cleared": true,
+      "kampus_vc_fellow": false,
+      "trust_score": 96
+    },
+    "skills": [
+      "Short-form",
+      "Prompt Engineering",
+      "ComfyUI Custom Nodes",
+      "Character Consistency",
+      "Color Grading"
+    ],
+    "specialization": "Short-form Viral Video & TikTok 9:16",
+    "content_types": [
+      "Cinematic Video (16:9)",
+      "Short-form Social (9:16)",
+      "Editorial Still (4:5)"
+    ],
+    "tools": [
+      {
+        "name": "ElevenLabs v2",
+        "category": "Audio AI",
+        "badge": "Voice & SFX"
+      },
+      {
+        "name": "ComfyUI Custom Nodes",
+        "category": "Workflow Engine",
+        "badge": "Workflow Verified"
+      },
+      {
+        "name": "ControlNet Multi-Depth",
+        "category": "3D Guidance",
+        "badge": "Spatial Geometry"
+      },
+      {
+        "name": "Midjourney v6.1",
+        "category": "Image Gen",
+        "badge": "Verified Pro"
+      },
+      {
+        "name": "Topaz Video AI 5",
+        "category": "Upscaling",
+        "badge": "4K 60fps Pipeline"
+      }
+    ],
+    "hardware_specs": "4x RTX 4090 Cluster | Kohya-ss & ComfyUI dedicated servers",
+    "commercial_terms": {
+      "license_type": "Full Buyout & Ad Rights",
+      "model_indemnity_included": true,
+      "max_revisions_included": 3,
+      "workflow_files_included": true
+    },
+    "portfolio": [
+      {
+        "id": "port-12-1",
+        "title": "Viktor Showcase: Commercial Master Render",
+        "content_type": "Short-form Social (9:16)",
+        "media_url": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=1000&q=80",
+        "thumbnail": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=1000&q=80",
+        "aspect_ratio": "9:16",
+        "client": "Enterprise Client #112",
+        "duration": "0:30",
+        "views": "136k",
+        "description": "High-impact generative visual campaign produced with ElevenLabs v2 and ComfyUI Custom Nodes. Features frame-accurate consistency and 4K upscaling.",
+        "ai_breakdown": {
+          "primary_models": [
+            "ElevenLabs v2",
+            "ComfyUI Custom Nodes",
+            "DaVinci Resolve ACES"
+          ],
+          "prompt_used": "Hero commercial master shot of futuristic luxury concept, volumetric cinematic lighting, photorealistic textures, 8k resolution, shot on Arri Alexa 65 anamorphic lenses, natural reflections --ar 9:16 --style raw",
+          "negative_prompt": "cartoon, low quality, artifacts, blur, oversaturated bloom, deformed geometry",
+          "seed": 1986173422,
+          "sampler": "Euler Ancestral / DPM++ 2M Karras",
+          "cfg_scale": 6.0,
+          "steps": 35,
+          "upscale_pipeline": "Topaz Video AI 5 Iris-HQ 4K 60fps",
+          "workflow_file": "workflow_node_graph_creator_12.json"
+        }
+      }
+    ]
+  },
+  {
+    "id": "creator-13",
+    "name": "Priya Sharma",
+    "handle": "@priya_heritage_ai",
+    "title": "Documentary & Cultural Heritage AI Filmmaker",
+    "avatar": "https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?auto=format&fit=crop&w=400&q=80",
+    "cover_image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1000&q=80",
+    "bio": "Specializing in 3d hard surface & automotive vfx. Delivering verified prompt reproducibility, model indemnity clearance, and commercial-grade generative assets for global brands.",
+    "location": "Mumbai / Remote",
+    "rating": 4.94,
+    "review_count": 27,
+    "completed_projects": 34,
+    "hourly_rate": 125,
+    "avg_turnaround_days": 4,
+    "verification": {
+      "verified_creator": true,
+      "verified_tool_stack": true,
+      "workflow_provenance_verified": true,
+      "commercial_license_cleared": true,
+      "kampus_vc_fellow": true,
+      "trust_score": 100
+    },
+    "skills": [
+      "3D",
+      "Prompt Engineering",
+      "ComfyUI Custom Nodes",
+      "Character Consistency",
+      "Color Grading"
+    ],
+    "specialization": "3D Hard Surface & Automotive VFX",
+    "content_types": [
+      "Cinematic Video (16:9)",
+      "Short-form Social (9:16)",
+      "Editorial Still (4:5)"
+    ],
+    "tools": [
+      {
+        "name": "Topaz Video AI 5",
+        "category": "Upscaling",
+        "badge": "4K 60fps Pipeline"
+      },
+      {
+        "name": "AnimateDiff v3",
+        "category": "Motion Synthesis",
+        "badge": "Latent Motion"
+      },
+      {
+        "name": "DaVinci Resolve Studio",
+        "category": "Post-Production",
+        "badge": "ACES Color Pipeline"
+      },
+      {
+        "name": "Flux.1 Pro",
+        "category": "Image Gen",
+        "badge": "Verified Pro"
+      },
+      {
+        "name": "Kling 1.5 Pro",
+        "category": "Video Gen",
+        "badge": "Verified Pro"
+      }
+    ],
+    "hardware_specs": "RTX 4090 | 64GB DDR5 | Blackmagic Pocket Cinema ACES",
+    "commercial_terms": {
+      "license_type": "Full Buyout & Ad Rights",
+      "model_indemnity_included": true,
+      "max_revisions_included": 3,
+      "workflow_files_included": true
+    },
+    "portfolio": [
+      {
+        "id": "port-13-1",
+        "title": "Priya Showcase: Commercial Master Render",
+        "content_type": "Cinematic Video (16:9)",
+        "media_url": "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=1000&q=80",
+        "thumbnail": "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=1000&q=80",
+        "aspect_ratio": "16:9",
+        "client": "Enterprise Client #113",
+        "duration": "0:30",
+        "views": "228k",
+        "description": "High-impact generative visual campaign produced with Topaz Video AI 5 and AnimateDiff v3. Features frame-accurate consistency and 4K upscaling.",
+        "ai_breakdown": {
+          "primary_models": [
+            "Topaz Video AI 5",
+            "AnimateDiff v3",
+            "DaVinci Resolve ACES"
+          ],
+          "prompt_used": "Hero commercial master shot of futuristic luxury concept, volumetric cinematic lighting, photorealistic textures, 8k resolution, shot on Arri Alexa 65 anamorphic lenses, natural reflections --ar 16:9 --style raw",
+          "negative_prompt": "cartoon, low quality, artifacts, blur, oversaturated bloom, deformed geometry",
+          "seed": 8844441178,
+          "sampler": "Euler Ancestral / DPM++ 2M Karras",
+          "cfg_scale": 7.2,
+          "steps": 45,
+          "upscale_pipeline": "Topaz Video AI 5 Iris-HQ 4K 60fps",
+          "workflow_file": "workflow_node_graph_creator_13.json"
+        }
+      }
+    ]
+  },
+  {
+    "id": "creator-14",
+    "name": "Lucas Silva",
+    "handle": "@lucas_music_latent",
+    "title": "Music Video Director & Audiovisual Flow Lead",
+    "avatar": "https://images.unsplash.com/photo-1501196354995-cbb51c65aaea?auto=format&fit=crop&w=400&q=80",
+    "cover_image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=1000&q=80",
+    "bio": "Specializing in virtual fashion & virtual garment cad. Delivering verified prompt reproducibility, model indemnity clearance, and commercial-grade generative assets for global brands.",
+    "location": "Sao Paulo / Remote",
+    "rating": 4.96,
+    "review_count": 47,
+    "completed_projects": 59,
+    "hourly_rate": 130,
+    "avg_turnaround_days": 3,
+    "verification": {
+      "verified_creator": true,
+      "verified_tool_stack": true,
+      "workflow_provenance_verified": true,
+      "commercial_license_cleared": true,
+      "kampus_vc_fellow": false,
+      "trust_score": 97
+    },
+    "skills": [
+      "Virtual",
+      "Prompt Engineering",
+      "ComfyUI Custom Nodes",
+      "Character Consistency",
+      "Color Grading"
+    ],
+    "specialization": "Virtual Fashion & Virtual Garment CAD",
+    "content_types": [
+      "Cinematic Video (16:9)",
+      "Short-form Social (9:16)",
+      "Editorial Still (4:5)"
+    ],
+    "tools": [
+      {
+        "name": "ControlNet Multi-Depth",
+        "category": "3D Guidance",
+        "badge": "Spatial Geometry"
+      },
+      {
+        "name": "Flux.1 Pro",
+        "category": "Image Gen",
+        "badge": "Verified Pro"
+      },
+      {
+        "name": "Runway Gen-3 Alpha",
+        "category": "Video Gen",
+        "badge": "Verified Pro"
+      },
+      {
+        "name": "ComfyUI Custom Nodes",
+        "category": "Workflow Engine",
+        "badge": "Workflow Verified"
+      },
+      {
+        "name": "Kling 1.5 Pro",
+        "category": "Video Gen",
+        "badge": "Verified Pro"
+      }
+    ],
+    "hardware_specs": "RTX 4090 24GB | Ableton Live 12 + ComfyUI OSC automation",
+    "commercial_terms": {
+      "license_type": "Full Buyout & Ad Rights",
+      "model_indemnity_included": true,
+      "max_revisions_included": 3,
+      "workflow_files_included": true
+    },
+    "portfolio": [
+      {
+        "id": "port-14-1",
+        "title": "Lucas Showcase: Commercial Master Render",
+        "content_type": "Short-form Social (9:16)",
+        "media_url": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1000&q=80",
+        "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1000&q=80",
+        "aspect_ratio": "9:16",
+        "client": "Enterprise Client #114",
+        "duration": "0:30",
+        "views": "444k",
+        "description": "High-impact generative visual campaign produced with ControlNet Multi-Depth and Flux.1 Pro. Features frame-accurate consistency and 4K upscaling.",
+        "ai_breakdown": {
+          "primary_models": [
+            "ControlNet Multi-Depth",
+            "Flux.1 Pro",
+            "DaVinci Resolve ACES"
+          ],
+          "prompt_used": "Hero commercial master shot of futuristic luxury concept, volumetric cinematic lighting, photorealistic textures, 8k resolution, shot on Arri Alexa 65 anamorphic lenses, natural reflections --ar 9:16 --style raw",
+          "negative_prompt": "cartoon, low quality, artifacts, blur, oversaturated bloom, deformed geometry",
+          "seed": 5154070490,
+          "sampler": "Euler Ancestral / DPM++ 2M Karras",
+          "cfg_scale": 5.9,
+          "steps": 50,
+          "upscale_pipeline": "Topaz Video AI 5 Iris-HQ 4K 60fps",
+          "workflow_file": "workflow_node_graph_creator_14.json"
+        }
+      }
+    ]
+  },
+  {
+    "id": "creator-15",
+    "name": "Nina Kowalski",
+    "handle": "@nina_virtual_aces",
+    "title": "Virtual Production & ACES Cinematic Colorist",
+    "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80",
+    "cover_image": "https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1000&q=80",
+    "bio": "Specializing in cosmetics & macro diffusion glow. Delivering verified prompt reproducibility, model indemnity clearance, and commercial-grade generative assets for global brands.",
+    "location": "Warsaw / Remote",
+    "rating": 4.97,
+    "review_count": 38,
+    "completed_projects": 45,
+    "hourly_rate": 140,
+    "avg_turnaround_days": 3,
+    "verification": {
+      "verified_creator": true,
+      "verified_tool_stack": true,
+      "workflow_provenance_verified": true,
+      "commercial_license_cleared": true,
+      "kampus_vc_fellow": false,
+      "trust_score": 97
+    },
+    "skills": [
+      "Cosmetics",
+      "Prompt Engineering",
+      "ComfyUI Custom Nodes",
+      "Character Consistency",
+      "Color Grading"
+    ],
+    "specialization": "Cosmetics & Macro Diffusion Glow",
+    "content_types": [
+      "Cinematic Video (16:9)",
+      "Short-form Social (9:16)",
+      "Editorial Still (4:5)"
+    ],
+    "tools": [
+      {
+        "name": "Topaz Video AI 5",
+        "category": "Upscaling",
+        "badge": "4K 60fps Pipeline"
+      },
+      {
+        "name": "DaVinci Resolve Studio",
+        "category": "Post-Production",
+        "badge": "ACES Color Pipeline"
+      },
+      {
+        "name": "Kling 1.5 Pro",
+        "category": "Video Gen",
+        "badge": "Verified Pro"
+      },
+      {
+        "name": "ControlNet Multi-Depth",
+        "category": "3D Guidance",
+        "badge": "Spatial Geometry"
+      },
+      {
+        "name": "Runway Gen-3 Alpha",
+        "category": "Video Gen",
+        "badge": "Verified Pro"
+      }
+    ],
+    "hardware_specs": "DaVinci Resolve Studio Advanced Panel | Dual RTX 4090",
+    "commercial_terms": {
+      "license_type": "Full Buyout & Ad Rights",
+      "model_indemnity_included": true,
+      "max_revisions_included": 3,
+      "workflow_files_included": true
+    },
+    "portfolio": [
+      {
+        "id": "port-15-1",
+        "title": "Nina Showcase: Commercial Master Render",
+        "content_type": "Cinematic Video (16:9)",
+        "media_url": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=1000&q=80",
+        "thumbnail": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=1000&q=80",
+        "aspect_ratio": "16:9",
+        "client": "Enterprise Client #115",
+        "duration": "0:30",
+        "views": "396k",
+        "description": "High-impact generative visual campaign produced with Topaz Video AI 5 and DaVinci Resolve Studio. Features frame-accurate consistency and 4K upscaling.",
+        "ai_breakdown": {
+          "primary_models": [
+            "Topaz Video AI 5",
+            "DaVinci Resolve Studio",
+            "DaVinci Resolve ACES"
+          ],
+          "prompt_used": "Hero commercial master shot of futuristic luxury concept, volumetric cinematic lighting, photorealistic textures, 8k resolution, shot on Arri Alexa 65 anamorphic lenses, natural reflections --ar 16:9 --style raw",
+          "negative_prompt": "cartoon, low quality, artifacts, blur, oversaturated bloom, deformed geometry",
+          "seed": 4098300969,
+          "sampler": "Euler Ancestral / DPM++ 2M Karras",
+          "cfg_scale": 5.6,
+          "steps": 35,
+          "upscale_pipeline": "Topaz Video AI 5 Iris-HQ 4K 60fps",
+          "workflow_file": "workflow_node_graph_creator_15.json"
+        }
+      }
+    ]
+  },
+  {
+    "id": "creator-16",
+    "name": "David Kim",
+    "handle": "@david_worldbuilder",
+    "title": "Generative Environment & Game Unreal Artist",
+    "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80",
+    "cover_image": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1000&q=80",
+    "bio": "Specializing in sci-fi & cyberpunk worldbuilding. Delivering verified prompt reproducibility, model indemnity clearance, and commercial-grade generative assets for global brands.",
+    "location": "Seoul / Remote",
+    "rating": 4.95,
+    "review_count": 40,
+    "completed_projects": 48,
+    "hourly_rate": 145,
+    "avg_turnaround_days": 4,
+    "verification": {
+      "verified_creator": true,
+      "verified_tool_stack": true,
+      "workflow_provenance_verified": true,
+      "commercial_license_cleared": true,
+      "kampus_vc_fellow": true,
+      "trust_score": 96
+    },
+    "skills": [
+      "Sci-Fi",
+      "Prompt Engineering",
+      "ComfyUI Custom Nodes",
+      "Character Consistency",
+      "Color Grading"
+    ],
+    "specialization": "Sci-Fi & Cyberpunk Worldbuilding",
+    "content_types": [
+      "Cinematic Video (16:9)",
+      "Short-form Social (9:16)",
+      "Editorial Still (4:5)"
+    ],
+    "tools": [
+      {
+        "name": "ElevenLabs v2",
+        "category": "Audio AI",
+        "badge": "Voice & SFX"
+      },
+      {
+        "name": "ControlNet Multi-Depth",
+        "category": "3D Guidance",
+        "badge": "Spatial Geometry"
+      },
+      {
+        "name": "ComfyUI Custom Nodes",
+        "category": "Workflow Engine",
+        "badge": "Workflow Verified"
+      },
+      {
+        "name": "Kling 1.5 Pro",
+        "category": "Video Gen",
+        "badge": "Verified Pro"
+      },
+      {
+        "name": "Topaz Video AI 5",
+        "category": "Upscaling",
+        "badge": "4K 60fps Pipeline"
+      }
+    ],
+    "hardware_specs": "Unreal Engine 5.4 Nanite-Lumen + Flux.1 Pro Depth pipeline",
+    "commercial_terms": {
+      "license_type": "Full Buyout & Ad Rights",
+      "model_indemnity_included": true,
+      "max_revisions_included": 3,
+      "workflow_files_included": true
+    },
+    "portfolio": [
+      {
+        "id": "port-16-1",
+        "title": "David Showcase: Commercial Master Render",
+        "content_type": "Short-form Social (9:16)",
+        "media_url": "https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1000&q=80",
+        "thumbnail": "https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1000&q=80",
+        "aspect_ratio": "9:16",
+        "client": "Enterprise Client #116",
+        "duration": "0:30",
+        "views": "384k",
+        "description": "High-impact generative visual campaign produced with ElevenLabs v2 and ControlNet Multi-Depth. Features frame-accurate consistency and 4K upscaling.",
+        "ai_breakdown": {
+          "primary_models": [
+            "ElevenLabs v2",
+            "ControlNet Multi-Depth",
+            "DaVinci Resolve ACES"
+          ],
+          "prompt_used": "Hero commercial master shot of futuristic luxury concept, volumetric cinematic lighting, photorealistic textures, 8k resolution, shot on Arri Alexa 65 anamorphic lenses, natural reflections --ar 9:16 --style raw",
+          "negative_prompt": "cartoon, low quality, artifacts, blur, oversaturated bloom, deformed geometry",
+          "seed": 6022661388,
+          "sampler": "Euler Ancestral / DPM++ 2M Karras",
+          "cfg_scale": 7.0,
+          "steps": 50,
+          "upscale_pipeline": "Topaz Video AI 5 Iris-HQ 4K 60fps",
+          "workflow_file": "workflow_node_graph_creator_16.json"
+        }
+      }
+    ]
+  },
+  {
+    "id": "creator-17",
+    "name": "Maya Lin",
+    "handle": "@maya_typography_ai",
+    "title": "Generative Typography & Motion Identity Lead",
+    "avatar": "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=400&q=80",
+    "cover_image": "https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=1000&q=80",
+    "bio": "Specializing in anime & stylized motion animation. Delivering verified prompt reproducibility, model indemnity clearance, and commercial-grade generative assets for global brands.",
+    "location": "San Francisco / Remote",
+    "rating": 4.98,
+    "review_count": 29,
+    "completed_projects": 36,
+    "hourly_rate": 150,
+    "avg_turnaround_days": 2,
+    "verification": {
+      "verified_creator": true,
+      "verified_tool_stack": true,
+      "workflow_provenance_verified": true,
+      "commercial_license_cleared": true,
+      "kampus_vc_fellow": false,
+      "trust_score": 99
+    },
+    "skills": [
+      "Anime",
+      "Prompt Engineering",
+      "ComfyUI Custom Nodes",
+      "Character Consistency",
+      "Color Grading"
+    ],
+    "specialization": "Anime & Stylized Motion Animation",
+    "content_types": [
+      "Cinematic Video (16:9)",
+      "Short-form Social (9:16)",
+      "Editorial Still (4:5)"
+    ],
+    "tools": [
+      {
+        "name": "Flux.1 Pro",
+        "category": "Image Gen",
+        "badge": "Verified Pro"
+      },
+      {
+        "name": "Topaz Video AI 5",
+        "category": "Upscaling",
+        "badge": "4K 60fps Pipeline"
+      },
+      {
+        "name": "Runway Gen-3 Alpha",
+        "category": "Video Gen",
+        "badge": "Verified Pro"
+      },
+      {
+        "name": "AnimateDiff v3",
+        "category": "Motion Synthesis",
+        "badge": "Latent Motion"
+      },
+      {
+        "name": "ElevenLabs v2",
+        "category": "Audio AI",
+        "badge": "Voice & SFX"
+      }
+    ],
+    "hardware_specs": "Apple M3 Max 128GB + Cloud H100 GPU cluster",
+    "commercial_terms": {
+      "license_type": "Full Buyout & Ad Rights",
+      "model_indemnity_included": true,
+      "max_revisions_included": 3,
+      "workflow_files_included": true
+    },
+    "portfolio": [
+      {
+        "id": "port-17-1",
+        "title": "Maya Showcase: Commercial Master Render",
+        "content_type": "Cinematic Video (16:9)",
+        "media_url": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1000&q=80",
+        "thumbnail": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1000&q=80",
+        "aspect_ratio": "16:9",
+        "client": "Enterprise Client #117",
+        "duration": "0:30",
+        "views": "279k",
+        "description": "High-impact generative visual campaign produced with Flux.1 Pro and Topaz Video AI 5. Features frame-accurate consistency and 4K upscaling.",
+        "ai_breakdown": {
+          "primary_models": [
+            "Flux.1 Pro",
+            "Topaz Video AI 5",
+            "DaVinci Resolve ACES"
+          ],
+          "prompt_used": "Hero commercial master shot of futuristic luxury concept, volumetric cinematic lighting, photorealistic textures, 8k resolution, shot on Arri Alexa 65 anamorphic lenses, natural reflections --ar 16:9 --style raw",
+          "negative_prompt": "cartoon, low quality, artifacts, blur, oversaturated bloom, deformed geometry",
+          "seed": 7445754157,
+          "sampler": "Euler Ancestral / DPM++ 2M Karras",
+          "cfg_scale": 5.6,
+          "steps": 50,
+          "upscale_pipeline": "Topaz Video AI 5 Iris-HQ 4K 60fps",
+          "workflow_file": "workflow_node_graph_creator_17.json"
+        }
+      }
+    ]
+  },
+  {
+    "id": "creator-18",
+    "name": "Julian Mercer",
+    "handle": "@julian_bio_macro",
+    "title": "Biophilic & Micro-Diffusion Medical Animator",
+    "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=400&q=80",
+    "cover_image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=1000&q=80",
+    "bio": "Specializing in food & beverage hyper-kinetic teasers. Delivering verified prompt reproducibility, model indemnity clearance, and commercial-grade generative assets for global brands.",
+    "location": "Boston / Remote",
+    "rating": 4.99,
+    "review_count": 22,
+    "completed_projects": 29,
+    "hourly_rate": 170,
+    "avg_turnaround_days": 5,
+    "verification": {
+      "verified_creator": true,
+      "verified_tool_stack": true,
+      "workflow_provenance_verified": true,
+      "commercial_license_cleared": true,
+      "kampus_vc_fellow": false,
+      "trust_score": 98
+    },
+    "skills": [
+      "Food",
+      "Prompt Engineering",
+      "ComfyUI Custom Nodes",
+      "Character Consistency",
+      "Color Grading"
+    ],
+    "specialization": "Food & Beverage Hyper-Kinetic Teasers",
+    "content_types": [
+      "Cinematic Video (16:9)",
+      "Short-form Social (9:16)",
+      "Editorial Still (4:5)"
+    ],
+    "tools": [
+      {
+        "name": "Runway Gen-3 Alpha",
+        "category": "Video Gen",
+        "badge": "Verified Pro"
+      },
+      {
+        "name": "AnimateDiff v3",
+        "category": "Motion Synthesis",
+        "badge": "Latent Motion"
+      },
+      {
+        "name": "Midjourney v6.1",
+        "category": "Image Gen",
+        "badge": "Verified Pro"
+      },
+      {
+        "name": "ElevenLabs v2",
+        "category": "Audio AI",
+        "badge": "Voice & SFX"
+      },
+      {
+        "name": "Topaz Video AI 5",
+        "category": "Upscaling",
+        "badge": "4K 60fps Pipeline"
+      }
+    ],
+    "hardware_specs": "Dual RTX 6000 Ada 48GB | Houdini Solaris Bio-Diffusion",
+    "commercial_terms": {
+      "license_type": "Full Buyout & Ad Rights",
+      "model_indemnity_included": true,
+      "max_revisions_included": 3,
+      "workflow_files_included": true
+    },
+    "portfolio": [
+      {
+        "id": "port-18-1",
+        "title": "Julian Showcase: Commercial Master Render",
+        "content_type": "Short-form Social (9:16)",
+        "media_url": "https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=1000&q=80",
+        "thumbnail": "https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=1000&q=80",
+        "aspect_ratio": "9:16",
+        "client": "Enterprise Client #118",
+        "duration": "0:30",
+        "views": "321k",
+        "description": "High-impact generative visual campaign produced with Runway Gen-3 Alpha and AnimateDiff v3. Features frame-accurate consistency and 4K upscaling.",
+        "ai_breakdown": {
+          "primary_models": [
+            "Runway Gen-3 Alpha",
+            "AnimateDiff v3",
+            "DaVinci Resolve ACES"
+          ],
+          "prompt_used": "Hero commercial master shot of futuristic luxury concept, volumetric cinematic lighting, photorealistic textures, 8k resolution, shot on Arri Alexa 65 anamorphic lenses, natural reflections --ar 9:16 --style raw",
+          "negative_prompt": "cartoon, low quality, artifacts, blur, oversaturated bloom, deformed geometry",
+          "seed": 6932963373,
+          "sampler": "Euler Ancestral / DPM++ 2M Karras",
+          "cfg_scale": 5.7,
+          "steps": 45,
+          "upscale_pipeline": "Topaz Video AI 5 Iris-HQ 4K 60fps",
+          "workflow_file": "workflow_node_graph_creator_18.json"
+        }
+      }
+    ]
+  },
+  {
+    "id": "creator-19",
+    "name": "Fatima Al-Mansoor",
+    "handle": "@fatima_arch_ai",
+    "title": "Futuristic Architecture & Urbanism Visualizer",
+    "avatar": "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=400&q=80",
+    "cover_image": "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=1000&q=80",
+    "bio": "Specializing in architectural visualization & biophilic spaces. Delivering verified prompt reproducibility, model indemnity clearance, and commercial-grade generative assets for global brands.",
+    "location": "Dubai / Remote",
+    "rating": 4.96,
+    "review_count": 37,
+    "completed_projects": 43,
+    "hourly_rate": 145,
+    "avg_turnaround_days": 4,
+    "verification": {
+      "verified_creator": true,
+      "verified_tool_stack": true,
+      "workflow_provenance_verified": true,
+      "commercial_license_cleared": true,
+      "kampus_vc_fellow": true,
+      "trust_score": 100
+    },
+    "skills": [
+      "Architectural",
+      "Prompt Engineering",
+      "ComfyUI Custom Nodes",
+      "Character Consistency",
+      "Color Grading"
+    ],
+    "specialization": "Architectural Visualization & Biophilic Spaces",
+    "content_types": [
+      "Cinematic Video (16:9)",
+      "Short-form Social (9:16)",
+      "Editorial Still (4:5)"
+    ],
+    "tools": [
+      {
+        "name": "ComfyUI Custom Nodes",
+        "category": "Workflow Engine",
+        "badge": "Workflow Verified"
+      },
+      {
+        "name": "DaVinci Resolve Studio",
+        "category": "Post-Production",
+        "badge": "ACES Color Pipeline"
+      },
+      {
+        "name": "Midjourney v6.1",
+        "category": "Image Gen",
+        "badge": "Verified Pro"
+      },
+      {
+        "name": "Kling 1.5 Pro",
+        "category": "Video Gen",
+        "badge": "Verified Pro"
+      },
+      {
+        "name": "Topaz Video AI 5",
+        "category": "Upscaling",
+        "badge": "4K 60fps Pipeline"
+      }
+    ],
+    "hardware_specs": "Rhino 8 + Grasshopper + Flux ControlNet pipeline",
+    "commercial_terms": {
+      "license_type": "Full Buyout & Ad Rights",
+      "model_indemnity_included": true,
+      "max_revisions_included": 3,
+      "workflow_files_included": true
+    },
+    "portfolio": [
+      {
+        "id": "port-19-1",
+        "title": "Fatima Showcase: Commercial Master Render",
+        "content_type": "Cinematic Video (16:9)",
+        "media_url": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=1000&q=80",
+        "thumbnail": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=1000&q=80",
+        "aspect_ratio": "16:9",
+        "client": "Enterprise Client #119",
+        "duration": "0:30",
+        "views": "387k",
+        "description": "High-impact generative visual campaign produced with ComfyUI Custom Nodes and DaVinci Resolve Studio. Features frame-accurate consistency and 4K upscaling.",
+        "ai_breakdown": {
+          "primary_models": [
+            "ComfyUI Custom Nodes",
+            "DaVinci Resolve Studio",
+            "DaVinci Resolve ACES"
+          ],
+          "prompt_used": "Hero commercial master shot of futuristic luxury concept, volumetric cinematic lighting, photorealistic textures, 8k resolution, shot on Arri Alexa 65 anamorphic lenses, natural reflections --ar 16:9 --style raw",
+          "negative_prompt": "cartoon, low quality, artifacts, blur, oversaturated bloom, deformed geometry",
+          "seed": 5513209907,
+          "sampler": "Euler Ancestral / DPM++ 2M Karras",
+          "cfg_scale": 7.3,
+          "steps": 35,
+          "upscale_pipeline": "Topaz Video AI 5 Iris-HQ 4K 60fps",
+          "workflow_file": "workflow_node_graph_creator_19.json"
+        }
+      }
+    ]
+  },
+  {
+    "id": "creator-20",
+    "name": "Oliver Bennett",
+    "handle": "@oliver_surreal_art",
+    "title": "Surrealist Editorial & High-Concept Art Director",
+    "avatar": "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&w=400&q=80",
+    "cover_image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1000&q=80",
+    "bio": "Specializing in audiovisual music video & latent sync. Delivering verified prompt reproducibility, model indemnity clearance, and commercial-grade generative assets for global brands.",
+    "location": "Stockholm / Remote",
+    "rating": 4.93,
+    "review_count": 34,
+    "completed_projects": 42,
+    "hourly_rate": 135,
+    "avg_turnaround_days": 3,
+    "verification": {
+      "verified_creator": true,
+      "verified_tool_stack": true,
+      "workflow_provenance_verified": true,
+      "commercial_license_cleared": true,
+      "kampus_vc_fellow": false,
+      "trust_score": 97
+    },
+    "skills": [
+      "Audiovisual",
+      "Prompt Engineering",
+      "ComfyUI Custom Nodes",
+      "Character Consistency",
+      "Color Grading"
+    ],
+    "specialization": "Audiovisual Music Video & Latent Sync",
+    "content_types": [
+      "Cinematic Video (16:9)",
+      "Short-form Social (9:16)",
+      "Editorial Still (4:5)"
+    ],
+    "tools": [
+      {
+        "name": "AnimateDiff v3",
+        "category": "Motion Synthesis",
+        "badge": "Latent Motion"
+      },
+      {
+        "name": "Flux.1 Pro",
+        "category": "Image Gen",
+        "badge": "Verified Pro"
+      },
+      {
+        "name": "ElevenLabs v2",
+        "category": "Audio AI",
+        "badge": "Voice & SFX"
+      },
+      {
+        "name": "ComfyUI Custom Nodes",
+        "category": "Workflow Engine",
+        "badge": "Workflow Verified"
+      },
+      {
+        "name": "Runway Gen-3 Alpha",
+        "category": "Video Gen",
+        "badge": "Verified Pro"
+      }
+    ],
+    "hardware_specs": "Hasselblad H6D-100c emulation + Midjourney v6.1 RAW",
+    "commercial_terms": {
+      "license_type": "Full Buyout & Ad Rights",
+      "model_indemnity_included": true,
+      "max_revisions_included": 3,
+      "workflow_files_included": true
+    },
+    "portfolio": [
+      {
+        "id": "port-20-1",
+        "title": "Oliver Showcase: Commercial Master Render",
+        "content_type": "Short-form Social (9:16)",
+        "media_url": "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=1000&q=80",
+        "thumbnail": "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=1000&q=80",
+        "aspect_ratio": "9:16",
+        "client": "Enterprise Client #120",
+        "duration": "0:30",
+        "views": "447k",
+        "description": "High-impact generative visual campaign produced with AnimateDiff v3 and Flux.1 Pro. Features frame-accurate consistency and 4K upscaling.",
+        "ai_breakdown": {
+          "primary_models": [
+            "AnimateDiff v3",
+            "Flux.1 Pro",
+            "DaVinci Resolve ACES"
+          ],
+          "prompt_used": "Hero commercial master shot of futuristic luxury concept, volumetric cinematic lighting, photorealistic textures, 8k resolution, shot on Arri Alexa 65 anamorphic lenses, natural reflections --ar 9:16 --style raw",
+          "negative_prompt": "cartoon, low quality, artifacts, blur, oversaturated bloom, deformed geometry",
+          "seed": 4852766615,
+          "sampler": "Euler Ancestral / DPM++ 2M Karras",
+          "cfg_scale": 6.4,
+          "steps": 45,
+          "upscale_pipeline": "Topaz Video AI 5 Iris-HQ 4K 60fps",
+          "workflow_file": "workflow_node_graph_creator_20.json"
+        }
+      }
+    ]
+  },
+  {
+    "id": "creator-21",
+    "name": "Gabriel Santos",
+    "handle": "@gabriel_sports_ai",
+    "title": "Dynamic Sports & Extreme Motion AI Director",
+    "avatar": "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?auto=format&fit=crop&w=400&q=80",
+    "cover_image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=1000&q=80",
+    "bio": "Specializing in cinematic commercials & brand teasers. Delivering verified prompt reproducibility, model indemnity clearance, and commercial-grade generative assets for global brands.",
+    "location": "Barcelona / Remote",
+    "rating": 4.95,
+    "review_count": 49,
+    "completed_projects": 58,
+    "hourly_rate": 130,
+    "avg_turnaround_days": 2,
+    "verification": {
+      "verified_creator": true,
+      "verified_tool_stack": true,
+      "workflow_provenance_verified": true,
+      "commercial_license_cleared": true,
+      "kampus_vc_fellow": false,
+      "trust_score": 97
+    },
+    "skills": [
+      "Cinematic",
+      "Prompt Engineering",
+      "ComfyUI Custom Nodes",
+      "Character Consistency",
+      "Color Grading"
+    ],
+    "specialization": "Cinematic Commercials & Brand Teasers",
+    "content_types": [
+      "Cinematic Video (16:9)",
+      "Short-form Social (9:16)",
+      "Editorial Still (4:5)"
+    ],
+    "tools": [
+      {
+        "name": "Kling 1.5 Pro",
+        "category": "Video Gen",
+        "badge": "Verified Pro"
+      },
+      {
+        "name": "Topaz Video AI 5",
+        "category": "Upscaling",
+        "badge": "4K 60fps Pipeline"
+      },
+      {
+        "name": "AnimateDiff v3",
+        "category": "Motion Synthesis",
+        "badge": "Latent Motion"
+      },
+      {
+        "name": "Midjourney v6.1",
+        "category": "Image Gen",
+        "badge": "Verified Pro"
+      },
+      {
+        "name": "Runway Gen-3 Alpha",
+        "category": "Video Gen",
+        "badge": "Verified Pro"
+      }
+    ],
+    "hardware_specs": "Runway Gen-3 Alpha Camera Track + Topaz 60fps interpolation",
+    "commercial_terms": {
+      "license_type": "Full Buyout & Ad Rights",
+      "model_indemnity_included": true,
+      "max_revisions_included": 3,
+      "workflow_files_included": true
+    },
+    "portfolio": [
+      {
+        "id": "port-21-1",
+        "title": "Gabriel Showcase: Commercial Master Render",
+        "content_type": "Cinematic Video (16:9)",
+        "media_url": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1000&q=80",
+        "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1000&q=80",
+        "aspect_ratio": "16:9",
+        "client": "Enterprise Client #121",
+        "duration": "0:30",
+        "views": "406k",
+        "description": "High-impact generative visual campaign produced with Kling 1.5 Pro and Topaz Video AI 5. Features frame-accurate consistency and 4K upscaling.",
+        "ai_breakdown": {
+          "primary_models": [
+            "Kling 1.5 Pro",
+            "Topaz Video AI 5",
+            "DaVinci Resolve ACES"
+          ],
+          "prompt_used": "Hero commercial master shot of futuristic luxury concept, volumetric cinematic lighting, photorealistic textures, 8k resolution, shot on Arri Alexa 65 anamorphic lenses, natural reflections --ar 16:9 --style raw",
+          "negative_prompt": "cartoon, low quality, artifacts, blur, oversaturated bloom, deformed geometry",
+          "seed": 7778473629,
+          "sampler": "Euler Ancestral / DPM++ 2M Karras",
+          "cfg_scale": 6.5,
+          "steps": 50,
+          "upscale_pipeline": "Topaz Video AI 5 Iris-HQ 4K 60fps",
+          "workflow_file": "workflow_node_graph_creator_21.json"
+        }
+      }
+    ]
+  },
+  {
+    "id": "creator-22",
+    "name": "Hana Becker",
+    "handle": "@hana_procedural_vfx",
+    "title": "Procedural VFX & Fluid Simulation Generative Artist",
+    "avatar": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=400&q=80",
+    "cover_image": "https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1000&q=80",
+    "bio": "Specializing in short-form viral video & tiktok 9:16. Delivering verified prompt reproducibility, model indemnity clearance, and commercial-grade generative assets for global brands.",
+    "location": "Munich / Remote",
+    "rating": 4.98,
+    "review_count": 26,
+    "completed_projects": 33,
+    "hourly_rate": 155,
+    "avg_turnaround_days": 4,
+    "verification": {
+      "verified_creator": true,
+      "verified_tool_stack": true,
+      "workflow_provenance_verified": true,
+      "commercial_license_cleared": true,
+      "kampus_vc_fellow": true,
+      "trust_score": 98
+    },
+    "skills": [
+      "Short-form",
+      "Prompt Engineering",
+      "ComfyUI Custom Nodes",
+      "Character Consistency",
+      "Color Grading"
+    ],
+    "specialization": "Short-form Viral Video & TikTok 9:16",
+    "content_types": [
+      "Cinematic Video (16:9)",
+      "Short-form Social (9:16)",
+      "Editorial Still (4:5)"
+    ],
+    "tools": [
+      {
+        "name": "DaVinci Resolve Studio",
+        "category": "Post-Production",
+        "badge": "ACES Color Pipeline"
+      },
+      {
+        "name": "AnimateDiff v3",
+        "category": "Motion Synthesis",
+        "badge": "Latent Motion"
+      },
+      {
+        "name": "Midjourney v6.1",
+        "category": "Image Gen",
+        "badge": "Verified Pro"
+      },
+      {
+        "name": "ControlNet Multi-Depth",
+        "category": "3D Guidance",
+        "badge": "Spatial Geometry"
+      },
+      {
+        "name": "ElevenLabs v2",
+        "category": "Audio AI",
+        "badge": "Voice & SFX"
+      }
+    ],
+    "hardware_specs": "EmberGen + ComfyUI AnimateDiff fluid velocity mapping",
+    "commercial_terms": {
+      "license_type": "Full Buyout & Ad Rights",
+      "model_indemnity_included": true,
+      "max_revisions_included": 3,
+      "workflow_files_included": true
+    },
+    "portfolio": [
+      {
+        "id": "port-22-1",
+        "title": "Hana Showcase: Commercial Master Render",
+        "content_type": "Short-form Social (9:16)",
+        "media_url": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=1000&q=80",
+        "thumbnail": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=1000&q=80",
+        "aspect_ratio": "9:16",
+        "client": "Enterprise Client #122",
+        "duration": "0:30",
+        "views": "466k",
+        "description": "High-impact generative visual campaign produced with DaVinci Resolve Studio and AnimateDiff v3. Features frame-accurate consistency and 4K upscaling.",
+        "ai_breakdown": {
+          "primary_models": [
+            "DaVinci Resolve Studio",
+            "AnimateDiff v3",
+            "DaVinci Resolve ACES"
+          ],
+          "prompt_used": "Hero commercial master shot of futuristic luxury concept, volumetric cinematic lighting, photorealistic textures, 8k resolution, shot on Arri Alexa 65 anamorphic lenses, natural reflections --ar 9:16 --style raw",
+          "negative_prompt": "cartoon, low quality, artifacts, blur, oversaturated bloom, deformed geometry",
+          "seed": 2199438032,
+          "sampler": "Euler Ancestral / DPM++ 2M Karras",
+          "cfg_scale": 6.5,
+          "steps": 45,
+          "upscale_pipeline": "Topaz Video AI 5 Iris-HQ 4K 60fps",
+          "workflow_file": "workflow_node_graph_creator_22.json"
+        }
+      }
+    ]
+  },
+  {
+    "id": "creator-23",
+    "name": "Ronald Chen",
+    "handle": "@ronald_brand_scale",
+    "title": "Enterprise AI Commercial Production Supervisor",
+    "avatar": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=400&q=80",
+    "cover_image": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1000&q=80",
+    "bio": "Specializing in 3d hard surface & automotive vfx. Delivering verified prompt reproducibility, model indemnity clearance, and commercial-grade generative assets for global brands.",
+    "location": "Toronto / Remote",
+    "rating": 4.97,
+    "review_count": 65,
+    "completed_projects": 78,
+    "hourly_rate": 160,
+    "avg_turnaround_days": 3,
+    "verification": {
+      "verified_creator": true,
+      "verified_tool_stack": true,
+      "workflow_provenance_verified": true,
+      "commercial_license_cleared": true,
+      "kampus_vc_fellow": false,
+      "trust_score": 99
+    },
+    "skills": [
+      "3D",
+      "Prompt Engineering",
+      "ComfyUI Custom Nodes",
+      "Character Consistency",
+      "Color Grading"
+    ],
+    "specialization": "3D Hard Surface & Automotive VFX",
+    "content_types": [
+      "Cinematic Video (16:9)",
+      "Short-form Social (9:16)",
+      "Editorial Still (4:5)"
+    ],
+    "tools": [
+      {
+        "name": "DaVinci Resolve Studio",
+        "category": "Post-Production",
+        "badge": "ACES Color Pipeline"
+      },
+      {
+        "name": "AnimateDiff v3",
+        "category": "Motion Synthesis",
+        "badge": "Latent Motion"
+      },
+      {
+        "name": "ComfyUI Custom Nodes",
+        "category": "Workflow Engine",
+        "badge": "Workflow Verified"
+      },
+      {
+        "name": "ElevenLabs v2",
+        "category": "Audio AI",
+        "badge": "Voice & SFX"
+      },
+      {
+        "name": "Runway Gen-3 Alpha",
+        "category": "Video Gen",
+        "badge": "Verified Pro"
+      }
+    ],
+    "hardware_specs": "Enterprise AWS Bedrock + ComfyUI dedicated farm",
+    "commercial_terms": {
+      "license_type": "Full Buyout & Ad Rights",
+      "model_indemnity_included": true,
+      "max_revisions_included": 3,
+      "workflow_files_included": true
+    },
+    "portfolio": [
+      {
+        "id": "port-23-1",
+        "title": "Ronald Showcase: Commercial Master Render",
+        "content_type": "Cinematic Video (16:9)",
+        "media_url": "https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1000&q=80",
+        "thumbnail": "https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1000&q=80",
+        "aspect_ratio": "16:9",
+        "client": "Enterprise Client #123",
+        "duration": "0:30",
+        "views": "254k",
+        "description": "High-impact generative visual campaign produced with DaVinci Resolve Studio and AnimateDiff v3. Features frame-accurate consistency and 4K upscaling.",
+        "ai_breakdown": {
+          "primary_models": [
+            "DaVinci Resolve Studio",
+            "AnimateDiff v3",
+            "DaVinci Resolve ACES"
+          ],
+          "prompt_used": "Hero commercial master shot of futuristic luxury concept, volumetric cinematic lighting, photorealistic textures, 8k resolution, shot on Arri Alexa 65 anamorphic lenses, natural reflections --ar 16:9 --style raw",
+          "negative_prompt": "cartoon, low quality, artifacts, blur, oversaturated bloom, deformed geometry",
+          "seed": 4801562154,
+          "sampler": "Euler Ancestral / DPM++ 2M Karras",
+          "cfg_scale": 6.4,
+          "steps": 45,
+          "upscale_pipeline": "Topaz Video AI 5 Iris-HQ 4K 60fps",
+          "workflow_file": "workflow_node_graph_creator_23.json"
+        }
+      }
+    ]
+  },
+  {
+    "id": "creator-24",
+    "name": "Leila Farah",
+    "handle": "@leila_character_lora",
+    "title": "Photorealistic Character & Digital Double Specialist",
+    "avatar": "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=400&q=80",
+    "cover_image": "https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=1000&q=80",
+    "bio": "Specializing in virtual fashion & virtual garment cad. Delivering verified prompt reproducibility, model indemnity clearance, and commercial-grade generative assets for global brands.",
+    "location": "Beirut / Remote",
+    "rating": 4.99,
+    "review_count": 41,
+    "completed_projects": 48,
+    "hourly_rate": 150,
+    "avg_turnaround_days": 3,
+    "verification": {
+      "verified_creator": true,
+      "verified_tool_stack": true,
+      "workflow_provenance_verified": true,
+      "commercial_license_cleared": true,
+      "kampus_vc_fellow": false,
+      "trust_score": 99
+    },
+    "skills": [
+      "Virtual",
+      "Prompt Engineering",
+      "ComfyUI Custom Nodes",
+      "Character Consistency",
+      "Color Grading"
+    ],
+    "specialization": "Virtual Fashion & Virtual Garment CAD",
+    "content_types": [
+      "Cinematic Video (16:9)",
+      "Short-form Social (9:16)",
+      "Editorial Still (4:5)"
+    ],
+    "tools": [
+      {
+        "name": "ControlNet Multi-Depth",
+        "category": "3D Guidance",
+        "badge": "Spatial Geometry"
+      },
+      {
+        "name": "DaVinci Resolve Studio",
+        "category": "Post-Production",
+        "badge": "ACES Color Pipeline"
+      },
+      {
+        "name": "Midjourney v6.1",
+        "category": "Image Gen",
+        "badge": "Verified Pro"
+      },
+      {
+        "name": "Runway Gen-3 Alpha",
+        "category": "Video Gen",
+        "badge": "Verified Pro"
+      },
+      {
+        "name": "Flux.1 Pro",
+        "category": "Image Gen",
+        "badge": "Verified Pro"
+      }
+    ],
+    "hardware_specs": "InstantID + FaceID LoRA Multi-Angle consistency rig",
+    "commercial_terms": {
+      "license_type": "Full Buyout & Ad Rights",
+      "model_indemnity_included": true,
+      "max_revisions_included": 3,
+      "workflow_files_included": true
+    },
+    "portfolio": [
+      {
+        "id": "port-24-1",
+        "title": "Leila Showcase: Commercial Master Render",
+        "content_type": "Short-form Social (9:16)",
+        "media_url": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1000&q=80",
+        "thumbnail": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1000&q=80",
+        "aspect_ratio": "9:16",
+        "client": "Enterprise Client #124",
+        "duration": "0:30",
+        "views": "211k",
+        "description": "High-impact generative visual campaign produced with ControlNet Multi-Depth and DaVinci Resolve Studio. Features frame-accurate consistency and 4K upscaling.",
+        "ai_breakdown": {
+          "primary_models": [
+            "ControlNet Multi-Depth",
+            "DaVinci Resolve Studio",
+            "DaVinci Resolve ACES"
+          ],
+          "prompt_used": "Hero commercial master shot of futuristic luxury concept, volumetric cinematic lighting, photorealistic textures, 8k resolution, shot on Arri Alexa 65 anamorphic lenses, natural reflections --ar 9:16 --style raw",
+          "negative_prompt": "cartoon, low quality, artifacts, blur, oversaturated bloom, deformed geometry",
+          "seed": 1573970820,
+          "sampler": "Euler Ancestral / DPM++ 2M Karras",
+          "cfg_scale": 6.8,
+          "steps": 50,
+          "upscale_pipeline": "Topaz Video AI 5 Iris-HQ 4K 60fps",
+          "workflow_file": "workflow_node_graph_creator_24.json"
+        }
+      }
+    ]
+  },
+  {
+    "id": "creator-25",
+    "name": "Samira Khan",
+    "handle": "@samira_brand_ident",
+    "title": "Generative Visual Identity & Packaging Innovator",
+    "avatar": "https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?auto=format&fit=crop&w=400&q=80",
+    "cover_image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=1000&q=80",
+    "bio": "Specializing in cosmetics & macro diffusion glow. Delivering verified prompt reproducibility, model indemnity clearance, and commercial-grade generative assets for global brands.",
+    "location": "London / Remote",
+    "rating": 4.94,
+    "review_count": 30,
+    "completed_projects": 37,
+    "hourly_rate": 135,
+    "avg_turnaround_days": 3,
+    "verification": {
+      "verified_creator": true,
+      "verified_tool_stack": true,
+      "workflow_provenance_verified": true,
+      "commercial_license_cleared": true,
+      "kampus_vc_fellow": true,
+      "trust_score": 96
+    },
+    "skills": [
+      "Cosmetics",
+      "Prompt Engineering",
+      "ComfyUI Custom Nodes",
+      "Character Consistency",
+      "Color Grading"
+    ],
+    "specialization": "Cosmetics & Macro Diffusion Glow",
+    "content_types": [
+      "Cinematic Video (16:9)",
+      "Short-form Social (9:16)",
+      "Editorial Still (4:5)"
+    ],
+    "tools": [
+      {
+        "name": "DaVinci Resolve Studio",
+        "category": "Post-Production",
+        "badge": "ACES Color Pipeline"
+      },
+      {
+        "name": "ComfyUI Custom Nodes",
+        "category": "Workflow Engine",
+        "badge": "Workflow Verified"
+      },
+      {
+        "name": "AnimateDiff v3",
+        "category": "Motion Synthesis",
+        "badge": "Latent Motion"
+      },
+      {
+        "name": "ElevenLabs v2",
+        "category": "Audio AI",
+        "badge": "Voice & SFX"
+      },
+      {
+        "name": "ControlNet Multi-Depth",
+        "category": "3D Guidance",
+        "badge": "Spatial Geometry"
+      }
+    ],
+    "hardware_specs": "Adobe Illustrator + Flux.1 Pro SVG vector guidance",
+    "commercial_terms": {
+      "license_type": "Full Buyout & Ad Rights",
+      "model_indemnity_included": true,
+      "max_revisions_included": 3,
+      "workflow_files_included": true
+    },
+    "portfolio": [
+      {
+        "id": "port-25-1",
+        "title": "Samira Showcase: Commercial Master Render",
+        "content_type": "Cinematic Video (16:9)",
+        "media_url": "https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=1000&q=80",
+        "thumbnail": "https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=1000&q=80",
+        "aspect_ratio": "16:9",
+        "client": "Enterprise Client #125",
+        "duration": "0:30",
+        "views": "389k",
+        "description": "High-impact generative visual campaign produced with DaVinci Resolve Studio and ComfyUI Custom Nodes. Features frame-accurate consistency and 4K upscaling.",
+        "ai_breakdown": {
+          "primary_models": [
+            "DaVinci Resolve Studio",
+            "ComfyUI Custom Nodes",
+            "DaVinci Resolve ACES"
+          ],
+          "prompt_used": "Hero commercial master shot of futuristic luxury concept, volumetric cinematic lighting, photorealistic textures, 8k resolution, shot on Arri Alexa 65 anamorphic lenses, natural reflections --ar 16:9 --style raw",
+          "negative_prompt": "cartoon, low quality, artifacts, blur, oversaturated bloom, deformed geometry",
+          "seed": 9132226466,
+          "sampler": "Euler Ancestral / DPM++ 2M Karras",
+          "cfg_scale": 6.6,
+          "steps": 50,
+          "upscale_pipeline": "Topaz Video AI 5 Iris-HQ 4K 60fps",
+          "workflow_file": "workflow_node_graph_creator_25.json"
+        }
+      }
+    ]
+  },
+  {
+    "id": "creator-26",
+    "name": "Alexander Wright",
+    "handle": "@alex_period_cinema",
+    "title": "Historical & Period Drama Generative Cinematographer",
+    "avatar": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=400&q=80",
+    "cover_image": "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=1000&q=80",
+    "bio": "Specializing in sci-fi & cyberpunk worldbuilding. Delivering verified prompt reproducibility, model indemnity clearance, and commercial-grade generative assets for global brands.",
+    "location": "Edinburgh / Remote",
+    "rating": 4.96,
+    "review_count": 25,
+    "completed_projects": 32,
+    "hourly_rate": 140,
+    "avg_turnaround_days": 5,
+    "verification": {
+      "verified_creator": true,
+      "verified_tool_stack": true,
+      "workflow_provenance_verified": true,
+      "commercial_license_cleared": true,
+      "kampus_vc_fellow": false,
+      "trust_score": 96
+    },
+    "skills": [
+      "Sci-Fi",
+      "Prompt Engineering",
+      "ComfyUI Custom Nodes",
+      "Character Consistency",
+      "Color Grading"
+    ],
+    "specialization": "Sci-Fi & Cyberpunk Worldbuilding",
+    "content_types": [
+      "Cinematic Video (16:9)",
+      "Short-form Social (9:16)",
+      "Editorial Still (4:5)"
+    ],
+    "tools": [
+      {
+        "name": "Flux.1 Pro",
+        "category": "Image Gen",
+        "badge": "Verified Pro"
+      },
+      {
+        "name": "Topaz Video AI 5",
+        "category": "Upscaling",
+        "badge": "4K 60fps Pipeline"
+      },
+      {
+        "name": "AnimateDiff v3",
+        "category": "Motion Synthesis",
+        "badge": "Latent Motion"
+      },
+      {
+        "name": "ComfyUI Custom Nodes",
+        "category": "Workflow Engine",
+        "badge": "Workflow Verified"
+      },
+      {
+        "name": "Midjourney v6.1",
+        "category": "Image Gen",
+        "badge": "Verified Pro"
+      }
+    ],
+    "hardware_specs": "Cooke Anamorphic /i Full Frame Plus look LoRAs",
+    "commercial_terms": {
+      "license_type": "Full Buyout & Ad Rights",
+      "model_indemnity_included": true,
+      "max_revisions_included": 3,
+      "workflow_files_included": true
+    },
+    "portfolio": [
+      {
+        "id": "port-26-1",
+        "title": "Alexander Showcase: Commercial Master Render",
+        "content_type": "Short-form Social (9:16)",
+        "media_url": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=1000&q=80",
+        "thumbnail": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=1000&q=80",
+        "aspect_ratio": "9:16",
+        "client": "Enterprise Client #126",
+        "duration": "0:30",
+        "views": "90k",
+        "description": "High-impact generative visual campaign produced with Flux.1 Pro and Topaz Video AI 5. Features frame-accurate consistency and 4K upscaling.",
+        "ai_breakdown": {
+          "primary_models": [
+            "Flux.1 Pro",
+            "Topaz Video AI 5",
+            "DaVinci Resolve ACES"
+          ],
+          "prompt_used": "Hero commercial master shot of futuristic luxury concept, volumetric cinematic lighting, photorealistic textures, 8k resolution, shot on Arri Alexa 65 anamorphic lenses, natural reflections --ar 9:16 --style raw",
+          "negative_prompt": "cartoon, low quality, artifacts, blur, oversaturated bloom, deformed geometry",
+          "seed": 2838540172,
+          "sampler": "Euler Ancestral / DPM++ 2M Karras",
+          "cfg_scale": 5.6,
+          "steps": 45,
+          "upscale_pipeline": "Topaz Video AI 5 Iris-HQ 4K 60fps",
+          "workflow_file": "workflow_node_graph_creator_26.json"
+        }
+      }
+    ]
+  },
+  {
+    "id": "creator-27",
+    "name": "Zoe Martinez",
+    "handle": "@zoe_tiktok_hooks",
+    "title": "Gen-Z Viral Hooks & 9:16 Kinetic Cutdowns Lead",
+    "avatar": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&q=80",
+    "cover_image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1000&q=80",
+    "bio": "Specializing in anime & stylized motion animation. Delivering verified prompt reproducibility, model indemnity clearance, and commercial-grade generative assets for global brands.",
+    "location": "Miami / Remote",
+    "rating": 4.93,
+    "review_count": 73,
+    "completed_projects": 89,
+    "hourly_rate": 120,
+    "avg_turnaround_days": 1,
+    "verification": {
+      "verified_creator": true,
+      "verified_tool_stack": true,
+      "workflow_provenance_verified": true,
+      "commercial_license_cleared": true,
+      "kampus_vc_fellow": false,
+      "trust_score": 96
+    },
+    "skills": [
+      "Anime",
+      "Prompt Engineering",
+      "ComfyUI Custom Nodes",
+      "Character Consistency",
+      "Color Grading"
+    ],
+    "specialization": "Anime & Stylized Motion Animation",
+    "content_types": [
+      "Cinematic Video (16:9)",
+      "Short-form Social (9:16)",
+      "Editorial Still (4:5)"
+    ],
+    "tools": [
+      {
+        "name": "Runway Gen-3 Alpha",
+        "category": "Video Gen",
+        "badge": "Verified Pro"
+      },
+      {
+        "name": "ComfyUI Custom Nodes",
+        "category": "Workflow Engine",
+        "badge": "Workflow Verified"
+      },
+      {
+        "name": "AnimateDiff v3",
+        "category": "Motion Synthesis",
+        "badge": "Latent Motion"
+      },
+      {
+        "name": "Topaz Video AI 5",
+        "category": "Upscaling",
+        "badge": "4K 60fps Pipeline"
+      },
+      {
+        "name": "Midjourney v6.1",
+        "category": "Image Gen",
+        "badge": "Verified Pro"
+      }
+    ],
+    "hardware_specs": "CapCut Pro + Kling 1.5 Vertical 9:16 rapid pipeline",
+    "commercial_terms": {
+      "license_type": "Full Buyout & Ad Rights",
+      "model_indemnity_included": true,
+      "max_revisions_included": 3,
+      "workflow_files_included": true
+    },
+    "portfolio": [
+      {
+        "id": "port-27-1",
+        "title": "Zoe Showcase: Commercial Master Render",
+        "content_type": "Cinematic Video (16:9)",
+        "media_url": "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=1000&q=80",
+        "thumbnail": "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=1000&q=80",
+        "aspect_ratio": "16:9",
+        "client": "Enterprise Client #127",
+        "duration": "0:30",
+        "views": "397k",
+        "description": "High-impact generative visual campaign produced with Runway Gen-3 Alpha and ComfyUI Custom Nodes. Features frame-accurate consistency and 4K upscaling.",
+        "ai_breakdown": {
+          "primary_models": [
+            "Runway Gen-3 Alpha",
+            "ComfyUI Custom Nodes",
+            "DaVinci Resolve ACES"
+          ],
+          "prompt_used": "Hero commercial master shot of futuristic luxury concept, volumetric cinematic lighting, photorealistic textures, 8k resolution, shot on Arri Alexa 65 anamorphic lenses, natural reflections --ar 16:9 --style raw",
+          "negative_prompt": "cartoon, low quality, artifacts, blur, oversaturated bloom, deformed geometry",
+          "seed": 5091222759,
+          "sampler": "Euler Ancestral / DPM++ 2M Karras",
+          "cfg_scale": 6.0,
+          "steps": 50,
+          "upscale_pipeline": "Topaz Video AI 5 Iris-HQ 4K 60fps",
+          "workflow_file": "workflow_node_graph_creator_27.json"
+        }
+      }
+    ]
+  },
+  {
+    "id": "creator-28",
+    "name": "Eric Johansson",
+    "handle": "@eric_nordic_glow",
+    "title": "Nordic Minimalist & Biophilic Brand Stylist",
+    "avatar": "https://images.unsplash.com/photo-1501196354995-cbb51c65aaea?auto=format&fit=crop&w=400&q=80",
+    "cover_image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=1000&q=80",
+    "bio": "Specializing in food & beverage hyper-kinetic teasers. Delivering verified prompt reproducibility, model indemnity clearance, and commercial-grade generative assets for global brands.",
+    "location": "Oslo / Remote",
+    "rating": 4.98,
+    "review_count": 32,
+    "completed_projects": 39,
+    "hourly_rate": 145,
     "avg_turnaround_days": 3,
     "verification": {
       "verified_creator": true,
@@ -110,64 +2694,97 @@
       "kampus_vc_fellow": true,
       "trust_score": 99
     },
-    "skills": ["ComfyUI Custom Nodes", "LoRA Training", "ControlNet Posing", "IP-Adapter Consistency", "Blender + NeRF AI Integration"],
-    "specialization": "Custom ComfyUI Workflows & Tech Visual Effects",
-    "content_types": ["3D Render Animation (16:9)", "Product Render (1:1)", "VFX Composite"],
-    "tools": [
-      {"name": "ComfyUI Node Graph", "category": "Pipeline Engine", "badge": "Custom Node Dev"},
-      {"name": "Flux.1 Schnell & Dev", "category": "Image Gen", "badge": "LoRA Trained"},
-      {"name": "Stable Diffusion XL", "category": "Image Gen", "badge": "ControlNet Multi"},
-      {"name": "AnimateDiff Evolved", "category": "Motion Gen", "badge": "Motion LoRA Pro"},
-      {"name": "Blender 4.2", "category": "3D & Depth", "badge": "Depth Map Export"},
-      {"name": "Magnific AI", "category": "Detail Synthesis", "badge": "8K Re-texture"}
+    "skills": [
+      "Food",
+      "Prompt Engineering",
+      "ComfyUI Custom Nodes",
+      "Character Consistency",
+      "Color Grading"
     ],
-    "hardware_specs": "4x RTX 4090 Cluster (96GB total VRAM) | Local Model Inference Server",
+    "specialization": "Food & Beverage Hyper-Kinetic Teasers",
+    "content_types": [
+      "Cinematic Video (16:9)",
+      "Short-form Social (9:16)",
+      "Editorial Still (4:5)"
+    ],
+    "tools": [
+      {
+        "name": "Midjourney v6.1",
+        "category": "Image Gen",
+        "badge": "Verified Pro"
+      },
+      {
+        "name": "Flux.1 Pro",
+        "category": "Image Gen",
+        "badge": "Verified Pro"
+      },
+      {
+        "name": "ControlNet Multi-Depth",
+        "category": "3D Guidance",
+        "badge": "Spatial Geometry"
+      },
+      {
+        "name": "AnimateDiff v3",
+        "category": "Motion Synthesis",
+        "badge": "Latent Motion"
+      },
+      {
+        "name": "DaVinci Resolve Studio",
+        "category": "Post-Production",
+        "badge": "ACES Color Pipeline"
+      }
+    ],
+    "hardware_specs": "Travertine & Natural Light Diffusion LoRA architecture",
     "commercial_terms": {
-      "license_type": "Full IP Transfer & Node Graph Source Delivery",
+      "license_type": "Full Buyout & Ad Rights",
       "model_indemnity_included": true,
-      "max_revisions_included": 4,
+      "max_revisions_included": 3,
       "workflow_files_included": true
     },
     "portfolio": [
       {
-        "id": "port-2-1",
-        "title": "Quantum Microchip: Silicon Heart",
-        "content_type": "3D Render Animation (16:9)",
+        "id": "port-28-1",
+        "title": "Eric Showcase: Commercial Master Render",
+        "content_type": "Short-form Social (9:16)",
         "media_url": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1000&q=80",
-        "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=600&q=80",
-        "aspect_ratio": "16:9",
-        "client": "NeuroSilicon Corp",
-        "duration": "0:25",
-        "views": "180k",
-        "description": "Photorealistic microscopic zoom into quantum transistor gates featuring translucent glowing circuits and copper substrate heat dissipation.",
+        "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1000&q=80",
+        "aspect_ratio": "9:16",
+        "client": "Enterprise Client #128",
+        "duration": "0:30",
+        "views": "91k",
+        "description": "High-impact generative visual campaign produced with Midjourney v6.1 and Flux.1 Pro. Features frame-accurate consistency and 4K upscaling.",
         "ai_breakdown": {
-          "primary_models": ["Flux.1 Dev", "ComfyUI Custom LoRA", "AnimateDiff"],
-          "prompt_used": "Macro electron microscope visualization of nanometer silicon quantum architecture, etched photon channels glowing cyan, golden microscopic interconnects, depth of field f/1.4, cinematic industrial lighting, octane render quality",
-          "negative_prompt": "blurry, low poly, noisy pixelation, artifacts",
-          "seed": 901284562,
-          "sampler": "DPM++ 3M SDE Karras",
-          "cfg_scale": 7.5,
-          "steps": 50,
-          "upscale_pipeline": "Magnific AI Detail Injector + ComfyUI Latent Upscale 2x",
-          "workflow_file": "neuro_silicon_comfy_vfx.json"
+          "primary_models": [
+            "Midjourney v6.1",
+            "Flux.1 Pro",
+            "DaVinci Resolve ACES"
+          ],
+          "prompt_used": "Hero commercial master shot of futuristic luxury concept, volumetric cinematic lighting, photorealistic textures, 8k resolution, shot on Arri Alexa 65 anamorphic lenses, natural reflections --ar 9:16 --style raw",
+          "negative_prompt": "cartoon, low quality, artifacts, blur, oversaturated bloom, deformed geometry",
+          "seed": 6978190844,
+          "sampler": "Euler Ancestral / DPM++ 2M Karras",
+          "cfg_scale": 6.5,
+          "steps": 35,
+          "upscale_pipeline": "Topaz Video AI 5 Iris-HQ 4K 60fps",
+          "workflow_file": "workflow_node_graph_creator_28.json"
         }
       }
     ]
   },
   {
-    "id": "creator-3",
-    "name": "Aoi Takahashi",
-    "handle": "@aoi_generative_fashion",
-    "title": "AI Fashion Director & Virtual Model Stylist",
-    "avatar": "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=400&q=80",
-    "cover_image": "https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=1200&q=80",
-    "bio": "Pioneering generative luxury fashion campaigns, virtual runway looks, and high-fashion editorial lookbooks with zero physical fabric waste.",
-    "location": "Tokyo / Paris / Remote",
-    "rating": 4.98,
-    "review_count": 47,
-    "completed_projects": 51,
-    "hourly_rate": 150,
-    "avg_turnaround_days": 4,
+    "id": "creator-29",
+    "name": "Mei Ling Zhao",
+    "handle": "@meiling_clay_motion",
+    "title": "Mixed-Media & Stop-Motion Generative Artist",
+    "avatar": "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=400&q=80",
+    "cover_image": "https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1000&q=80",
+    "bio": "Specializing in architectural visualization & biophilic spaces. Delivering verified prompt reproducibility, model indemnity clearance, and commercial-grade generative assets for global brands.",
+    "location": "Hong Kong / Remote",
+    "rating": 4.95,
+    "review_count": 36,
+    "completed_projects": 44,
+    "hourly_rate": 130,
+    "avg_turnaround_days": 3,
     "verification": {
       "verified_creator": true,
       "verified_tool_stack": true,
@@ -176,189 +2793,96 @@
       "kampus_vc_fellow": false,
       "trust_score": 96
     },
-    "skills": ["Virtual Haute Couture", "Textile Simulation", "Editorial Lighting", "Virtual Model Consistency", "CLO3D to Generative Pipeline"],
-    "specialization": "Haute Couture, Virtual Fashion & E-Commerce Lookbooks",
-    "content_types": ["Editorial Still (4:5)", "Virtual Runway (9:16)", "Catalog (1:1)"],
-    "tools": [
-      {"name": "Midjourney v6.1", "category": "Image Gen", "badge": "Prompt Master"},
-      {"name": "Flux.1 Pro", "category": "Image Gen", "badge": "Photorealism Pro"},
-      {"name": "Kling 1.5", "category": "Video Gen", "badge": "Fabric Flow Verified"},
-      {"name": "CLO3D", "category": "Garment CAD", "badge": "Pattern Modeling"},
-      {"name": "Photoshop Generative Fill", "category": "Retouching", "badge": "Commercial Retouch"}
+    "skills": [
+      "Architectural",
+      "Prompt Engineering",
+      "ComfyUI Custom Nodes",
+      "Character Consistency",
+      "Color Grading"
     ],
-    "hardware_specs": "RTX 4090 24GB + Color Calibrated EIZO ColorEdge 4K Monitor",
+    "specialization": "Architectural Visualization & Biophilic Spaces",
+    "content_types": [
+      "Cinematic Video (16:9)",
+      "Short-form Social (9:16)",
+      "Editorial Still (4:5)"
+    ],
+    "tools": [
+      {
+        "name": "ControlNet Multi-Depth",
+        "category": "3D Guidance",
+        "badge": "Spatial Geometry"
+      },
+      {
+        "name": "Flux.1 Pro",
+        "category": "Image Gen",
+        "badge": "Verified Pro"
+      },
+      {
+        "name": "ElevenLabs v2",
+        "category": "Audio AI",
+        "badge": "Voice & SFX"
+      },
+      {
+        "name": "ComfyUI Custom Nodes",
+        "category": "Workflow Engine",
+        "badge": "Workflow Verified"
+      },
+      {
+        "name": "AnimateDiff v3",
+        "category": "Motion Synthesis",
+        "badge": "Latent Motion"
+      }
+    ],
+    "hardware_specs": "Custom Claymation Texture LoRAs + 12fps frame modulation",
     "commercial_terms": {
-      "license_type": "Global Commercial & Social Media Advertising",
+      "license_type": "Full Buyout & Ad Rights",
       "model_indemnity_included": true,
       "max_revisions_included": 3,
       "workflow_files_included": true
     },
     "portfolio": [
       {
-        "id": "port-3-1",
-        "title": "SOLARIS: Iridescent Silk Haute Couture 2026",
-        "content_type": "Editorial Still (4:5)",
-        "media_url": "https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=1000&q=80",
-        "thumbnail": "https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=600&q=80",
-        "aspect_ratio": "4:5",
-        "client": "Maison Aurelia Paris",
-        "duration": "Stills",
-        "views": "310k",
-        "description": "Editorial cover shoot featuring virtual fashion model wearing liquid chrome silk gown under golden desert dawn lighting.",
-        "ai_breakdown": {
-          "primary_models": ["Flux.1 Pro", "Midjourney v6.1", "Custom Silk LoRA"],
-          "prompt_used": "High fashion editorial portrait of striking East Asian fashion model, sculpted architectural silk gown with chromatic liquid reflection, desert sand dunes at golden hour, sharp editorial lighting, Hasselblad H6D-100c medium format, Vogue Paris aesthetic --ar 4:5 --raw",
-          "negative_prompt": "plastic skin, oversaturated, blurry textile, distorted fingers, flat lighting",
-          "seed": 732910481,
-          "sampler": "FlowMatch Euler",
-          "cfg_scale": 6.8,
-          "steps": 40,
-          "upscale_pipeline": "Magnific AI Fashion Skin & Textile preset + Photoshop neural retouching",
-          "workflow_file": "maison_aurelia_couture.json"
-        }
-      }
-    ]
-  },
-  {
-    "id": "creator-4",
-    "name": "Devon Carter",
-    "handle": "@devon_ai_avatar",
-    "title": "Hyper-realistic AI UGC & Virtual Human Producer",
-    "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=400&q=80",
-    "cover_image": "https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=1200&q=80",
-    "bio": "Producing native-looking UGC video ads with custom fine-tuned synthetic creators. 100% compliant with commercial advertising regulations.",
-    "location": "Austin, TX / Remote",
-    "rating": 4.93,
-    "review_count": 62,
-    "completed_projects": 89,
-    "hourly_rate": 115,
-    "avg_turnaround_days": 2,
-    "verification": {
-      "verified_creator": true,
-      "verified_tool_stack": true,
-      "workflow_provenance_verified": true,
-      "commercial_license_cleared": true,
-      "kampus_vc_fellow": false,
-      "trust_score": 95
-    },
-    "skills": ["Lip-Sync Synchronization", "Synthetic Voice Cloning", "UGC Scriptwriting", "Facial Micro-Expressions", "Direct Response Video"],
-    "specialization": "TikTok / Meta Direct Response UGC & Virtual Brand Ambassadors",
-    "content_types": ["UGC Video (9:16)", "Product Demo (9:16)", "Brand Ambassador Avatar"],
-    "tools": [
-      {"name": "Hedra Character-1", "category": "Facial AI", "badge": "Expression Pro"},
-      {"name": "LivePortrait AI", "category": "Motion Transfer", "badge": "Micro-Motion"},
-      {"name": "ElevenLabs v2", "category": "Voice AI", "badge": "Emotional Inflection"},
-      {"name": "Kling 1.5", "category": "Video Gen", "badge": "Verified Pro"},
-      {"name": "CapCut Pro Studio", "category": "Direct Response Edit", "badge": "Hook Specialist"}
-    ],
-    "hardware_specs": "RTX 4080 Super 16GB + Studio Microphones & Acoustic Vocal Booth",
-    "commercial_terms": {
-      "license_type": "Performance Ad Rights (Meta, TikTok, YouTube Shorts)",
-      "model_indemnity_included": true,
-      "max_revisions_included": 2,
-      "workflow_files_included": false
-    },
-    "portfolio": [
-      {
-        "id": "port-4-1",
-        "title": "GlowNova Collagen Serum - 9:16 TikTok Hook",
-        "content_type": "UGC Video (9:16)",
-        "media_url": "https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=1000&q=80",
-        "thumbnail": "https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=600&q=80",
-        "aspect_ratio": "9:16",
-        "client": "GlowNova Skincare",
-        "duration": "0:22",
-        "views": "890k",
-        "description": "High-converting UGC video ad featuring virtual creator unboxing skincare serum with micro-facial expressions and realistic vocal pauses.",
-        "ai_breakdown": {
-          "primary_models": ["LivePortrait", "Hedra Character-1", "ElevenLabs Voice"],
-          "prompt_used": "Selfie smartphone camera perspective of friendly young woman in brightly lit modern bathroom holding glass dropper serum, authentic conversational smile, talking directly to camera, natural skin texture with realistic pores, natural lighting --ar 9:16",
-          "seed": 51920831,
-          "sampler": "DPM++ 2M",
-          "cfg_scale": 6.0,
-          "steps": 35,
-          "upscale_pipeline": "Topaz Video AI Face Recovery v2",
-          "workflow_file": "glownova_ugc_hedra.json"
-        }
-      }
-    ]
-  },
-  {
-    "id": "creator-5",
-    "name": "Mateo Silva",
-    "handle": "@mateo_ai_arch",
-    "title": "Spatial AI Architect & Virtual Environment Designer",
-    "avatar": "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&w=400&q=80",
-    "cover_image": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80",
-    "bio": "Transforming luxury architectural developments and hospitality concepts into breathtaking photorealistic walkthroughs and immersive brand spaces.",
-    "location": "Barcelona / Remote",
-    "rating": 4.97,
-    "review_count": 31,
-    "completed_projects": 35,
-    "hourly_rate": 135,
-    "avg_turnaround_days": 5,
-    "verification": {
-      "verified_creator": true,
-      "verified_tool_stack": true,
-      "workflow_provenance_verified": true,
-      "commercial_license_cleared": true,
-      "kampus_vc_fellow": true,
-      "trust_score": 97
-    },
-    "skills": ["Architectural Visualization", "Lighting Simulation", "Spatial Composition", "CAD/BIM to AI Render", "Drone Path Simulation"],
-    "specialization": "Architectural Visualization & Luxury Real Estate Walkthroughs",
-    "content_types": ["Cinematic Video (16:9)", "Architectural Still (16:9)", "Virtual Reality 360"],
-    "tools": [
-      {"name": "Flux.1 Dev", "category": "Image Gen", "badge": "Arch LoRA Pro"},
-      {"name": "Luma Dream Machine", "category": "Video Gen", "badge": "Smooth Fly-Through"},
-      {"name": "Krea AI", "category": "Real-time AI", "badge": "Spatial Enhancer"},
-      {"name": "Rhino 3D + Grasshopper", "category": "Parametric CAD", "badge": "Geometry Base"}
-    ],
-    "hardware_specs": "RTX 4090 24GB | 64GB DDR5 RAM",
-    "commercial_terms": {
-      "license_type": "Perpetual Real Estate & Commercial Marketing License",
-      "model_indemnity_included": true,
-      "max_revisions_included": 3,
-      "workflow_files_included": true
-    },
-    "portfolio": [
-      {
-        "id": "port-5-1",
-        "title": "Villa Solstice: Mediterranean Biophilic Sanctuary",
+        "id": "port-29-1",
+        "title": "Mei Showcase: Commercial Master Render",
         "content_type": "Cinematic Video (16:9)",
-        "media_url": "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1000&q=80",
-        "thumbnail": "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=600&q=80",
+        "media_url": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=1000&q=80",
+        "thumbnail": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=1000&q=80",
         "aspect_ratio": "16:9",
-        "client": "Balearic Luxury Estates",
-        "duration": "0:45",
-        "views": "140k",
-        "description": "Slow sweeping architectural cinematic tracking from cantilevered infinity pool through travertine glass pavilion at twilight.",
+        "client": "Enterprise Client #129",
+        "duration": "0:30",
+        "views": "274k",
+        "description": "High-impact generative visual campaign produced with ControlNet Multi-Depth and Flux.1 Pro. Features frame-accurate consistency and 4K upscaling.",
         "ai_breakdown": {
-          "primary_models": ["Flux.1 Dev", "Luma Dream Machine", "Krea AI"],
-          "prompt_used": "Smooth cinematic drone sweep through minimalist brutalist cliffside villa in Mallorca, travertine stone walls, infinity pool reflecting dusk horizon, warm interior architectural accent lights, photorealistic foliage, Architectural Digest quality --ar 16:9",
-          "seed": 109283741,
-          "sampler": "Euler",
-          "cfg_scale": 7.0,
-          "steps": 40,
-          "upscale_pipeline": "Krea Realtime Upscaler 4K",
-          "workflow_file": "villa_solstice_luma_flux.json"
+          "primary_models": [
+            "ControlNet Multi-Depth",
+            "Flux.1 Pro",
+            "DaVinci Resolve ACES"
+          ],
+          "prompt_used": "Hero commercial master shot of futuristic luxury concept, volumetric cinematic lighting, photorealistic textures, 8k resolution, shot on Arri Alexa 65 anamorphic lenses, natural reflections --ar 16:9 --style raw",
+          "negative_prompt": "cartoon, low quality, artifacts, blur, oversaturated bloom, deformed geometry",
+          "seed": 2298857155,
+          "sampler": "Euler Ancestral / DPM++ 2M Karras",
+          "cfg_scale": 5.9,
+          "steps": 35,
+          "upscale_pipeline": "Topaz Video AI 5 Iris-HQ 4K 60fps",
+          "workflow_file": "workflow_node_graph_creator_29.json"
         }
       }
     ]
   },
   {
-    "id": "creator-6",
-    "name": "Zara Chen",
-    "handle": "@zara_anime_motion",
-    "title": "Generative Anime & Stylized Motion Animator",
-    "avatar": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=400&q=80",
-    "cover_image": "https://images.unsplash.com/photo-1578632767115-351597cf2477?auto=format&fit=crop&w=1200&q=80",
-    "bio": "Crafting fluid stylized anime cinematics, character title sequences, and cyberpunk action choreography using hybrid 2D/AI diffusion pipelines.",
-    "location": "Seoul / Vancouver / Remote",
-    "rating": 4.95,
-    "review_count": 41,
-    "completed_projects": 48,
-    "hourly_rate": 125,
+    "id": "creator-30",
+    "name": "Jasper Vance",
+    "handle": "@jasper_hologram_vfx",
+    "title": "Volumetric Holographic & Spatial Computing Creator",
+    "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80",
+    "cover_image": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1000&q=80",
+    "bio": "Specializing in audiovisual music video & latent sync. Delivering verified prompt reproducibility, model indemnity clearance, and commercial-grade generative assets for global brands.",
+    "location": "Austin / Remote",
+    "rating": 4.99,
+    "review_count": 21,
+    "completed_projects": 28,
+    "hourly_rate": 175,
     "avg_turnaround_days": 4,
     "verification": {
       "verified_creator": true,
@@ -366,45 +2890,81 @@
       "workflow_provenance_verified": true,
       "commercial_license_cleared": true,
       "kampus_vc_fellow": false,
-      "trust_score": 94
+      "trust_score": 100
     },
-    "skills": ["Niji Stylization", "Keyframe Animation", "Action Choreography", "Stylized VFX Particles", "Character Sheet Consistency"],
-    "specialization": "Stylized Anime, Game Cinematic Trailers & Cyberpunk Motion",
-    "content_types": ["Cinematic Video (16:9)", "Short-form Social (9:16)", "Animated Loop (1:1)"],
-    "tools": [
-      {"name": "Midjourney Niji v6", "category": "Stylized Gen", "badge": "Niji Master"},
-      {"name": "Kling 1.5 Anime Mode", "category": "Video Gen", "badge": "Fluid 24fps"},
-      {"name": "ComfyUI AnimateDiff", "category": "Motion Pipeline", "badge": "Custom Workflow"},
-      {"name": "After Effects", "category": "Compositing", "badge": "Particle VFX"}
+    "skills": [
+      "Audiovisual",
+      "Prompt Engineering",
+      "ComfyUI Custom Nodes",
+      "Character Consistency",
+      "Color Grading"
     ],
-    "hardware_specs": "RTX 4090 24GB | Cintiq Pro 27",
+    "specialization": "Audiovisual Music Video & Latent Sync",
+    "content_types": [
+      "Cinematic Video (16:9)",
+      "Short-form Social (9:16)",
+      "Editorial Still (4:5)"
+    ],
+    "tools": [
+      {
+        "name": "Kling 1.5 Pro",
+        "category": "Video Gen",
+        "badge": "Verified Pro"
+      },
+      {
+        "name": "AnimateDiff v3",
+        "category": "Motion Synthesis",
+        "badge": "Latent Motion"
+      },
+      {
+        "name": "Midjourney v6.1",
+        "category": "Image Gen",
+        "badge": "Verified Pro"
+      },
+      {
+        "name": "DaVinci Resolve Studio",
+        "category": "Post-Production",
+        "badge": "ACES Color Pipeline"
+      },
+      {
+        "name": "ElevenLabs v2",
+        "category": "Audio AI",
+        "badge": "Voice & SFX"
+      }
+    ],
+    "hardware_specs": "Looking Glass Pro Holographic display + NeRF Gaussian Splatting",
     "commercial_terms": {
-      "license_type": "Worldwide Digital & Streaming Rights",
+      "license_type": "Full Buyout & Ad Rights",
       "model_indemnity_included": true,
       "max_revisions_included": 3,
       "workflow_files_included": true
     },
     "portfolio": [
       {
-        "id": "port-6-1",
-        "title": "Neon Ronin: Episode Zero Opening",
-        "content_type": "Cinematic Video (16:9)",
-        "media_url": "https://images.unsplash.com/photo-1578632767115-351597cf2477?auto=format&fit=crop&w=1000&q=80",
-        "thumbnail": "https://images.unsplash.com/photo-1578632767115-351597cf2477?auto=format&fit=crop&w=600&q=80",
-        "aspect_ratio": "16:9",
-        "client": "Kuro Games Studio",
+        "id": "port-30-1",
+        "title": "Jasper Showcase: Commercial Master Render",
+        "content_type": "Short-form Social (9:16)",
+        "media_url": "https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1000&q=80",
+        "thumbnail": "https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1000&q=80",
+        "aspect_ratio": "9:16",
+        "client": "Enterprise Client #130",
         "duration": "0:30",
-        "views": "520k",
-        "description": "High-octane anime opening sequence with fluid sword combat, electrical particle strikes, and dynamic sakuga frame pacing.",
+        "views": "348k",
+        "description": "High-impact generative visual campaign produced with Kling 1.5 Pro and AnimateDiff v3. Features frame-accurate consistency and 4K upscaling.",
         "ai_breakdown": {
-          "primary_models": ["Niji v6", "Kling 1.5", "AnimateDiff Anime LoRA"],
-          "prompt_used": "Sakuga anime animation of futuristic cyber samurai deflecting laser barrage with plasma katana, neon cherry blossom petals flying in rain, intense camera angle, Studio Trigger aesthetic, fluid hand-drawn motion --ar 16:9 --niji 6",
-          "seed": 88301928,
-          "sampler": "Euler Ancestral",
-          "cfg_scale": 8.0,
+          "primary_models": [
+            "Kling 1.5 Pro",
+            "AnimateDiff v3",
+            "DaVinci Resolve ACES"
+          ],
+          "prompt_used": "Hero commercial master shot of futuristic luxury concept, volumetric cinematic lighting, photorealistic textures, 8k resolution, shot on Arri Alexa 65 anamorphic lenses, natural reflections --ar 9:16 --style raw",
+          "negative_prompt": "cartoon, low quality, artifacts, blur, oversaturated bloom, deformed geometry",
+          "seed": 2175695674,
+          "sampler": "Euler Ancestral / DPM++ 2M Karras",
+          "cfg_scale": 5.9,
           "steps": 35,
-          "upscale_pipeline": "Waifu2x Anime 4K Upscaler",
-          "workflow_file": "neon_ronin_sakuga_kling.json"
+          "upscale_pipeline": "Topaz Video AI 5 Iris-HQ 4K 60fps",
+          "workflow_file": "workflow_node_graph_creator_30.json"
         }
       }
     ]
